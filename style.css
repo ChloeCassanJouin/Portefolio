@@ -39,6 +39,9 @@ header .logo p {
     font-size: 1rem;
     margin: 0;
     color: #fff; /* Couleur du texte en blanc */
+    width: 50%; /* Ajuste la largeur du texte (augmente si besoin) */
+    text-align: right; /* Aligne le texte vers la droite */
+    margin-left: auto; /* Pousse le texte à droite */
 }
 
 /* Animation pour le texte défilant */
