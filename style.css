@@ -1,0 +1,228 @@
+/* Général */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff; /* Couleur du texte en blanc pour un bon contraste avec le fond sombre */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #333; /* Fond sombre pour l'ensemble de la page */
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Header */
+header {
+    padding: 20px 0;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin: 0;
+    color: #007BFF; /* Bleu métallique pour le titre */
+}
+
+header .logo p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-bar ul li {
+    margin: 0 15px;
+}
+
+.nav-bar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-bar ul li a:hover {
+    color: #007BFF; /* Bleu métallique pour le survol */
+}
+
+/* Section principale */
+.main-layout {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+/* Grille d'articles */
+.main-articles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    flex: 70%;
+}
+
+.article-main {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1); /* Ombre pour les articles */
+}
+
+.article-main img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.article-text {
+    padding: 20px;
+    background-color: transparent; /* Pas de fond pour les textes d'articles */
+}
+
+.article-main h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    margin: 0 0 10px;
+    color: #007BFF; /* Bleu métallique pour les titres d'articles */
+}
+
+.article-main p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.read-more {
+    color: #fff; /* Texte blanc pour les boutons "Lire la suite" */
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #007BFF; /* Bleu métallique pour le survol */
+}
+
+/* Styles des articles de tailles différentes */
+.article-main.large {
+    grid-column: span 2; /* Les articles larges occupent 2 colonnes */
+}
+
+.article-main.medium {
+    grid-column: span 1; /* Les articles moyens occupent 1 colonne */
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 25%;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #007BFF; /* Bleu métallique pour le titre de la sidebar */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: #fff; /* Texte blanc pour les liens de la sidebar */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #007BFF; /* Bleu métallique pour le survol */
+}
+
+/* Styles pour la section Parcours */
+#parcours {
+    margin: 40px 0;
+}
+
+.form-container {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1); /* Ombre pour le formulaire */
+    margin-bottom: 20px;
+}
+
+.form-container h3 {
+    margin-top: 0;
+    color: #007BFF; /* Bleu métallique pour le titre du formulaire */
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    margin: 10px 0 5px;
+    color: #fff; /* Texte blanc pour les labels */
+}
+
+.form-container input,
+.form-container textarea {
+    padding: 10px;
+    border: 1px solid #ddd; /* Bordure claire pour les champs */
+    border-radius: 4px;
+    background-color: transparent; /* Pas de fond pour les champs */
+    color: #fff; /* Texte blanc pour les champs */
+}
+
+.form-container button {
+    background-color: #007BFF; /* Bleu métallique pour le bouton */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #0056b3; /* Teinte plus foncée pour le survol */
+}
+
+/* Coordonnées */
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info h3 {
+    margin-bottom: 10px;
+    color: #007BFF; /* Bleu métallique pour le titre des coordonnées */
+}
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #333; /* Fond sombre pour le footer */
+}
