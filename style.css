@@ -36,12 +36,13 @@ header .logo h1 {
 
 header .logo p {
     font-family: 'Merriweather', serif; /* Police plus sérieuse pour le métier */
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin: 0;
-    color: #fff; /* Couleur du texte en blanc */
+    color: red; /* Couleur du texte en blanc */
     width: 50%; /* Ajuste la largeur du texte (augmente si besoin) */
     text-align: right; /* Aligne le texte vers la droite */
     margin-left: auto; /* Pousse le texte à droite */
+    font-weight: bold; /* Rend le texte en gras */
 }
 
 /* Animation pour le texte défilant */
@@ -205,6 +206,7 @@ header .logo p {
     flex: 25%;
     padding: 20px;
     text-align: center; /* Centrer le texte */
+    background-color: lightgrey;
 }
 
 .sidebar h2 {
@@ -254,51 +256,67 @@ header .logo p {
 }
 
 .form-container {
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre pour le formulaire */
+    padding: 40px 130px;
+    border-radius: 12px; /* Bords plus arrondis */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Ombre plus prononcée pour le formulaire */
     margin-bottom: 20px;
+    background-color: #f9f9f9; /* Fond légèrement coloré pour le formulaire */
 }
 
 .form-container h3 {
     margin-top: 0;
     color: #007BFF; /* Bleu métallique pour le titre du formulaire */
+    font-size: 1.8rem; /* Augmente la taille du titre pour plus d'impact */
+    text-align: center; /* Centre le titre */
 }
 
 .form-container form {
     display: flex;
     flex-direction: column;
+    gap: 15px; /* Espace entre les éléments du formulaire */
 }
 
 .form-container label {
     margin: 10px 0 5px;
     color: #333; /* Texte gris foncé pour les labels */
+    font-weight: bold; /* Rendre les labels plus visibles */
 }
 
 .form-container input,
 .form-container textarea {
-    padding: 10px;
-    border: 1px solid #ddd; /* Bordure claire pour les champs */
-    border-radius: 4px;
+    padding: 15px; /* Augmente le padding pour un meilleur confort */
+    border: 1px solid #ccc; /* Bordure plus claire */
+    border-radius: 8px; /* Bords plus arrondis */
     background-color: #fff; /* Fond blanc pour les champs */
     color: #333; /* Texte gris foncé pour les champs */
+    font-size: 1rem; /* Taille de police légèrement augmentée */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transition pour les effets au focus */
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+    border-color: #007BFF; /* Couleur de bordure lors du focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Ombre au focus */
+    outline: none; /* Enlève le contour par défaut */
 }
 
 .form-container button {
     background-color: #007BFF; /* Bleu métallique pour le bouton */
     color: white;
     border: none;
-    padding: 10px;
-    border-radius: 4px;
+    margin: 12px 0; /* Enlève le margin horizontal fixe pour être responsive */
+    padding: 12px; /* Augmente le padding pour un bouton plus grand */
+    border-radius: 8px; /* Bords arrondis */
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animation sur hover */
+    font-size: 1rem; /* Taille de police pour le bouton */
 }
 
 .form-container button:hover {
-    background-color: #0056b3; /* Teinte plus foncée pour le survol */
+    background-color: #0056b3; /* Teinte plus foncée au survol */
+    transform: translateY(-2px); /* Légère montée du bouton au survol */
 }
 
-/* Coordonnées */
 .contact-info {
     margin-top: 20px;
 }
@@ -313,4 +331,88 @@ footer {
     padding: 20px 0;
     text-align: center;
     background-color: #f9f9f9; /* Fond clair pour le footer */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header .logo {
+        flex-direction: column; /* Logo et description en colonne sur mobile */
+        align-items: flex-start; /* Aligner à gauche */
+    }
+
+    header .logo h1 {
+        width: 100%; /* Laisser le titre prendre toute la largeur */
+        text-align: left; /* Alignement à gauche */
+    }
+
+    header .logo p {
+        width: 100%; /* Laisser le texte prendre toute la largeur */
+        text-align: left; /* Alignement à gauche */
+        margin-left: 0; /* Réinitialiser le margin */
+    }
+
+    .nav-bar ul {
+        flex-direction: column; /* Lier les éléments verticalement */
+        padding: 0;
+    }
+
+    .nav-bar ul li {
+        margin: 10px 0; /* Espace entre les éléments verticalement */
+    }
+
+    .main-layout {
+        flex-direction: column; /* Changer la direction de flex à colonne sur mobile */
+    }
+
+    .main-articles {
+        grid-template-columns: 1fr; /* Une colonne sur mobile */
+    }
+
+    .sidebar {
+        flex: 100%; /* Sidebar prend toute la largeur */
+    }
+
+    .form-container {
+        padding: 20px; /* Réduire le padding sur mobile */
+    }
+
+    .form-container h3 {
+        font-size: 1.5rem; /* Réduire la taille du titre */
+    }
+
+    .form-container button {
+        margin: 12px 0; /* Margin vertical uniquement */
+        width: 100%; /* Bouton prend toute la largeur */
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo h1 {
+        font-size: 1.8rem; /* Ajustement de la taille de la police sur mobile */
+    }
+
+    header .logo p {
+        font-size: 1.2rem; /* Ajustement de la taille de la police sur mobile */
+    }
+
+    .nav-bar ul li a {
+        padding: 8px 16px; /* Réduire le padding pour les liens */
+    }
+
+    .sidebar img {
+        width: 150px; /* Réduire la taille de l'image de la sidebar */
+        height: 150px; /* Réduire la taille de l'image de la sidebar */
+    }
+
+    .sidebar h2 {
+        font-size: 1.2rem; /* Ajustement de la taille de la police sur mobile */
+    }
+
+    .article-main h2 {
+        font-size: 1.2rem; /* Ajustement de la taille de la police sur mobile */
+    }
+
+    .article-main p {
+        font-size: 0.9rem; /* Ajustement de la taille de la police sur mobile */
+    }
 }
