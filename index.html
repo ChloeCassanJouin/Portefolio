@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chloé Jouin - Développeur Web Front-End</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,36 +13,25 @@
         <div class="container">
             <div class="logo">
                 <h1>Chloé Jouin</h1>
-                <p>Développeur Web Front-End</p>
+                <div class="job-title-container">
+                    <p class="job-title">Développeur Web Front-End</p>
+                </div>
             </div>
-            <nav class="nav-bar">
-                <ul>
-                    <!-- Lien vers section parcours (formulaire bas de page et coordonnées) -->
-                    <li><a href="#parcours">Parcours</a></li>
-
-                    <!-- Lien vers page "news.html" -->
-                    <li><a href="news.html">News</a></li>
-
-                    <!-- Lien vers page "articles.html" -->
-                    <li><a href="articles.html">Articles</a></li>
-
-                    <!-- Lien vers section projets (sur la page principale) -->
-                    <li><a href="#projects">Projets</a></li>
-
-                    <!-- Lien vers page "outside-opinions.html" (avis extérieurs) -->
-                    <li><a href="outside-opinions.html">Avis extérieurs</a></li>
-
-                    <!-- Lien vers page "inspiring-articles.html" (articles inspirants) -->
-                    <li><a href="inspiring-articles.html">Articles inspirants</a></li>
-
-                    <!-- Lien vers section contact (formulaire bas de page) -->
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
     <main>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#parcours">Parcours</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="outside-opinions.html">Avis extérieurs</a></li>
+                <li><a href="inspiring-articles.html">Articles inspirants</a></li>
+                <li class="contact"><a href="#contact">Contact</a></li> <!-- Nouveau lien Contact -->
+            </ul>
+        </nav>
         <div class="container main-layout">
             <!-- Articles principaux en grille -->
             <section class="main-articles">
@@ -92,6 +81,7 @@
                     <li><a href="#">Top 3 - Mon parcours chez OpenClassrooms</a></li>
                     <li><a href="#">Top 4 - Contactez-moi</a></li>
                 </ul>
+                <img src="Assets/Images/portrait/IMG_20240126_151241.jpg" alt="photo cv">
             </aside>
         </div>
 
