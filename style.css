@@ -1,418 +1,74 @@
-/* Général */
 body {
-    font-family: 'Open Sans', sans-serif;
-    color: #333; /* Couleur du texte en gris foncé pour un bon contraste avec le fond blanc */
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #fff; /* Fond blanc pour l'ensemble de la page */
+    font-family: Arial, sans-serif;
 }
 
-.container {
-    width: 90%;
-    margin: 0 auto;
-    max-width: 1200px;
-}
-
-/* Header */
-header {
-    background-color: #001f3f; /* Fond bleu marine pour le header */
-    color: #fff; /* Couleur du texte en blanc pour le contraste */
-    padding: 10px 0px;
-}
-
-header .logo {
+.menu {
+    position: fixed;
+    top: -80px; /* Commence plus haut pour une barre plus large */
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px; /* Augmente la hauteur de la barre de navigation */
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    z-index: 10;
+    animation: slide-down 2s forwards; /* Animation pour descendre la nav (plus longue) */
 }
 
-header .logo h1 {
-    font-family: 'Merriweather', serif; /* Police plus sérieuse pour le nom */
-    margin: 0;
-    color: #fff; /* Couleur du titre en blanc */
-    width: 30%;
-}
-
-header .logo p {
-    font-family: 'Merriweather', serif; /* Police plus sérieuse pour le métier */
-    font-size: 1.5rem;
-    margin: 0;
-    color: red; /* Couleur du texte en blanc */
-    width: 50%; /* Ajuste la largeur du texte (augmente si besoin) */
-    text-align: right; /* Aligne le texte vers la droite */
-    margin-left: auto; /* Pousse le texte à droite */
-    font-weight: bold; /* Rend le texte en gras */
-}
-
-/* Animation pour le texte défilant */
-@keyframes scroll {
+@keyframes slide-down {
     0% {
-        transform: translateX(-100%); /* Commence hors de l'écran à gauche */
+        top: -80px; /* Position initiale au-dessus de l'écran */
     }
     100% {
-        transform: translateX(100%); /* Termine hors de l'écran à droite */
+        top: 0; /* Position finale */
     }
 }
 
-.job-title-container {
-    width: 100%; /* Prend toute la largeur du parent */
-    overflow: hidden; /* Masque le texte qui dépasse */
-    position: relative;
-}
-
-.job-title {
-    font-family: 'Merriweather', serif;
-    font-size: 1.5rem; /* Taille du texte ajustée */
-    color: #fff;
-    white-space: nowrap; /* Empêche le retour à la ligne */
-    display: inline-block;
-    position: relative;
-    animation: scroll 10s linear infinite; /* Animation sur 10 secondes */
-}
-
-/* Barre de navigation */
-.nav-bar {
-    background-color: #fff; /* Fond blanc pour la barre de navigation */
-    border-bottom: 2px solid #ddd; /* Ligne grise sous la navbar */
-    padding: 15px 0; /* Padding pour abaisser la navbar */
-}
-
-.nav-bar ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center; /* Centrer les éléments */
-    padding: 0;
-    margin: 0;
-}
-
-.nav-bar ul li {
-    margin: 0 10px; /* Espace entre les éléments */
-}
-
-.nav-bar ul li a {
-    color: #333; /* Couleur des liens en gris foncé */
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 20px; /* Ajout de padding fixe */
-    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease; /* Transition sans modification de taille */
-    border-radius: 20px; /* Bords arrondis permanents */
-}
-
-.nav-bar ul li a:hover {
-    background-color: #007BFF; /* Changer seulement la couleur de fond */
-    color: white; /* Texte blanc au survol */
-    transform: scale(1.05); /* Légère augmentation de la taille au survol sans affecter la mise en page */
-}
-
-/* Styles pour le lien Contact */
-.nav-bar ul li.contact a {
-    background-color: red; /* Fond rouge */
-    color: white; /* Texte blanc pour le contraste */
-    padding: 10px 20px; /* Padding fixe pour éviter de changer la taille */
-    border-radius: 20px; /* Bords arrondis */
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.nav-bar ul li.contact a:hover {
-    background-color: darkred; /* Teinte plus foncée au survol */
-    transform: scale(1.05); /* Légère augmentation de la taille au survol */
-}
-
-/* Ajouter des petits ronds entre les liens */
-.nav-bar ul li::after {
-    content: ''; /* Crée un pseudo-élément */
-    display: inline-block;
-    width: 6px; /* Diamètre du rond */
-    height: 6px; /* Diamètre du rond */
-    background-color: #ddd; /* Couleur du rond */
-    border-radius: 50%; /* Pour faire un rond */
-    margin-left: 10px; /* Espacement à gauche du rond */
-}
-
-.nav-bar ul li:last-child::after {
-    content: none; /* Supprimer le rond après le dernier élément */
-}
-
-/* Section principale */
-.main-layout {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-}
-
-/* Grille d'articles */
-.main-articles {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    flex: 70%;
-}
-
-.article-main {
-    position: relative;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre pour les articles */
-}
-
-.article-main img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.article-text {
-    padding: 20px;
-    background-color: transparent; /* Pas de fond pour les textes d'articles */
-}
-
-.article-main h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-    margin: 0 0 10px;
-    color: #007BFF; /* Bleu métallique pour les titres d'articles */
-}
-
-.article-main p {
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-.read-more {
-    color: #007BFF; /* Bleu métallique pour le texte "Lire la suite" */
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 10px;
-    transition: color 0.3s ease;
-}
-
-.read-more:hover {
-    color: #0056b3; /* Teinte plus foncée pour le survol */
-}
-
-/* Styles des articles de tailles différentes */
-.article-main.large {
-    grid-column: span 2; /* Les articles larges occupent 2 colonnes */
-}
-
-.article-main.medium {
-    grid-column: span 1; /* Les articles moyens occupent 1 colonne */
-}
-
-/* Sidebar */
-.sidebar {
-    flex: 25%;
-    padding: 20px;
-    text-align: center; /* Centrer le texte */
-    background-color: lightgrey;
-}
-
-.sidebar h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-    color: #007BFF; /* Bleu métallique pour le titre de la sidebar */
-    text-align: center; /* Centrer le titre */
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0 auto; /* Centrer la liste */
-}
-
-.sidebar ul li {
-    margin-bottom: 15px;
-    text-align: center; /* Centrer le texte des éléments de la liste */
-}
-
-.sidebar ul li a {
-    color: #333; /* Texte gris foncé pour les liens de la sidebar */
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.sidebar ul li a:hover {
-    color: #007BFF; /* Bleu métallique pour le survol */
-}
-
-.sidebar img {
-    width: 250px; /* Taille fixe de l'image (ajuste la taille selon tes besoins) */
-    height: 250px; /* Même hauteur pour garder une forme carrée avant de la rendre ronde */
-    border-radius: 50%; /* Rendre l'image ronde */
-    border: #007BFF solid 5px;
-    object-fit: cover; /* S'assure que l'image ne soit pas déformée */
-    display: block; /* Pour éviter tout espacement indésirable */
-    margin: 20px auto; /* Centrer l'image et ajouter un espace au-dessus et en dessous */
-    margin-top: 150px;
-}
-
-/* Styles pour la section Parcours */
-#parcours {
-    margin: 40px 0;
-}
-
-.form-container {
-    padding: 40px 130px;
-    border-radius: 12px; /* Bords plus arrondis */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Ombre plus prononcée pour le formulaire */
-    margin-bottom: 20px;
-    background-color: #f9f9f9; /* Fond légèrement coloré pour le formulaire */
-}
-
-.form-container h3 {
-    margin-top: 0;
-    color: #007BFF; /* Bleu métallique pour le titre du formulaire */
-    font-size: 1.8rem; /* Augmente la taille du titre pour plus d'impact */
-    text-align: center; /* Centre le titre */
-}
-
-.form-container form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Espace entre les éléments du formulaire */
-}
-
-.form-container label {
-    margin: 10px 0 5px;
-    color: #333; /* Texte gris foncé pour les labels */
-    font-weight: bold; /* Rendre les labels plus visibles */
-}
-
-.form-container input,
-.form-container textarea {
-    padding: 15px; /* Augmente le padding pour un meilleur confort */
-    border: 1px solid #ccc; /* Bordure plus claire */
-    border-radius: 8px; /* Bords plus arrondis */
-    background-color: #fff; /* Fond blanc pour les champs */
-    color: #333; /* Texte gris foncé pour les champs */
-    font-size: 1rem; /* Taille de police légèrement augmentée */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transition pour les effets au focus */
-}
-
-.form-container input:focus,
-.form-container textarea:focus {
-    border-color: #007BFF; /* Couleur de bordure lors du focus */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Ombre au focus */
-    outline: none; /* Enlève le contour par défaut */
-}
-
-.form-container button {
-    background-color: #007BFF; /* Bleu métallique pour le bouton */
+.link {
     color: white;
-    border: none;
-    margin: 12px 0; /* Enlève le margin horizontal fixe pour être responsive */
-    padding: 12px; /* Augmente le padding pour un bouton plus grand */
-    border-radius: 8px; /* Bords arrondis */
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Animation sur hover */
-    font-size: 1rem; /* Taille de police pour le bouton */
+    text-decoration: none;
+    margin: 0 25px; /* Élargit l'espace entre les liens */
+    font-size: 24px; /* Augmente la taille du texte */
+    transition: color 0.3s;
 }
 
-.form-container button:hover {
-    background-color: #0056b3; /* Teinte plus foncée au survol */
-    transform: translateY(-2px); /* Légère montée du bouton au survol */
+.link:hover {
+    color: #ff4081; /* Couleur au survol */
 }
 
-.contact-info {
-    margin-top: 20px;
+.background-container {
+    position: relative;
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    overflow: hidden;
 }
 
-.contact-info h3 {
-    margin-bottom: 10px;
-    color: #007BFF; /* Bleu métallique pour le titre des coordonnées */
+.background-image {
+    background-image: url('Assets/Images/background-image/cassette.jpg'); /* Chemin correct de l'image */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Opacité initiale */
+    animation: fade-in 6s forwards; /* Animation fade-in plus longue */
+    animation-delay: 2s; /* Pause de 2 secondes avant de commencer à apparaître */
 }
 
-/* Footer */
-footer {
-    padding: 20px 0;
+@keyframes fade-in {
+    0% {
+        opacity: 0; /* Commence transparent */
+    }
+    100% {
+        opacity: 1; /* Termine complètement visible */
+    }
+}
+
+section {
+    padding: 100px 20px;
     text-align: center;
-    background-color: #f9f9f9; /* Fond clair pour le footer */
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    header .logo {
-        flex-direction: column; /* Logo et description en colonne sur mobile */
-        align-items: flex-start; /* Aligner à gauche */
-    }
-
-    header .logo h1 {
-        width: 100%; /* Laisser le titre prendre toute la largeur */
-        text-align: left; /* Alignement à gauche */
-    }
-
-    header .logo p {
-        width: 100%; /* Laisser le texte prendre toute la largeur */
-        text-align: left; /* Alignement à gauche */
-        margin-left: 0; /* Réinitialiser le margin */
-    }
-
-    .nav-bar ul {
-        flex-direction: column; /* Lier les éléments verticalement */
-        padding: 0;
-    }
-
-    .nav-bar ul li {
-        margin: 10px 0; /* Espace entre les éléments verticalement */
-    }
-
-    .main-layout {
-        flex-direction: column; /* Changer la direction de flex à colonne sur mobile */
-    }
-
-    .main-articles {
-        grid-template-columns: 1fr; /* Une colonne sur mobile */
-    }
-
-    .sidebar {
-        flex: 100%; /* Sidebar prend toute la largeur */
-    }
-
-    .form-container {
-        padding: 20px; /* Réduire le padding sur mobile */
-    }
-
-    .form-container h3 {
-        font-size: 1.5rem; /* Réduire la taille du titre */
-    }
-
-    .form-container button {
-        margin: 12px 0; /* Margin vertical uniquement */
-        width: 100%; /* Bouton prend toute la largeur */
-    }
-}
-
-@media (max-width: 480px) {
-    header .logo h1 {
-        font-size: 1.8rem; /* Ajustement de la taille de la police sur mobile */
-    }
-
-    header .logo p {
-        font-size: 1.2rem; /* Ajustement de la taille de la police sur mobile */
-    }
-
-    .nav-bar ul li a {
-        padding: 8px 16px; /* Réduire le padding pour les liens */
-    }
-
-    .sidebar img {
-        width: 150px; /* Réduire la taille de l'image de la sidebar */
-        height: 150px; /* Réduire la taille de l'image de la sidebar */
-    }
-
-    .sidebar h2 {
-        font-size: 1.2rem; /* Ajustement de la taille de la police sur mobile */
-    }
-
-    .article-main h2 {
-        font-size: 1.2rem; /* Ajustement de la taille de la police sur mobile */
-    }
-
-    .article-main p {
-        font-size: 0.9rem; /* Ajustement de la taille de la police sur mobile */
-    }
+    color: white; /* Optionnel, pour que le texte soit visible sur un fond sombre */
 }

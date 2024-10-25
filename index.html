@@ -3,123 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chloé Jouin - Développeur Web Front-End</title>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>Chloé Jouin - Développeur Web Frond End - Portfolio </title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header avec navigation -->
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Chloé Jouin</h1>
-                <div class="job-title-container">
-                    <p class="job-title">Développeur Web Front-End</p>
-                </div>
-            </div>
-        </div>
-    </header>
+    <nav class="menu">
+        <a href="#parcours" class="link"><span>Parcours</span></a>
+        <a href="#projets" class="link"><span>Projets</span></a>
+        <a href="#avis" class="link"><span>Avis</span></a>
+    </nav>
+    
+    <div class="background-container">
+        <div class="background-image"></div>
+    </div>
 
-    <main>
-        <nav class="nav-bar">
-            <ul>
-                <li><a href="#parcours">Parcours</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="articles.html">Articles</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="outside-opinions.html">Avis extérieurs</a></li>
-                <li class="contact"><a href="#contact">Contact</a></li> <!-- Nouveau lien Contact -->
-            </ul>
-        </nav>
-        <div class="container main-layout">
-            <!-- Articles principaux en grille -->
-            <section class="main-articles">
-                <article class="article-main large">
-                    <img src="article1.jpg" alt="Article 1">
-                    <div class="article-text">
-                        <h2>Article 1 - Mon projet GitHub</h2>
-                        <p>Description courte de l'article 1. Ce projet est une application bancaire qui permet la gestion des comptes...</p>
-                        <a href="#" class="read-more">Lire la suite</a>
-                    </div>
-                </article>
+    <section id="parcours">
+        <h2>Mon Parcours</h2>
+        <p>Ajoute ici des informations sur ton parcours professionnel.</p>
+    </section>
 
-                <article class="article-main medium">
-                    <img src="article2.jpg" alt="Article 2">
-                    <div class="article-text">
-                        <h2>Article 2 - Mon école OpenClassrooms</h2>
-                        <p>OpenClassrooms est une plateforme de formation en ligne, où j'ai suivi le parcours développeur web...</p>
-                        <a href="#" class="read-more">Lire la suite</a>
-                    </div>
-                </article>
+    <section id="projets">
+        <h2>Mes Projets</h2>
+        <p>Ajoute ici des descriptions de tes projets.</p>
+    </section>
 
-                <article class="article-main medium">
-                    <img src="article3.jpg" alt="Article 3">
-                    <div class="article-text">
-                        <h2>Article 3 - Réalisation Front-End</h2>
-                        <p>Dans ce projet, j'ai conçu un site web interactif en utilisant React et Bootstrap pour une interface fluide...</p>
-                        <a href="#" class="read-more">Lire la suite</a>
-                    </div>
-                </article>
-
-                <article class="article-main large">
-                    <img src="article4.jpg" alt="Article 4">
-                    <div class="article-text">
-                        <h2>Article 4 - Autre réalisation</h2>
-                        <p>Un autre projet où j'ai pu appliquer mes compétences en développement web...</p>
-                        <a href="#" class="read-more">Lire la suite</a>
-                    </div>
-                </article>
-            </section>
-
-            <!-- Données les plus consultées à droite -->
-            <aside class="sidebar">
-                <h2>Données les plus consultées</h2>
-                <ul>
-                    <li><a href="#">Top 1 - Projet Argent Bank</a></li>
-                    <li><a href="#">Top 2 - Compétences en React</a></li>
-                    <li><a href="#">Top 3 - Mon parcours chez OpenClassrooms</a></li>
-                    <li><a href="#">Top 4 - Contactez-moi</a></li>
-                </ul>
-                <img src="Assets/Images/portrait/IMG_20240126_151241.jpg" alt="photo cv">
-            </aside>
-        </div>
-
-        <!-- Section Parcours avec formulaire et coordonnées -->
-        <section id="parcours">
-            <h2>Mon parcours</h2>
-            <p>Bienvenue dans la section de mon parcours. Vous trouverez ici mes expériences professionnelles et mes études.</p>
-            <!-- Formulaire de contact -->
-            <div class="form-container">
-                <h3>Formulaire de contact</h3>
-                <form>
-                    <label for="name">Nom :</label>
-                    <input type="text" id="name" name="name" required>
-
-                    <label for="email">Email :</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="message">Message :</label>
-                    <textarea id="message" name="message" required></textarea>
-
-                    <button type="submit">Envoyer</button>
-                </form>
-            </div>
-            <!-- Coordonnées -->
-            <div class="contact-info">
-                <h3>Mes coordonnées</h3>
-                <p>Email : chloe.jouin@example.com</p>
-                <p>Téléphone : +33 6 12 34 56 78</p>
-                <p>LinkedIn : <a href="https://www.linkedin.com/in/chloe-jouin">chloe-jouin</a></p>
-                <p>Github : <a href="https://www.github.com/in/chloe-jouin">chloe-jouin</a></p>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Chloé Jouin. Tous droits réservés.</p>
-        </div>
-    </footer>
+    <section id="avis">
+        <h2>Avis</h2>
+        <p>Ajoute ici des avis ou témoignages.</p>
+    </section>
 </body>
 </html>
