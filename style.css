@@ -14,7 +14,7 @@ body {
     display: flex;
     justify-content: center;
     z-index: 10;
-    animation: slide-down 2s forwards; /* Animation pour descendre la nav (plus longue) */
+    animation: slide-down 2s forwards; /* Animation pour descendre la nav */
 }
 
 @keyframes slide-down {
@@ -65,6 +65,93 @@ body {
     100% {
         opacity: 1; /* Termine complètement visible */
     }
+}
+
+.neon-links {
+    position: absolute;
+    bottom: 20px; /* Positionne les liens en bas de l'image */
+    left: 50%; /* Centre horizontalement */
+    transform: translateX(-50%); /* Ajuste le centre */
+    display: flex;
+    gap: 150px; /* Espacement entre les liens */
+    opacity: 0; /* Initialement invisible */
+    animation: fade-in-links 1s forwards; /* Animation pour faire apparaître les liens */
+    animation-delay: 6s; /* Délai avant l'apparition des liens (6s pour attendre que l'image soit affichée) */
+    z-index: 20; /* S'assurer que les liens sont au-dessus de l'image de fond */
+}
+
+@keyframes fade-in-links {
+    0% {
+        opacity: 0; /* Commence transparent */
+    }
+    100% {
+        opacity: 1; /* Termine complètement visible */
+    }
+}
+
+.neon-link {
+    color: #39ff14; /* Vert néon */
+    font-size: 36px; /* Taille de police */
+    text-decoration: none; /* Pas de soulignement */
+    text-transform: uppercase; /* Met le texte en majuscules */
+    text-shadow: 
+        0 0 5px #39ff14,
+        0 0 10px #39ff14,
+        0 0 15px #39ff14,
+        0 0 20px #39ff14,
+        0 0 25px #39ff14; /* Effet néon */
+}
+
+/* Animation de clignotement rapide pour le premier lien */
+@keyframes flicker {
+    0%, 100% {
+        opacity: 1; /* Visible */
+    }
+    50% {
+        opacity: 0; /* Invisible au milieu */
+    }
+}
+
+/* Animation pour le premier lien (clignote vite 2 fois) */
+.neon-link:nth-child(1) {
+    opacity: 0; /* Initialement invisible */
+    animation: appear-flicker 1s forwards; /* Animation pour faire apparaître avec clignotement */
+    animation-delay: 8s; /* Commence après 8 secondes */
+}
+
+/* Animation d'apparition et de clignotement pour le premier lien */
+@keyframes appear-flicker {
+    0% {
+        opacity: 0; /* Invisible au début */
+    }
+    30% {
+        opacity: 1; /* Visible */
+    }
+    50% {
+        opacity: 1; /* Reste visible */
+    }
+    70% {
+        opacity: 0; /* Invisible pour le premier clignotement */
+    }
+    80% {
+        opacity: 1; /* Réapparaît */
+    }
+    90% {
+        opacity: 0; /* Invisible pour le deuxième clignotement */
+    }
+    100% {
+        opacity: 1; /* Visible à la fin */
+    }
+}
+
+/* Liens 2 et 3 */
+.neon-link:nth-child(2),
+.neon-link:nth-child(3) {
+    opacity: 1; /* Visibilité immédiate */
+}
+
+.neon-link:hover {
+    transform: scale(1.1); /* Agrandir légèrement au survol */
 }
 
 section {
