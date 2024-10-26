@@ -192,6 +192,7 @@ section {
   color: white;
 }
 
+
 #projects {
   text-align: center;
   padding: 50px;
@@ -325,4 +326,99 @@ section {
   width: 100px; /* Largeur du logo */
   height: auto; /* Hauteur automatique pour conserver le ratio */
   margin-bottom: 15px; /* Espacement en dessous du logo */
+}
+
+#contact {
+  text-align: center;
+  padding: 50px 20px;
+  color: white; /* Couleur du texte */
+}
+
+.Contact-title {
+  color: rgb(214, 128, 174); /* Rose néon */
+  font-size: 36px;
+  text-decoration: none; /* Pas de soulignement */
+  text-shadow: 
+      0 0 5px rgba(255, 20, 147, 0.7),
+      0 0 10px rgba(255, 20, 147, 0.7),
+      0 0 15px rgba(255, 20, 147, 0.7),
+      0 0 20px rgba(255, 20, 147, 0.7),
+      0 0 25px rgba(255, 20, 147, 0.7);
+}
+
+.contact-form-container {
+  padding: 20px;
+  margin: 0 auto;
+  width: 80%; /* Largeur de la zone du formulaire */
+  max-width: 600px; /* Largeur maximale */
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input, textarea {
+  width: 100%; /* Largeur complète */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc; /* Bordure des champs */
+  border-radius: 5px;
+  background-color: #fff; /* Fond des champs */
+}
+
+textarea {
+  resize: none; /* Désactiver le redimensionnement */
+  height: 100px; /* Hauteur du textarea */
+}
+
+.submit-button {
+  background-color: #ff4081; /* Couleur du bouton */
+  color: white; /* Couleur du texte du bouton */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #ff1a5e; /* Couleur du bouton au survol */
+}
+
+/* Modale Styles */
+.modal {
+  display: none; /* Cacher par défaut */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; /* Pleine largeur */
+  height: 100%; /* Pleine hauteur */
+  overflow: auto; /* Activer le défilement si nécessaire */
+  background-color: rgba(0,0,0,0.4); /* Fond semi-transparent */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Largeur de la modale */
+  max-width: 400px; /* Largeur maximale de la modale */
+  text-align: center;
+}
+
+.close {
+  color: #aaa; /* Couleur de la croix de fermeture */
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
