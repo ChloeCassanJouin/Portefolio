@@ -1,201 +1,195 @@
 body {
-    margin: 0;
-    background-color: black; /* Définit le fond noir */
-    font-family: 'Monoton', cursive;
+  margin: 0;
+  background-color: black;
+  font-family: "Monoton", cursive;
 }
 
 .menu {
-    position: fixed;
-    top: -80px; /* Commence plus haut pour une barre plus large */
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 20px; /* Augmente la hauteur de la barre de navigation */
-    display: flex;
-    justify-content: center;
-    z-index: 10;
-    animation: slide-down 2s forwards; /* Animation pour descendre la nav */
+  position: fixed;
+  top: -80px;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center; /* Centrer le contenu */
+  z-index: 10;
+  animation: slide-down 2s forwards;
+}
+.menu .link-nav {
+  color: rgb(255, 20, 147);
+  text-decoration: none;
+  margin: 0 25px; /* Espacement entre les liens */
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.menu .link-nav:hover {
+  color: #ff4081;
 }
 
 @keyframes slide-down {
-    0% {
-        top: -80px; /* Position initiale au-dessus de l'écran */
-    }
-    100% {
-        top: 0; /* Position finale */
-    }
-}
-
-.link-nav {
-    color: rgba(255, 20, 147, 1);
-    text-decoration: none;
-    margin: 0 25px; /* Élargit l'espace entre les liens */
-    font-size: 24px; /* Augmente la taille du texte */
-    transition: color 0.3s;
-}
-
-.link:hover {
-    color: #ff4081; /* Couleur au survol */
-}
-
-.background-container {
-    position: relative;
-    height: 100vh; /* Prend toute la hauteur de l'écran */
-    overflow: hidden;
-}
-
-.background-image {
-    background-image: url('Assets/Images/background-image/cassette.jpg'); /* Chemin correct de l'image */
-    background-size: 82%;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    position: absolute;
+  0% {
+    top: -80px;
+  }
+  100% {
     top: 0;
-    left: 0;
-    opacity: 0; /* Opacité initiale */
-    animation: fade-in 6s forwards; /* Animation fade-in plus longue */
-    animation-delay: 2s; /* Pause de 2 secondes avant de commencer à apparaître */
+  }
 }
-
+.background-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.background-container .background-image {
+  background-image: url("Assets/Images/background-image/cassette.jpg");
+  background-size: 82%;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation: fade-in 6s forwards;
+  animation-delay: 2s;
+}
 @keyframes fade-in {
-    0% {
-        opacity: 0; /* Commence transparent */
-    }
-    100% {
-        opacity: 1; /* Termine complètement visible */
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .neon-links {
-    position: absolute;
-    bottom: 20px; /* Positionne les liens en bas de l'image */
-    left: 50%; /* Centre horizontalement */
-    transform: translateX(-50%); /* Ajuste le centre */
-    display: flex;
-    gap: 220px; /* Espacement entre les liens */
-    opacity: 0; /* Initialement invisible */
-    animation: fade-in-links 1s forwards; /* Animation pour faire apparaître les liens */
-    animation-delay: 6s; /* Délai avant l'apparition des liens (6s pour attendre que l'image soit affichée) */
-    z-index: 20; /* S'assurer que les liens sont au-dessus de l'image de fond */
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 220px;
+  opacity: 0;
+  animation: fade-in-links 1s forwards;
+  animation-delay: 6s; /* Délai avant l'apparition des liens */
+  z-index: 20;
+  font-size: 36px;
+  text-transform: uppercase;
 }
 
 @keyframes fade-in-links {
-    0% {
-        opacity: 0; /* Commence transparent */
-    }
-    100% {
-        opacity: 1; /* Termine complètement visible */
-    }
-}
-
-.neon-links {
-    font-size: 36px; /* Taille de police */
-
-    text-transform: uppercase; /* Met le texte en majuscules */
+  0% {
+      opacity: 0; /* Commence transparent */
+  }
+  100% {
+      opacity: 1; /* Termine complètement visible */
+  }
 }
 
 /* Neon Link 1: Bleu néon */
 .neon-link1 {
-    color: rgb(0, 217, 255); /* Bleu néon */
-    text-decoration: none; /* Pas de soulignement */
-    text-shadow: 
-        0 0 5px rgba(0, 100, 255, 0.7),
-        0 0 10px rgba(0, 100, 255, 0.7),
-        0 0 15px rgba(0, 100, 255, 0.7),
-        0 0 20px rgba(0, 100, 255, 0.7),
-        0 0 25px rgba(0, 100, 255, 0.7);
+  color: rgb(0, 217, 255); /* Bleu néon */
+  text-decoration: none; /* Pas de soulignement */
+  text-shadow: 
+      0 0 5px rgba(0, 100, 255, 0.7),
+      0 0 10px rgba(0, 100, 255, 0.7),
+      0 0 15px rgba(0, 100, 255, 0.7),
+      0 0 20px rgba(0, 100, 255, 0.7),
+      0 0 25px rgba(0, 100, 255, 0.7);
 }
 
 /* Neon Link 2: Vert néon */
 .neon-link2 {
-    color: rgb(132, 240, 113); /* Vert néon */
-    text-decoration: none; /* Pas de soulignement */
-    text-shadow: 
-        0 0 5px rgba(57, 255, 20, 0.7),
-        0 0 10px rgba(57, 255, 20, 0.7),
-        0 0 15px rgba(57, 255, 20, 0.7),
-        0 0 20px rgba(57, 255, 20, 0.7),
-        0 0 25px rgba(57, 255, 20, 0.7);
+  color: rgb(132, 240, 113); /* Vert néon */
+  text-decoration: none; /* Pas de soulignement */
+  text-shadow: 
+      0 0 5px rgba(57, 255, 20, 0.7),
+      0 0 10px rgba(57, 255, 20, 0.7),
+      0 0 15px rgba(57, 255, 20, 0.7),
+      0 0 20px rgba(57, 255, 20, 0.7),
+      0 0 25px rgba(57, 255, 20, 0.7);
 }
 
 /* Neon Link 3: Jaune néon */
 .neon-link3 {
-    color: rgb(255, 255, 95); /* Jaune néon */
-    text-decoration: none; /* Pas de soulignement */
-    text-shadow: 
-        0 0 5px rgba(255, 255, 0, 0.7),
-        0 0 10px rgba(255, 255, 0, 0.7),
-        0 0 15px rgba(255, 255, 0, 0.7),
-        0 0 20px rgba(255, 255, 0, 0.7),
-        0 0 25px rgba(255, 255, 0, 0.7);
+  color: rgb(255, 255, 95); /* Jaune néon */
+  text-decoration: none; /* Pas de soulignement */
+  text-shadow: 
+      0 0 5px rgba(255, 255, 0, 0.7),
+      0 0 10px rgba(255, 255, 0, 0.7),
+      0 0 15px rgba(255, 255, 0, 0.7),
+      0 0 20px rgba(255, 255, 0, 0.7),
+      0 0 25px rgba(255, 255, 0, 0.7);
 }
 
 /* Animation de clignotement rapide pour le premier lien */
 @keyframes flicker {
-    0%, 100% {
-        opacity: 1; /* Visible */
-    }
-    50% {
-        opacity: 0; /* Invisible au milieu */
-    }
+  0%, 100% {
+      opacity: 1; /* Visible */
+  }
+  50% {
+      opacity: 0; /* Invisible au milieu */
+  }
 }
 
 /* Animation pour le premier lien (clignote vite 2 fois) */
 .neon-link1:nth-child(1) {
-    opacity: 0; /* Initialement invisible */
-    animation: appear-flicker 1s forwards; /* Animation pour faire apparaître avec clignotement */
-    animation-delay: 8s; /* Commence après 8 secondes */
+  opacity: 0; /* Initialement invisible */
+  animation: appear-flicker 1s forwards; /* Animation pour faire apparaître avec clignotement */
+  animation-delay: 8s; /* Commence après 8 secondes */
 }
 
 /* Animation d'apparition et de clignotement pour le premier lien */
 @keyframes appear-flicker {
-    0% {
-        opacity: 0; /* Invisible au début */
-    }
-    30% {
-        opacity: 1; /* Visible */
-    }
-    50% {
-        opacity: 1; /* Reste visible */
-    }
-    70% {
-        opacity: 0; /* Invisible pour le premier clignotement */
-    }
-    80% {
-        opacity: 1; /* Réapparaît */
-    }
-    90% {
-        opacity: 0; /* Invisible pour le deuxième clignotement */
-    }
-    100% {
-        opacity: 1; /* Visible à la fin */
-    }
+  0% {
+      opacity: 0; /* Invisible au début */
+  }
+  30% {
+      opacity: 1; /* Visible */
+  }
+  50% {
+      opacity: 1; /* Reste visible */
+  }
+  70% {
+      opacity: 0; /* Invisible pour le premier clignotement */
+  }
+  80% {
+      opacity: 1; /* Réapparaît */
+  }
+  90% {
+      opacity: 0; /* Invisible pour le deuxième clignotement */
+  }
+  100% {
+      opacity: 1; /* Visible à la fin */
+  }
 }
 
 /* Liens 2 et 3 */
 .neon-link2:nth-child(2),
 .neon-link3:nth-child(3) {
-    opacity: 1; /* Visibilité immédiate */
+  opacity: 1; /* Visibilité immédiate */
 }
 
 .neon-link1,
 .neon-link2,
 .neon-link3 {
-    display: inline-block; /* Nécessaire pour un effet de transformation fluide */
-    transform-origin: center; /* Centre l'agrandissement */
-    transition: transform 0.2s ease; /* Transition douce pour le survol */
+  display: inline-block; /* Nécessaire pour un effet de transformation fluide */
+  transform-origin: center; /* Centre l'agrandissement */
+  transition: transform 0.2s ease; /* Transition douce pour le survol */
 }
 
 .neon-link1:hover,
 .neon-link2:hover,
 .neon-link3:hover {
-    transform: scale(1.1); /* Grossit légèrement à partir du centre */
+  transform: scale(1.1); /* Grossit légèrement à partir du centre */
 }
 
 section {
-    padding: 100px 20px;
-    text-align: center;
-    color: white; /* Optionnel, pour que le texte soit visible sur un fond sombre */
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
 }
+
+/*# sourceMappingURL=style.css.map */
