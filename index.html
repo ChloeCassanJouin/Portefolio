@@ -9,8 +9,8 @@
 </head>
 <body>
     <nav class="menu">
-        <a href="#devweb" class="link-nav"><span>DEVELOPPEUR WEB</span></a>
-        <a href="#devweb" class="link-nav"><span>CHLOE JOUIN</span></a>
+        <a href="#contact" class="link-nav"><span>DEVELOPPEUR WEB</span></a>
+        <a href="#contact" class="link-nav"><span>CHLOE JOUIN</span></a>
         <a href="#contact" class="link-nav"><span>CONTACT</span></a>
     </nav>
     
@@ -21,27 +21,65 @@
     <div class="neon-links">
         <a href="#projets" class="neon-link1">PROJETS</a>
         <a href="#parcours" class="neon-link2">PARCOURS</a>
-        <a href="#formation" class="neon-link3">FORMATION</a>
+        <a href="outside-opinions.html" class="neon-link3">avis</a>
     </div>
 
-    <section id="devweb">
-        <h2>Mon Parcours</h2>
-        <p>Ajoute ici des informations sur ton parcours professionnel.</p>
-    </section>
+    
+To create a section resembling "Gros projets" from the Keziah Moselle site, you can use HTML and CSS as follows:
 
-    <section id="projets">
-        <h2>Mes Projets</h2>
-        <p>Ajoute ici des descriptions de tes projets.</p>
-    </section>
+HTML Structure
+html
+Copier le code
+<section id="projects">
+    <h2>PROJETS</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="Assets/Images/PROJETS/Argent-Bank/argent-bank1.png" alt="Argent Bank accueil">
+                <img src="Assets/Images/PROJETS/Argent-Bank/argent-bank2.png" alt="Argent Bank identifiant">
+                <img src="Assets/Images/PROJETS/Argent-Bank/argent-bank3.png" alt="Argent Bank accounts">
+            </div>
+            <div class="project-content">
+                <div class="year-tag">2024</div> <!-- Tag Année -->
+                <h3>ARGENT BANK</h3>
+                <p>Brief description of the project.</p>
+                <div class="tags">
+                    <span>compétences/ outils</span>
+                    <span>Frontend</span>
+                </div>
+                <div class="project-links">
+                    <a href="#view">Voir le Projet</a>
+                    <a href="#github">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image">
+                <img src="Assets/Images/PROJETS/Photograph-Sophie-Bluel/sophie-bluel1.PNG" alt="Sophie Bluel accueil">
+                
+            </div>
+            <div class="project-content">
+                <div class="year-tag">2024</div> <!-- Tag Année -->
+                <h3>PHOTOGRAPHE SOPHIE BLUEL</h3>
+                <p>Brief description of the project.</p>
+                <div class="tags">
+                    <span>compétences/ outils</span>
+                    <span>Frontend</span>
+                </div>
+                <div class="project-links">
+                    <a href="#view">Voir le Projet</a>
+                    <a href="#github">GitHub</a>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat similar cards for each project -->
+    </div>
+</section>
 
     <section id="parcours">
         <h2>Mon Parcours</h2>
         <p>Ajoute ici des informations sur ton parcours professionnel.</p>
-    </section>
-
-    <section id="avis">
-        <h2>Avis</h2>
-        <p>Ajoute ici des avis ou témoignages.</p>
     </section>
 
     <script src="script.js"></script> <!-- Lien vers le fichier JavaScript -->
