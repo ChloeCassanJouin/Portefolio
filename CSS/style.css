@@ -43,7 +43,7 @@ body {
   overflow: hidden;
 }
 .background-container .background-image {
-  background-image: url("Assets/Images/background-image/cassette.jpg");
+  background-image: url(../Assets/Images/background-image/cassette.jpg);
   background-size: 82%;
   background-position: center;
   width: 100%;
