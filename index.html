@@ -10,9 +10,11 @@
 </head>
 <body>
     <nav class="menu">
-        <a href="#contact" class="link-nav"><span>DEVELOPPEUR WEB</span></a>
-        <a href="#contact" class="link-nav"><span>CHLOE JOUIN</span></a>
-        <a href="#contact" class="link-nav"><span>CONTACT</span></a>
+        <div class="nav-content">
+            <a href="#contact" class="link-nav dev-web"><span>DEVELOPPEUR WEB</span></a>
+            <a href="#contact" class="link-nav chloe-jouin"><span>CHLOE JOUIN</span></a>
+            <a href="#contact" class="link-nav contact"><span>CONTACT</span></a>
+        </div>
         <button id="toggle-music-button">Arrêter la musique</button>
     </nav>
     
@@ -26,7 +28,6 @@
         <a href="outside-opinions.html" class="neon-link3">avis</a>
     </div>
 
-    
 <section id="projects" class="neon-border">
     <div class="projects-grid">
         <section id="projects" class="neon-border">
@@ -34,44 +35,6 @@
             <div class="projects-grid" id="projects-grid"></div>
         </section>
         
-        
-        <!--<section id="#projets" class="neon-border">
-            <h2 class="Projects-title">PROJETS</h2>
-        <a href="pages/Argent-Bank.html" class="project-card">
-            <div class="project-image">
-                <img src="Assets/Images/PROJETS/Argent-Bank/argent-bank1.png" alt="Argent Bank accueil">
-                <img src="Assets/Images/PROJETS/Argent-Bank/argent-bank2.png" alt="Argent Bank identifiant">
-                <img src="Assets/Images/PROJETS/Argent-Bank/argent-bank3.png" alt="Argent Bank accounts">
-            </div>
-            <div class="project-content">
-                <h3>ARGENT BANK</h3>
-                <p>Brief description of the project.</p>
-                <div class="tags">
-                    <span>compétences/ outils</span>
-                    <span>Frontend</span>
-                </div>
-            </div>
-        </a>
-    </div>
-        
-    <a href="pages/Photographe-S-Bluel.html" class="project-card">
-            <div class="project-image">
-                <img src="Assets/Images/PROJETS/Photograph-Sophie-Bluel/sophie-bluel1.PNG" alt="Sophie Bluel accueil">
-                
-            </div>
-            <div class="project-content">
-                <div class="year-tag">2024</div> 
-                <h3>PHOTOGRAPHE SOPHIE BLUEL</h3>
-                <p>Brief description of the project.</p>
-                <div class="tags">
-                    <span>compétences/ outils</span>
-                    <span>Frontend</span>
-                </div>
-            </div>
-        </div>
-    </a>
-</section>-->
-
 <section id="parcours">
     <h2 class="Parcours-title">Mon Parcours</h2>
     <div class="carousel-container">
@@ -80,48 +43,6 @@
         <div class="carousel-chevron right">&#10095;</div>
     </div>
 </section>
-
-<!--<section id="parcours" class="neon-border">
-    <h2 class="Parcours-title">PARCOURS</h2>
-    <div class="parcours-content">
-        <div class="parcours-item">
-            <img src="Assets/Images/Logos/openclassrooms.jpg" alt="Logo openclassrooms" class="parcours-logo">
-            <p>Formation</p>
-            <p>Intégrateur Web</p>
-            <p>2024</p>
-        </div>
-        <div class="parcours-item">
-            <img src="Assets/Images/Logos/CATS.png" alt="Logo CATS" class="parcours-logo">
-            <p>Stage observation</p>
-            <p>Développeur Cobol</p>
-            <p>2023-24-25</p>
-        </div>
-        <div class="parcours-item">
-            <img src="Assets/Images/Logos/DN-Info-Reseau.png" alt="Logo DN-Info-Reseau" class="parcours-logo">
-            <p>Stage observation</p>
-            <p>Développeur Web</p>
-            <p>2024</p>
-        </div>
-        <div class="parcours-item">
-            <img src="Assets/Images/Logos/capfruit.jpg" alt="Logo capfruit" class="parcours-logo">
-            <p>en Poste</p>
-            <p>Assistante ADV export</p>
-            <p>2022</p>
-        </div>
-        <div class="parcours-item">
-            <img src="Assets/Images/Logos/drome-cailles.jpg" alt="Logo drome-cailles" class="parcours-logo">
-            <p>en Poste</p>
-            <p>Assistante ADV</p>
-            <p>20??</p>
-        </div>
-        <div class="parcours-item">
-            <img src="Assets/Images/Logos/onlylyon.png" alt="Logo onlylyon" class="parcours-logo">
-            <p>en Poste</p>
-            <p>Assistante administrative</p>
-            <p>20??</p>
-        </div>
-    </div>
-</section>-->
 
 <section id="contact" class="neon-border">
     <h2 class="Contact-title">CONTACT</h2>
@@ -139,7 +60,6 @@
             <button type="submit" class="submit-button">Envoyer</button>
         </form>
     </div>
-
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -150,8 +70,11 @@
 
 <audio id="background-music" src="Assets/music/(FREE) 80s Type Beat - Delorean  The Weeknd x Dua Lipa Pop Synthwave.mp3"></audio>
 
+<script src="js/navbar.js"></script>   
+<script src="js/music-play.js"></script>    
+<script src="js/project.js"></script> <!-- Lien vers le fichier JavaScript -->
+<script src="js/parcours.js"></script>
 
-    <script src="js/project.js"></script> <!-- Lien vers le fichier JavaScript -->
-    <script src="js/parcours.js"></script>
 </body>
+
 </html>
