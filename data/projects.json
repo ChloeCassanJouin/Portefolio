@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "ARGENT BANK",
+        "year": 2024,
+        "description": "Brief description of the project.",
+        "skills": ["Frontend", "compétences/ outils"],
+        "images": [
+            "Assets/Images/PROJETS/Argent-Bank/argent-bank1.png",
+            "Assets/Images/PROJETS/Argent-Bank/argent-bank2.png",
+            "Assets/Images/PROJETS/Argent-Bank/argent-bank3.png"
+        ],
+        "link": "pages/Argent-Bank.html"
+    },
+    {
+        "id": 2,
+        "title": "PHOTOGRAPHE SOPHIE BLUEL",
+        "year": 2024,
+        "description": "Brief description of the project.",
+        "skills": ["Frontend", "compétences/ outils"],
+        "images": [
+            "Assets/Images/PROJETS/Photograph-Sophie-Bluel/sophie-bluel1.PNG"
+        ],
+        "link": "pages/Photographe-S-Bluel.html"
+    }
+]

@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chloé Jouin - Développeur Web Front End - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/style.css"> <!-- Lien vers le CSS compilé -->
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
     <nav class="menu">
         <a href="#contact" class="link-nav"><span>DEVELOPPEUR WEB</span></a>
         <a href="#contact" class="link-nav"><span>CHLOE JOUIN</span></a>
         <a href="#contact" class="link-nav"><span>CONTACT</span></a>
+        <button id="toggle-music-button">Arrêter la musique</button>
     </nav>
     
     <div class="background-container">
@@ -31,53 +32,56 @@ HTML Structure
 html
 Copier le code
 <section id="projects" class="neon-border">
-    <h2 class="Projects-title">PROJETS</h2>
     <div class="projects-grid">
-        <div class="project-card">
+        <section id="projects" class="neon-border">
+            <h2 class="Projects-title">PROJETS</h2>
+            <div class="projects-grid" id="projects-grid"></div>
+        </section>
+        
+        
+        <!--<section id="#projets" class="neon-border">
+            <h2 class="Projects-title">PROJETS</h2>
+        <a href="pages/Argent-Bank.html" class="project-card">
             <div class="project-image">
                 <img src="Assets/Images/PROJETS/Argent-Bank/argent-bank1.png" alt="Argent Bank accueil">
                 <img src="Assets/Images/PROJETS/Argent-Bank/argent-bank2.png" alt="Argent Bank identifiant">
                 <img src="Assets/Images/PROJETS/Argent-Bank/argent-bank3.png" alt="Argent Bank accounts">
             </div>
             <div class="project-content">
-                <div class="year-tag">2024</div> <!-- Tag Année -->
                 <h3>ARGENT BANK</h3>
                 <p>Brief description of the project.</p>
                 <div class="tags">
                     <span>compétences/ outils</span>
                     <span>Frontend</span>
                 </div>
-                <div class="project-links">
-                    <a href="#view">Voir le Projet</a>
-                    <a href="#github">GitHub</a>
-                </div>
             </div>
-        </div>
-
-        <div class="project-card">
+        </a>
+    </div>
+        
+    <a href="pages/Photographe-S-Bluel.html" class="project-card">
             <div class="project-image">
                 <img src="Assets/Images/PROJETS/Photograph-Sophie-Bluel/sophie-bluel1.PNG" alt="Sophie Bluel accueil">
                 
             </div>
             <div class="project-content">
-                <div class="year-tag">2024</div> <!-- Tag Année -->
+                <div class="year-tag">2024</div> 
                 <h3>PHOTOGRAPHE SOPHIE BLUEL</h3>
                 <p>Brief description of the project.</p>
                 <div class="tags">
                     <span>compétences/ outils</span>
                     <span>Frontend</span>
                 </div>
-                <div class="project-links">
-                    <a href="#view">Voir le Projet</a>
-                    <a href="#github">GitHub</a>
-                </div>
             </div>
         </div>
-        <!-- Repeat similar cards for each project -->
-    </div>
-</section>
+    </a>
+</section>-->
 
 <section id="parcours" class="neon-border">
+    <h2 class="Parcours-title">PARCOURS</h2>
+    <div class="parcours-content" id="parcours-content"></div>
+</section>
+
+<!--<section id="parcours" class="neon-border">
     <h2 class="Parcours-title">PARCOURS</h2>
     <div class="parcours-content">
         <div class="parcours-item">
@@ -116,9 +120,8 @@ Copier le code
             <p>Assistante administrative</p>
             <p>20??</p>
         </div>
-        <!-- Ajoute d'autres parcours ici -->
     </div>
-</section>
+</section>-->
 
 <section id="contact" class="neon-border">
     <h2 class="Contact-title">CONTACT</h2>
@@ -145,6 +148,10 @@ Copier le code
     </div>
 </section>
 
-    <script src="script.js"></script> <!-- Lien vers le fichier JavaScript -->
+<audio id="background-music" src="Assets/music/(FREE) 80s Type Beat - Delorean  The Weeknd x Dua Lipa Pop Synthwave.mp3"></audio>
+
+
+    <script src="js/project.js"></script> <!-- Lien vers le fichier JavaScript -->
+    <script src="js/parcours.js"></script>
 </body>
 </html>
