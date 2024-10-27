@@ -1,15 +1,14 @@
-// Fonction pour charger les données JSON du parcours
+let currentIndex = 0; // Index de la carte actuelle
+
 async function loadParcours() {
     try {
-        const response = await fetch('data/parcours.json'); // Chemin vers le fichier JSON
+        const response = await fetch('data/parcours.json');
         const parcours = await response.json();
         
-        // Sélectionner le conteneur pour les éléments de parcours
         const parcoursContent = document.getElementById('parcours-content');
         
-        // Parcourir chaque élément de parcours et créer les éléments
-        parcours.forEach(item => {
-            // Création du conteneur de chaque élément de parcours
+        // Créer et ajouter chaque élément de parcours
+        parcours.forEach((item) => {
             const parcoursItem = document.createElement('div');
             parcoursItem.classList.add('parcours-item');
             
@@ -19,7 +18,7 @@ async function loadParcours() {
             img.alt = item.alt;
             img.classList.add('parcours-logo');
             
-            // Type de parcours (ex. Formation, Stage)
+            // Type de parcours
             const type = document.createElement('p');
             type.textContent = item.type;
             
@@ -31,19 +30,52 @@ async function loadParcours() {
             const year = document.createElement('p');
             year.textContent = item.year;
             
-            // Ajouter les éléments dans le conteneur de parcours
+            // Ajouter les éléments dans l'élément de parcours
             parcoursItem.appendChild(img);
             parcoursItem.appendChild(type);
             parcoursItem.appendChild(role);
             parcoursItem.appendChild(year);
             
-            // Ajouter l'élément au conteneur principal
+            // Ajouter au conteneur principal
             parcoursContent.appendChild(parcoursItem);
         });
+
+        // Centrer la première carte
+        updateCarousel();
     } catch (error) {
         console.error('Erreur lors du chargement du parcours :', error);
     }
 }
 
-// Appeler la fonction pour charger le parcours lorsque la page est chargée
-document.addEventListener('DOMContentLoaded', loadParcours);
+// Fonction pour déplacer le carrousel
+function moveCarousel(direction) {
+    const parcoursContent = document.getElementById('parcours-content');
+    const totalItems = parcoursContent.children.length;
+    
+    // Calculer le nouvel index de la carte actuelle
+    currentIndex = (currentIndex + direction + totalItems) % totalItems;
+    
+    updateCarousel();
+}
+
+// Mettre à jour l'affichage du carrousel
+function updateCarousel() {
+    const parcoursContent = document.getElementById('parcours-content');
+    const itemWidth = parcoursContent.children[0].offsetWidth + 20; // Inclut l'espacement entre les items
+    
+    // Déplacer le carrousel pour afficher la carte actuelle
+    parcoursContent.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+}
+
+// Ajouter les événements pour les chevrons
+document.addEventListener('DOMContentLoaded', () => {
+    loadParcours();
+
+    document.querySelector('.carousel-chevron.left').addEventListener('click', () => {
+        moveCarousel(-1); // Déplacer à gauche
+    });
+
+    document.querySelector('.carousel-chevron.right').addEventListener('click', () => {
+        moveCarousel(1); // Déplacer à droite
+    });
+});

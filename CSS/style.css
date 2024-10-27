@@ -422,3 +422,73 @@ textarea {
   text-decoration: none;
   cursor: pointer;
 }
+
+/* Conteneur principal du carousel */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  padding: 20px 0;
+}
+
+/* Conteneur pour les items de parcours qui défilent */
+.carousel-content {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 20px;
+}
+
+/* Chevron de navigation */
+.carousel-chevron {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+  user-select: none;
+}
+
+/* Position des chevrons */
+.carousel-chevron.left {
+  left: 10px;
+}
+
+.carousel-chevron.right {
+  right: 10px;
+}
+
+/* Style des éléments du carousel */
+.carousel-item {
+  flex: 0 0 300px; /* Largeur fixe de chaque card */
+  background: #333;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.carousel-item img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 50%;
+}
+
+.carousel-item p {
+  color: white;
+}
+
+/* Centre le premier élément de la liste au chargement */
+.carousel-content.start-at-center {
+  transform: translateX(calc(50vw - 150px)); /* Centrage de la première card */
+}
+
+/* Animation au survol pour l'effet de zoom */
+.carousel-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
