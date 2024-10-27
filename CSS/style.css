@@ -4,6 +4,10 @@ body {
   font-family: "Monoton", cursive;
 }
 
+p {
+  font-family: 'Zen Dots', sans-serif;
+}
+
 .menu {
   position: fixed;
   top: -80px;
@@ -288,46 +292,7 @@ section {
   top: 10px; /* Slides down when hovering */
 }
 
-#parcours {
-  text-align: center;
-  padding: 50px 20px;
-  color: white; /* Couleur du texte */
-}
-
-.Parcours-title {
-  color: rgb(183, 233, 171); /* Vert néon */
-  text-decoration: none; /* Pas de soulignement */
-  font-size: 36px;
-  text-shadow: 
-      0 0 5px rgba(57, 255, 20, 0.7),
-      0 0 10px rgba(57, 255, 20, 0.7),
-      0 0 15px rgba(57, 255, 20, 0.7),
-      0 0 20px rgba(57, 255, 20, 0.7),
-      0 0 25px rgba(57, 255, 20, 0.7);
-}
-
-.parcours-content {
-  display: flex;
-  flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
-  justify-content: center; /* Centre les éléments horizontalement */
-  gap: 20px; /* Espace entre les éléments */
-}
-
-.parcours-item {
-  background: #333; /* Couleur de fond des éléments de parcours */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  max-width: 250px; /* Largeur maximale de chaque élément */
-  text-align: center; /* Centre le texte */
-}
-
-.parcours-logo {
-  width: 100px; /* Largeur du logo */
-  height: auto; /* Hauteur automatique pour conserver le ratio */
-  margin-bottom: 15px; /* Espacement en dessous du logo */
-}
-
+/* FORMULAIRE CONTACT***********************************************/
 #contact {
   text-align: center;
   padding: 50px 20px;
@@ -386,7 +351,7 @@ textarea {
   background-color: #ff1a5e; /* Couleur du bouton au survol */
 }
 
-/* Modale Styles */
+/******************************************************** Modale Styles */
 .modal {
   display: none; /* Cacher par défaut */
   position: fixed;
@@ -423,72 +388,83 @@ textarea {
   cursor: pointer;
 }
 
-/* Conteneur principal du carousel */
+/*PARCOURS SLIDER *****************************************/
+
+#parcours {
+  text-align: center;
+  padding: 50px 20px;
+  color: white; /* Couleur du texte */
+}
+
+.Parcours-title {
+  color: rgb(183, 233, 171); /* Vert néon */
+  text-decoration: none; /* Pas de soulignement */
+  font-size: 36px;
+  text-shadow: 
+      0 0 5px rgba(57, 255, 20, 0.7),
+      0 0 10px rgba(57, 255, 20, 0.7),
+      0 0 15px rgba(57, 255, 20, 0.7),
+      0 0 20px rgba(57, 255, 20, 0.7),
+      0 0 25px rgba(57, 255, 20, 0.7);
+}
+
 .carousel-container {
   display: flex;
+  justify-content: center; /* Centrer les éléments */
   align-items: center;
   position: relative;
+  perspective: 1200px; /* Pour l'effet 3D */
   overflow: hidden;
-  max-width: 100%;
-  padding: 20px 0;
+  width: 100%; /* Ajustez selon vos besoins */
+  height: 400px; /* Ajustez selon vos besoins */
 }
 
-/* Conteneur pour les items de parcours qui défilent */
 .carousel-content {
-  display: flex;
-  transition: transform 0.5s ease;
-  gap: 20px;
+  display: flex; /* Pour aligner les cartes horizontalement */
+  transition: transform 0.5s ease; /* Ajoute une transition douce lors du déplacement */
+  transform-style: preserve-3d; /* Pour permettre les transformations 3D */
+  position: relative;
 }
 
-/* Chevron de navigation */
+.parcours-item {
+  position: relative; /* Positionnement relatif pour le carrousel */
+  width: 200px; /* Ajustez selon vos besoins */
+  height: 250px; /* Ajustez selon vos besoins */
+  background: #333; /* Ajustez la couleur selon vos besoins */
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0.5; /* Opacité réduite par défaut */
+}
+
+.parcours-logo {
+  width: 100px; /* Largeur du logo */
+  height: auto; /* Hauteur automatique pour conserver le ratio */
+  margin-bottom: 15px; /* Espacement en dessous du logo */
+}
+
+.parcours-item.active {
+  opacity: 1; /* Pleine opacité pour la carte active */
+  transform: scale(1.1); /* Mettez en valeur l'élément central */
+}
+
 .carousel-chevron {
+  font-size: 2rem;
+  color: white;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 2rem;
-  color: white;
   cursor: pointer;
   z-index: 10;
-  user-select: none;
 }
 
-/* Position des chevrons */
 .carousel-chevron.left {
   left: 10px;
 }
 
 .carousel-chevron.right {
   right: 10px;
-}
-
-/* Style des éléments du carousel */
-.carousel-item {
-  flex: 0 0 300px; /* Largeur fixe de chaque card */
-  background: #333;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-}
-
-.carousel-item img {
-  width: 100px;
-  height: auto;
-  margin-bottom: 15px;
-  border-radius: 50%;
-}
-
-.carousel-item p {
-  color: white;
-}
-
-/* Centre le premier élément de la liste au chargement */
-.carousel-content.start-at-center {
-  transform: translateX(calc(50vw - 150px)); /* Centrage de la première card */
-}
-
-/* Animation au survol pour l'effet de zoom */
-.carousel-item:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
 }

@@ -46,5 +46,21 @@
         "type": "En Poste",
         "role": "Assistante administrative",
         "year": "20??"
+    },
+    {
+        "id": 7,
+        "image": "Assets/Images/Logos/onlylyon.png",
+        "alt": "Logo onlylyon",
+        "type": "En Poste",
+        "role": "Assistante administrative",
+        "year": "20??"
+    },
+    {
+        "id": 8,
+        "image": "Assets/Images/Logos/onlylyon.png",
+        "alt": "Logo onlylyon",
+        "type": "En Poste",
+        "role": "Assistante administrative",
+        "year": "20??"
     }
 ]
