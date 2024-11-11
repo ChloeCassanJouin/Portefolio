@@ -8,6 +8,92 @@ p {
   font-family: 'Zen Dots', sans-serif;
 }
 
+/*LOADER*****************************************************/
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeOut 3s forwards;
+  animation-delay: 1s; /* Attends 1 seconde avant de lancer l'animation */
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* Sun ball with neon gradient */
+.ball {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(rgb(255, 102, 0), rgb(255, 0, 150)); /* Yellow to neon pink */
+  position: relative; /* Position relative pour positionner les lignes à l'intérieur */
+  /*box-shadow: 0 0 30px 20px rgba(240, 10, 110, 0.8); /* Soft neon pink halo */
+  z-index: 1; /* La boule doit être derrière les lignes */
+}
+
+/* Styling for the rays */
+.line {
+  width: 200%; /* Lignes horizontales adaptées à la taille de la boule */
+  height: 4px;
+  background-color: black; /* Rose néon intense */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Centrage horizontal de la ligne */
+  animation: rise 6s infinite linear;
+  z-index: 2; /* Les lignes doivent être devant la boule */
+}
+
+/* Position des lignes autour de la boule */
+.line1 {
+  top: 100%;
+  height: 10px; /* Ligne la plus basse et la plus haute */
+}
+.line2 {
+  top: 90%;
+  height: 8px;
+}
+.line3 {
+  top: 80%;
+  height: 6px;
+}
+.line4 {
+  top: 70%;
+  height: 4px;
+}
+.line5 {
+  top: 60%;
+  height: 2px; /* Ligne la plus haute et la plus petite */
+}
+/* Animation pour faire monter les lignes */
+@keyframes rise {
+  0% {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+  }
+  100% {
+      transform: translateX(-50%) translateY(-100px); /* Monte de 100px */
+      opacity: 0;
+  }
+}
+
+/* Main content (hidden by default, will be shown after loader) */
+.content {
+  display: none;
+  text-align: center;
+  padding: 20px;
+}
 /*navbar*****************************************************/
 
 .menu {
@@ -231,7 +317,7 @@ section {
 #projects {
   text-align: center;
   padding: 50px;
-  color: #fff;
+  color: pink;
 }
 
 .Projects-title {
@@ -498,4 +584,58 @@ textarea {
 
 .carousel-chevron.right {
   right: 10px;
+}
+
+/* PAGE PROJETS **************************************/
+.project-item {
+  background-color: grey;
+}
+
+.project-item h3 {
+  color: pink;
+}
+
+/*MODAL PROJETCT ************************/
+/* Style pour la modale */
+.modal-projects {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content-projects {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-projects img {
+  max-width: 100%;
+  height: auto;
+  margin: 5px 0;
+}
+
+.tags span, .tool {
+  background-color: #eee;
+  border-radius: 4px;
+  padding: 3px 5px;
+  margin: 2px;
+  font-size: 0.9em;
 }
