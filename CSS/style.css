@@ -522,6 +522,7 @@ textarea {
   text-align: center;
   padding: 50px 20px;
   color: white; /* Couleur du texte */
+
 }
 
 .Parcours-title {
@@ -536,36 +537,59 @@ textarea {
       0 0 25px rgba(57, 255, 20, 0.7);
 }
 
+.parcours-container {
+  display: flex; /* Flexbox pour aligner les éléments horizontalement */
+  justify-content: center; /* Espacer l'image et les carousels */
+  align-items: flex-start; /* Aligner les éléments au début (en haut) */
+  gap: 20px; /* Espacement entre l'image et les carousels */
+}
+
+.portrait {
+  flex-shrink: 0; /* Empêche l'image de se réduire */
+}
+
+.portrait-img {
+  width: 200px;  /* Ajuste la largeur de l'image */
+  height: auto;  /* Laisse la hauteur s'ajuster automatiquement */
+}
+
 .carousel-container {
-  display: flex;
-  justify-content: center; /* Centrer les éléments */
-  align-items: center;
+  width: 100%; /* Le carousel occupe toute la largeur de son conteneur */
   position: relative;
-  perspective: 1200px; /* Pour l'effet 3D */
-  overflow: hidden;
-  width: 100%; /* Ajustez selon vos besoins */
-  height: 400px; /* Ajustez selon vos besoins */
+  overflow: hidden; /* Cache tout ce qui dépasse de l'élément parent */
 }
 
 .carousel-content {
-  display: flex; /* Pour aligner les cartes horizontalement */
-  transition: transform 0.5s ease; /* Ajoute une transition douce lors du déplacement */
-  transform-style: preserve-3d; /* Pour permettre les transformations 3D */
-  position: relative;
+  display: flex;
+  width: 100%; /* Le contenu occupe toute la largeur */
+  transition: transform 0.3s ease; /* Pour une transition fluide au défilement */
+}
+.carousel-chevron.left {
+  left: 0;
+}
+
+.carousel-chevron.right {
+  right: 0;
+}
+
+.carousel-chevron {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 .parcours-item {
-  position: relative; /* Positionnement relatif pour le carrousel */
-  width: 200px; /* Ajustez selon vos besoins */
-  height: 250px; /* Ajustez selon vos besoins */
-  background: #333; /* Ajustez la couleur selon vos besoins */
-  padding: 10px;
-  border-radius: 10px;
+  flex: 0 0 33%; /* Chaque item prend 33% de la largeur du conteneur (3 éléments visibles à la fois) */
+  margin: 0 10px; /* Espacement entre les éléments */
+  padding: 20px;
+  background-color: #333;
+  color: white;
   text-align: center;
+  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transform-style: preserve-3d;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  opacity: 0.5; /* Opacité réduite par défaut */
+  box-sizing: border-box; /* Inclut la marge et le padding dans le calcul de la largeur */
 }
 
 .parcours-logo {

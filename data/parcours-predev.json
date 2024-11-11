@@ -1,30 +1,6 @@
 [
     {
         "id": 1,
-        "image": "Assets/Images/Logos/openclassrooms.jpg",
-        "alt": "Logo openclassrooms",
-        "type": "Formation",
-        "role": "Intégrateur Web",
-        "year": "2024"
-    },
-    {
-        "id": 2,
-        "image": "Assets/Images/Logos/CATS.png",
-        "alt": "Logo CATS",
-        "type": "Stage observation",
-        "role": "Développeur Cobol",
-        "year": "2023-24-25"
-    },
-    {
-        "id": 3,
-        "image": "Assets/Images/Logos/DN-Info-Reseau.png",
-        "alt": "Logo DN-Info-Reseau",
-        "type": "Stage observation",
-        "role": "Développeur Web",
-        "year": "2024"
-    },
-    {
-        "id": 4,
         "image": "Assets/Images/Logos/capfruit.jpg",
         "alt": "Logo capfruit",
         "type": "En Poste",
@@ -32,7 +8,7 @@
         "year": "2022"
     },
     {
-        "id": 5,
+        "id": 2,
         "image": "Assets/Images/Logos/drome-cailles.jpg",
         "alt": "Logo drome-cailles",
         "type": "En Poste",
@@ -40,7 +16,7 @@
         "year": "20??"
     },
     {
-        "id": 6,
+        "id": 3,
         "image": "Assets/Images/Logos/onlylyon.png",
         "alt": "Logo onlylyon",
         "type": "En Poste",
@@ -48,7 +24,7 @@
         "year": "20??"
     },
     {
-        "id": 7,
+        "id": 4,
         "image": "Assets/Images/Logos/onlylyon.png",
         "alt": "Logo onlylyon",
         "type": "En Poste",
@@ -56,7 +32,7 @@
         "year": "20??"
     },
     {
-        "id": 8,
+        "id": 5,
         "image": "Assets/Images/Logos/onlylyon.png",
         "alt": "Logo onlylyon",
         "type": "En Poste",
