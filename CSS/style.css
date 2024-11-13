@@ -6,6 +6,7 @@ body {
 
 p {
   font-family: 'Zen Dots', sans-serif;
+  font-size: large;
 }
 
 /*LOADER*****************************************************/
@@ -167,6 +168,23 @@ p {
   }
 }
 
+#toggle-music-button {
+  color:#ff4081;
+  background-color: transparent;
+  border: none; /* Enlève les bordures */
+  padding: 10px 15px; /* Espace autour de l'icône */
+  font-size: 20px; /* Taille de l'icône */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur en forme de main */
+}
+
+.icon-play {
+  display: inline;
+}
+
+.icon-pause {
+  display: none;
+}
 /*background-image ****************************************/
 .background-container {
   position: relative;
