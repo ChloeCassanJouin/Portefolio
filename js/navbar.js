@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => { 
     const developerLink = document.querySelector('.link-nav.dev-web');
-    console.log(developerLink)
     const chloeLink = document.querySelector('.link-nav.chloe-jouin');
     const contactLink = document.querySelector('.link-nav.contact');
     
-    // Initialiser les liens
+    // Initialiser les liens : developerLink et chloeLink sont visibles
     developerLink.classList.add('visible');
     chloeLink.classList.add('visible');
+    contactLink.classList.remove('visible');  // Masquer le lien 'contact' au début
 
     // Gestion de l'événement de défilement
     window.addEventListener('scroll', () => {

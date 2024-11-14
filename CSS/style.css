@@ -126,6 +126,14 @@ p {
   transition: color 0.3s;
 }
 
+.link-nav {
+  display: none;  /* Masque tous les liens par défaut */
+}
+
+.link-nav.visible {
+  display: inline-block; /* Affiche les éléments ayant la classe 'visible' */
+}
+
 .menu .link-nav:hover {
   color: #ff4081;
 }
