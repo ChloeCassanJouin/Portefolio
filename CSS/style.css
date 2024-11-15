@@ -1,7 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background-color: black;
   font-family: "Monoton", cursive;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
 }
 
 p {
@@ -9,9 +18,17 @@ p {
   font-size: large;
 }
 
+section {
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+
+
+
 /*LOADER*****************************************************/
-.loader {
-  position: fixed;
+/*.loader {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -21,9 +38,9 @@ p {
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  animation: fadeOut 3s forwards; /* Début de la disparition du loader */
-  animation-delay: 1s; /* Délai de 1s avant la disparition */
-  gap: 26em; /* Espacement de 50px entre les boules, tu peux ajuster */
+  animation: fadeOut 3s forwards; 
+  animation-delay: 1s; /
+  gap: 26em; 
 }
 
 @keyframes fadeOut {
@@ -34,14 +51,14 @@ p {
     opacity: 0;
   }
 }
-/* Sun ball with neon gradient */
+
 .ball {
   width: 150px;
   height: 150px;
   border-radius: 50%;
 
-  position: relative; /* Position relative pour positionner les lignes à l'intérieur */
-  z-index: 1; /* La boule doit être derrière les lignes */
+
+  z-index: 1; 
 }
 
 .ball1 {
@@ -52,22 +69,21 @@ p {
   background: linear-gradient(to bottom, rgb(255, 102, 0) 20%, rgb(255, 165, 0) 70%, rgb(0, 255, 255) 100%);
 }
 
-/* Styling for the rays */
 .line {
-  width: 200%; /* Lignes horizontales adaptées à la taille de la boule */
+  width: 200%; 
   height: 4px;
-  background-color: black; /* Rose néon intense */
+  background-color: black; 
   position: absolute;
   left: 50%;
-  transform: translateX(-50%); /* Centrage horizontal de la ligne */
+  transform: translateX(-50%); 
   animation: rise 6s infinite linear;
-  z-index: 2; /* Les lignes doivent être devant la boule */
+  z-index: 2; 
 }
 
-/* Position des lignes autour de la boule */
+
 .line1 {
   top: 100%;
-  height: 10px; /* Ligne la plus basse et la plus haute */
+  height: 10px; 
 }
 .line2 {
   top: 90%;
@@ -83,41 +99,57 @@ p {
 }
 .line5 {
   top: 60%;
-  height: 2px; /* Ligne la plus haute et la plus petite */
+  height: 2px; 
 }
-/* Animation pour faire monter les lignes */
+
 @keyframes rise {
   0% {
       transform: translateX(-50%) translateY(0);
       opacity: 1;
   }
   100% {
-      transform: translateX(-50%) translateY(-100px); /* Monte de 100px */
+      transform: translateX(-50%) translateY(-100px); 
       opacity: 0;
   }
 }
 
-/* Main content (hidden by default, will be shown after loader) */
+
 .content {
   display: none;
   text-align: center;
   padding: 20px;
+}*/
+
+
+
+
+/*navbar /menu *****************************************************/
+
+header {
+  padding: 10px 0;
 }
-/*navbar*****************************************************/
 
 .menu {
+  display: flex;
   position: fixed;
   top: -80px;
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 20px;
+  padding: 8px;
   display: flex;
-  justify-content: center; /* Centrer le contenu */
+  justify-content: center; 
+  align-items: center;
   z-index: 10;
   animation: slide-down 2s forwards;
 }
+
+.nav-content {
+  display: flex;
+}
+
+
+
 .menu .link-nav {
   color: rgb(255, 20, 147);
   text-decoration: none;
@@ -138,41 +170,13 @@ p {
   color: #ff4081;
 }
 
+
 @keyframes slide-down {
   0% {
     top: -80px;
   }
   100% {
     top: 0;
-  }
-}
-.background-container {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-/* La section de l'image de fond */
-.background-container .background-image {
-  background-image: url(../Assets/Images/background-image/cassette.jpg);
-  background-size: 82%;
-  background-position: center;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  animation: fade-in 2s forwards; /* Animation qui fait apparaître l'image */
-  animation-delay: 0s; /* L'image commence à apparaître immédiatement */
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 
@@ -184,6 +188,7 @@ p {
   font-size: 20px; /* Taille de l'icône */
   border-radius: 5px; /* Coins arrondis */
   cursor: pointer; /* Curseur en forme de main */
+
 }
 
 .icon-play {
@@ -193,25 +198,63 @@ p {
 .icon-pause {
   display: none;
 }
-/*background-image ****************************************/
-.background-container {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
+
+@media (max-width: 768px) {
+
+
+  .menu {
+    justify-content: space-between;
+
+    .link-nav {
+      font-size: 15px;
+    }
+  }
+
+  .nav-content {
+    flex-direction: column;
+  }
+
+
 }
-.background-container .background-image {
-  background-image: url(../Assets/Images/background-image/cassette.jpg);
-  background-size: 82%;
-  background-position: center;
+
+
+
+/*section*******************************************************************/
+section {
+  padding: 20px;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  position: relative; 
+  overflow: hidden; 
+}
+
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+  }
+}
+
+/*Welcome part - background img ******/
+
+#Welcome-part {
+  padding: 0px;
+  margin: 0px;
+
+}
+
+.background-container {
   width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
+  position: relative;
+
+}
+
+.background-img {
+  width: 100%;
   animation: fade-in 6s forwards;
   animation-delay: 2s;
 }
+
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -221,35 +264,46 @@ p {
   }
 }
 
-/* NEON LINKS *************************************************/
+
+/* NEON LINKS **************************/
 .neon-links {
   position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 5%;
+  right: 35%;
+  transform: translateX(0);
   display: flex;
-  gap: 220px;
+  gap: 40%;
+  flex-wrap: nowrap;
   opacity: 0;
   animation: fade-in-links 1s forwards;
-  animation-delay: 6s; /* Délai avant l'apparition des liens */
+  animation-delay: 6s; 
   z-index: 20;
-  font-size: 36px;
+  font-size: 2vw;
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
 }
 
 @keyframes fade-in-links {
   0% {
-      opacity: 0; /* Commence transparent */
+      opacity: 0; 
   }
   100% {
-      opacity: 1; /* Termine complètement visible */
+      opacity: 1; 
   }
 }
 
-/* Neon Link 1: Bleu néon */
+@media (max-width: 768px) {
+  .neon-links {
+    gap: 60px;
+    font-size: 25px;
+    bottom: 24rem;
+  }
+}
+
 .neon-link1 {
-  color: rgb(0, 217, 255); /* Bleu néon */
-  text-decoration: none; /* Pas de soulignement */
+  color: rgb(0, 217, 255); 
+  text-decoration: none; 
   text-shadow: 
       0 0 5px rgba(0, 100, 255, 0.7),
       0 0 10px rgba(0, 100, 255, 0.7),
@@ -258,10 +312,9 @@ p {
       0 0 25px rgba(0, 100, 255, 0.7);
 }
 
-/* Neon Link 2: Vert néon */
 .neon-link2 {
-  color: rgb(183, 233, 171); /* Vert néon */
-  text-decoration: none; /* Pas de soulignement */
+  color: rgb(183, 233, 171); 
+  text-decoration: none; 
   text-shadow: 
       0 0 5px rgba(57, 255, 20, 0.7),
       0 0 10px rgba(57, 255, 20, 0.7),
@@ -270,10 +323,9 @@ p {
       0 0 25px rgba(57, 255, 20, 0.7);
 }
 
-/* Neon Link 3: Jaune néon */
 .neon-link3 {
-  color: rgb(214, 128, 174); /* Rose néon */
-  text-decoration: none; /* Pas de soulignement */
+  color: rgb(214, 128, 174); 
+  text-decoration: none;
   text-shadow: 
       0 0 5px rgba(255, 20, 147, 0.7),
       0 0 10px rgba(255, 20, 147, 0.7),
@@ -282,75 +334,78 @@ p {
       0 0 25px rgba(255, 20, 147, 0.7);
 }
 
-/* Animation de clignotement rapide pour le premier lien */
 @keyframes flicker {
   0%, 100% {
-      opacity: 1; /* Visible */
+      opacity: 1; 
   }
   50% {
-      opacity: 0; /* Invisible au milieu */
+      opacity: 0; 
   }
 }
 
-/* Animation pour le premier lien (clignote vite 2 fois) */
 .neon-link1:nth-child(1) {
-  opacity: 0; /* Initialement invisible */
-  animation: appear-flicker 1s forwards; /* Animation pour faire apparaître avec clignotement */
-  animation-delay: 8s; /* Commence après 8 secondes */
+  opacity: 0; 
+  animation: appear-flicker 1s forwards; 
+  animation-delay: 8s; 
 }
 
-/* Animation d'apparition et de clignotement pour le premier lien */
+
 @keyframes appear-flicker {
   0% {
-      opacity: 0; /* Invisible au début */
+      opacity: 0; 
   }
   30% {
-      opacity: 1; /* Visible */
+      opacity: 1; 
   }
   50% {
-      opacity: 1; /* Reste visible */
+      opacity: 1; 
   }
   70% {
-      opacity: 0; /* Invisible pour le premier clignotement */
+      opacity: 0; 
   }
   80% {
-      opacity: 1; /* Réapparaît */
+      opacity: 1; 
   }
   90% {
-      opacity: 0; /* Invisible pour le deuxième clignotement */
+      opacity: 0; 
   }
   100% {
-      opacity: 1; /* Visible à la fin */
+      opacity: 1; 
   }
 }
 
-/* Liens 2 et 3 */
+
 .neon-link2:nth-child(2),
 .neon-link3:nth-child(3) {
-  opacity: 1; /* Visibilité immédiate */
+  opacity: 1; 
 }
 
 .neon-link1,
 .neon-link2,
 .neon-link3 {
-  display: inline-block; /* Nécessaire pour un effet de transformation fluide */
-  transform-origin: center; /* Centre l'agrandissement */
-  transition: transform 0.2s ease; /* Transition douce pour le survol */
+  display: inline-block; 
+  transform-origin: center;
+  transition: transform 0.2s ease; 
 }
 
 .neon-link1:hover,
 .neon-link2:hover,
 .neon-link3:hover {
-  transform: scale(1.1); /* Grossit légèrement à partir du centre */
+  transform: scale(1.1); 
 }
 
-section {
-  padding: 100px 20px;
-  text-align: center;
-  color: white;
+@media (max-width: 768px) {
+  .neon-links {
+  bottom: 20px;
+
+  }
 }
 
+/*PROJETS ****************************************************************/
 
+.project-item h3 {
+  color: pink;
+}
 #projects {
   text-align: center;
   padding: 50px;
@@ -358,28 +413,27 @@ section {
 }
 
 .Projects-title {
-  color: rgb(0, 217, 255); /* Bleu néon */
+  color: rgb(0, 217, 255); 
   text-shadow: 
       0 0 5px rgba(0, 100, 255, 0.7),
       0 0 10px rgba(0, 100, 255, 0.7),
       0 0 15px rgba(0, 100, 255, 0.7),
       0 0 20px rgba(0, 100, 255, 0.7),
       0 0 25px rgba(0, 100, 255, 0.7);
-  font-size: 36px; /* Ajuste la taille du texte selon tes préférences */
-  margin: 20px 0; /* Espacement autour du titre */
+  font-size: 36px; 
+  margin: 20px 0; 
 }
 
 .projects-grid {
   display: flex;
-  flex-direction: column; /* Place les cartes en colonne */
+  flex-direction: column; 
   gap: 40px;
-  align-items: center; /* Centre les cartes horizontalement */
-  padding: 0 20px; /* Ajoute un padding horizontal pour créer un espace de chaque côté */
+  align-items: center; 
+  padding: 0 20px; 
 }
 .project-card {
   display: flex;
-  flex-direction: row; /* Image à gauche, contenu à droite */
-  background: #222;
+  flex-direction: row; 
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -429,6 +483,10 @@ section {
   color: #ff4081;
 }
 
+.github-logo {
+  width: 5em;
+}
+
 .year-tag {
   position: absolute;
   top: -30px; /* Initially hidden above the card */
@@ -446,17 +504,110 @@ section {
   top: 10px; /* Slides down when hovering */
 }
 
+/*MODALE PROJECT****************************************************/
+.modal-description-projects {
+  color: pink;
+}
+
+/*MODAL PROJECT ************************/
+.modal-projects {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content-projects {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-projects img {
+  max-width: 100%;
+  height: auto;
+  margin: 5px 0;
+}
+
+.tags span, .tool {
+  background-color: #eee;
+  border-radius: 4px;
+  padding: 3px 5px;
+  margin: 2px;
+  font-size: 0.9em;
+}
+
+#modal-video-projects {
+  width: 60em;
+}
+
+/*Carousel Avis *******************************************************/
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* Largeur maximale */
+  margin: auto;
+  overflow: hidden; /* Cache les images hors de la vue */
+}
+
+.carousel-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slides img {
+  width: 100%;
+  max-width: 600px; /* S'assure que les images ne dépassent pas la largeur du carousel */
+  object-fit: cover;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
 /* FORMULAIRE CONTACT***********************************************/
 #contact {
   text-align: center;
   padding: 50px 20px;
-  color: white; /* Couleur du texte */
+  color: white;
 }
 
 .Contact-title {
-  color: rgb(214, 128, 174); /* Rose néon */
+  color: rgb(214, 128, 174); 
   font-size: 36px;
-  text-decoration: none; /* Pas de soulignement */
+  text-decoration: none; 
   text-shadow: 
       0 0 5px rgba(255, 20, 147, 0.7),
       0 0 10px rgba(255, 20, 147, 0.7),
@@ -542,13 +693,14 @@ textarea {
   cursor: pointer;
 }
 
-/*PARCOURS SLIDER *****************************************/
+/*PARCOURS *****************************************************/
 
 #parcours {
   text-align: center;
   padding: 50px 20px;
   color: white; /* Couleur du texte */
-
+  display: flex;
+  flex-direction: column;
 }
 
 .Parcours-title {
@@ -579,33 +731,6 @@ textarea {
   height: auto;  /* Laisse la hauteur s'ajuster automatiquement */
 }
 
-.carousel-container {
-  width: 100%; /* Le carousel occupe toute la largeur de son conteneur */
-  position: relative;
-  overflow: hidden; /* Cache tout ce qui dépasse de l'élément parent */
-}
-
-.carousel-content {
-  display: flex;
-  width: 100%; /* Le contenu occupe toute la largeur */
-  transition: transform 0.3s ease; /* Pour une transition fluide au défilement */
-}
-.carousel-chevron.left {
-  left: 0;
-}
-
-.carousel-chevron.right {
-  right: 0;
-}
-
-.carousel-chevron {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  cursor: pointer;
-}
-
 .parcours-item {
   flex: 0 0 33%; /* Chaque item prend 33% de la largeur du conteneur (3 éléments visibles à la fois) */
   margin: 0 10px; /* Espacement entre les éléments */
@@ -629,74 +754,13 @@ textarea {
   transform: scale(1.1); /* Mettez en valeur l'élément central */
 }
 
-.carousel-chevron {
-  font-size: 2rem;
-  color: white;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  z-index: 10;
-}
-
-.carousel-chevron.left {
-  left: 10px;
-}
-
-.carousel-chevron.right {
-  right: 10px;
-}
-
-/* PAGE PROJETS **************************************/
-.project-item {
-  background-color: grey;
-}
-
-.project-item h3 {
-  color: pink;
-}
-
-/*MODAL PROJETCT ************************/
-/* Style pour la modale */
-.modal-projects {
-  display: none;
-  position: fixed;
-  z-index: 10;
-  left: 0;
-  top: 0;
+/*AVIS*****************************************************/
+.letters {
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  overflow: auto;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content-projects {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  width: 80%;
-  max-width: 600px;
-  margin: auto;
-}
-
-.close {
-  float: right;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.modal-projects img {
   max-width: 100%;
-  height: auto;
-  margin: 5px 0;
 }
 
-.tags span, .tool {
-  background-color: #eee;
-  border-radius: 4px;
-  padding: 3px 5px;
-  margin: 2px;
-  font-size: 0.9em;
+.letter {
+  width: 100%;
+  max-width: 100%;
 }

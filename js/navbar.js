@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => { 
-    const developerLink = document.querySelector('.link-nav.dev-web');
-    const chloeLink = document.querySelector('.link-nav.chloe-jouin');
+    const developerLink = document.querySelector('.link-nav.job');
+    const chloeLink = document.querySelector('.link-nav.name');
     const contactLink = document.querySelector('.link-nav.contact');
     
     // Initialiser les liens : developerLink et chloeLink sont visibles

@@ -32,7 +32,9 @@ async function displayProjects() {
                     ${project.tools.map(tool => `<span class="tool">${tool}</span>`).join('')}
                 </div>
                 <div class="project-links">
-                    <a href="${project.github}" target="_blank">GITHUB</a>
+                    <a href="${project.github}" target="_blank">
+                        <img src="Assets/Images/Logos/github.png" alt="Github" class="github-logo">
+                    </a>
                 </div>
             </div>
         `;

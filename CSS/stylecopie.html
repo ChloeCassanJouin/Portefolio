@@ -1,0 +1,684 @@
+body {
+    margin: 0;
+    background-color: black;
+    font-family: "Monoton", cursive;
+  }
+  
+  p {
+    font-family: 'Zen Dots', sans-serif;
+    font-size: large;
+  }
+  
+  
+  /*LOADER*****************************************************/
+  .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeOut 3s forwards; /* Début de la disparition du loader */
+    animation-delay: 1s; /* Délai de 1s avant la disparition */
+    gap: 26em; /* Espacement de 50px entre les boules, tu peux ajuster */
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  /* Sun ball with neon gradient */
+  .ball {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  
+    position: relative; /* Position relative pour positionner les lignes à l'intérieur */
+    z-index: 1; /* La boule doit être derrière les lignes */
+  }
+  
+  .ball1 {
+    background: linear-gradient(to bottom, rgb(255, 20, 147) 20%, rgb(255, 105, 180) 70%, rgb(0, 255, 255) 100%);
+  }
+  
+  .ball2 {
+    background: linear-gradient(to bottom, rgb(255, 102, 0) 20%, rgb(255, 165, 0) 70%, rgb(0, 255, 255) 100%);
+  }
+  
+  /* Styling for the rays */
+  .line {
+    width: 200%; /* Lignes horizontales adaptées à la taille de la boule */
+    height: 4px;
+    background-color: black; /* Rose néon intense */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Centrage horizontal de la ligne */
+    animation: rise 6s infinite linear;
+    z-index: 2; /* Les lignes doivent être devant la boule */
+  }
+  
+  /* Position des lignes autour de la boule */
+  .line1 {
+    top: 100%;
+    height: 10px; /* Ligne la plus basse et la plus haute */
+  }
+  .line2 {
+    top: 90%;
+    height: 8px;
+  }
+  .line3 {
+    top: 80%;
+    height: 6px;
+  }
+  .line4 {
+    top: 70%;
+    height: 4px;
+  }
+  .line5 {
+    top: 60%;
+    height: 2px; /* Ligne la plus haute et la plus petite */
+  }
+  /* Animation pour faire monter les lignes */
+  @keyframes rise {
+    0% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-50%) translateY(-100px); /* Monte de 100px */
+        opacity: 0;
+    }
+  }
+  
+  /* Main content (hidden by default, will be shown after loader) */
+  .content {
+    display: none;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  
+  
+  
+  /*navbar*****************************************************/
+  
+  .menu {
+    position: fixed;
+    top: -80px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 8px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    z-index: 10;
+    animation: slide-down 2s forwards;
+  }
+  .menu .link-nav {
+    color: rgb(255, 20, 147);
+    text-decoration: none;
+    margin: 0 25px; /* Espacement entre les liens */
+    font-size: 24px;
+    transition: color 0.3s;
+  }
+  
+  .link-nav {
+    display: none;  /* Masque tous les liens par défaut */
+  }
+  
+  .link-nav.visible {
+    display: inline-block; /* Affiche les éléments ayant la classe 'visible' */
+  }
+  
+  .menu .link-nav:hover {
+    color: #ff4081;
+  }
+  
+  @keyframes slide-down {
+    0% {
+      top: -80px;
+    }
+    100% {
+      top: 0;
+    }
+  }
+  
+  #toggle-music-button {
+    color:#ff4081;
+    background-color: transparent;
+    border: none; /* Enlève les bordures */
+    padding: 10px 15px; /* Espace autour de l'icône */
+    font-size: 20px; /* Taille de l'icône */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur en forme de main */
+  }
+  
+  .icon-play {
+    display: inline;
+  }
+  
+  .icon-pause {
+    display: none;
+  }
+  
+  
+  
+  .background-container {
+    width: 100%;
+    height: 100vh; /* Utilisez 100vh pour occuper la hauteur de la fenêtre */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .background-container .background-image {
+    background-image: url(../Assets/Images/background-image/cassette.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* Ajuste l'image pour qu'elle soit entièrement visible */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: fade-in 6s forwards;
+    animation-delay: 2s;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* NEON LINKS *************************************************/
+  .neon-links {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 220px;
+    opacity: 0;
+    animation: fade-in-links 1s forwards;
+    animation-delay: 6s; /* Délai avant l'apparition des liens */
+    z-index: 20;
+    font-size: 36px;
+    text-transform: uppercase;
+  }
+  
+  @keyframes fade-in-links {
+    0% {
+        opacity: 0; /* Commence transparent */
+    }
+    100% {
+        opacity: 1; /* Termine complètement visible */
+    }
+  }
+  
+  /* Neon Link 1: Bleu néon */
+  .neon-link1 {
+    color: rgb(0, 217, 255); /* Bleu néon */
+    text-decoration: none; /* Pas de soulignement */
+    text-shadow: 
+        0 0 5px rgba(0, 100, 255, 0.7),
+        0 0 10px rgba(0, 100, 255, 0.7),
+        0 0 15px rgba(0, 100, 255, 0.7),
+        0 0 20px rgba(0, 100, 255, 0.7),
+        0 0 25px rgba(0, 100, 255, 0.7);
+  }
+  
+  /* Neon Link 2: Vert néon */
+  .neon-link2 {
+    color: rgb(183, 233, 171); /* Vert néon */
+    text-decoration: none; /* Pas de soulignement */
+    text-shadow: 
+        0 0 5px rgba(57, 255, 20, 0.7),
+        0 0 10px rgba(57, 255, 20, 0.7),
+        0 0 15px rgba(57, 255, 20, 0.7),
+        0 0 20px rgba(57, 255, 20, 0.7),
+        0 0 25px rgba(57, 255, 20, 0.7);
+  }
+  
+  /* Neon Link 3: Jaune néon */
+  .neon-link3 {
+    color: rgb(214, 128, 174); /* Rose néon */
+    text-decoration: none; /* Pas de soulignement */
+    text-shadow: 
+        0 0 5px rgba(255, 20, 147, 0.7),
+        0 0 10px rgba(255, 20, 147, 0.7),
+        0 0 15px rgba(255, 20, 147, 0.7),
+        0 0 20px rgba(255, 20, 147, 0.7),
+        0 0 25px rgba(255, 20, 147, 0.7);
+  }
+  
+  /* Animation de clignotement rapide pour le premier lien */
+  @keyframes flicker {
+    0%, 100% {
+        opacity: 1; /* Visible */
+    }
+    50% {
+        opacity: 0; /* Invisible au milieu */
+    }
+  }
+  
+  /* Animation pour le premier lien (clignote vite 2 fois) */
+  .neon-link1:nth-child(1) {
+    opacity: 0; /* Initialement invisible */
+    animation: appear-flicker 1s forwards; /* Animation pour faire apparaître avec clignotement */
+    animation-delay: 8s; /* Commence après 8 secondes */
+  }
+  
+  /* Animation d'apparition et de clignotement pour le premier lien */
+  @keyframes appear-flicker {
+    0% {
+        opacity: 0; /* Invisible au début */
+    }
+    30% {
+        opacity: 1; /* Visible */
+    }
+    50% {
+        opacity: 1; /* Reste visible */
+    }
+    70% {
+        opacity: 0; /* Invisible pour le premier clignotement */
+    }
+    80% {
+        opacity: 1; /* Réapparaît */
+    }
+    90% {
+        opacity: 0; /* Invisible pour le deuxième clignotement */
+    }
+    100% {
+        opacity: 1; /* Visible à la fin */
+    }
+  }
+  
+  /* Liens 2 et 3 */
+  .neon-link2:nth-child(2),
+  .neon-link3:nth-child(3) {
+    opacity: 1; /* Visibilité immédiate */
+  }
+  
+  .neon-link1,
+  .neon-link2,
+  .neon-link3 {
+    display: inline-block; /* Nécessaire pour un effet de transformation fluide */
+    transform-origin: center; /* Centre l'agrandissement */
+    transition: transform 0.2s ease; /* Transition douce pour le survol */
+  }
+  
+  .neon-link1:hover,
+  .neon-link2:hover,
+  .neon-link3:hover {
+    transform: scale(1.1); /* Grossit légèrement à partir du centre */
+  }
+  
+  section {
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  
+  #projects {
+    text-align: center;
+    padding: 50px;
+    color: pink;
+  }
+  
+  .Projects-title {
+    color: rgb(0, 217, 255); /* Bleu néon */
+    text-shadow: 
+        0 0 5px rgba(0, 100, 255, 0.7),
+        0 0 10px rgba(0, 100, 255, 0.7),
+        0 0 15px rgba(0, 100, 255, 0.7),
+        0 0 20px rgba(0, 100, 255, 0.7),
+        0 0 25px rgba(0, 100, 255, 0.7);
+    font-size: 36px; /* Ajuste la taille du texte selon tes préférences */
+    margin: 20px 0; /* Espacement autour du titre */
+  }
+  
+  .projects-grid {
+    display: flex;
+    flex-direction: column; /* Place les cartes en colonne */
+    gap: 40px;
+    align-items: center; /* Centre les cartes horizontalement */
+    padding: 0 20px; /* Ajoute un padding horizontal pour créer un espace de chaque côté */
+  }
+  .project-card {
+    display: flex;
+    flex-direction: row; /* Image à gauche, contenu à droite */
+    /*background: #222;*/
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    width: 100%; /* S'étend à la largeur du conteneur parent */
+    max-width: 1200px; /* Largeur maximale pour les grandes écrans */
+    height: 300px; /* Hauteur fixe des cartes */
+  }
+  
+  
+  .project-image img {
+    width: 100%;
+    height: auto;
+    max-width: 200px; /* Largeur maximum de l'image */
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .project-content {
+    flex: 1; /* Prend tout l'espace restant pour le contenu */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre verticalement le contenu */
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+  }
+  .project-card h3 {
+    color: #ff4081;
+  }
+  .tags span {
+    background: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 0.8rem;
+  }
+  .project-links a {
+    color: #00d9ff;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+  }
+  .project-links a:hover {
+    color: #ff4081;
+  }
+  
+  .year-tag {
+    position: absolute;
+    top: -30px; /* Initially hidden above the card */
+    right: 10px;
+    background-color: #ff4081;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: top 0.3s ease;
+  }
+  
+  .project-card:hover .year-tag {
+    top: 10px; /* Slides down when hovering */
+  }
+  
+  /* FORMULAIRE CONTACT***********************************************/
+  #contact {
+    text-align: center;
+    padding: 50px 20px;
+    color: white; /* Couleur du texte */
+  }
+  
+  .Contact-title {
+    color: rgb(214, 128, 174); /* Rose néon */
+    font-size: 36px;
+    text-decoration: none; /* Pas de soulignement */
+    text-shadow: 
+        0 0 5px rgba(255, 20, 147, 0.7),
+        0 0 10px rgba(255, 20, 147, 0.7),
+        0 0 15px rgba(255, 20, 147, 0.7),
+        0 0 20px rgba(255, 20, 147, 0.7),
+        0 0 25px rgba(255, 20, 147, 0.7);
+  }
+  
+  .contact-form-container {
+    padding: 20px;
+    margin: 0 auto;
+    width: 80%; /* Largeur de la zone du formulaire */
+    max-width: 600px; /* Largeur maximale */
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  input, textarea {
+    width: 100%; /* Largeur complète */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Bordure des champs */
+    border-radius: 5px;
+    background-color: #fff; /* Fond des champs */
+  }
+  
+  textarea {
+    resize: none; /* Désactiver le redimensionnement */
+    height: 100px; /* Hauteur du textarea */
+  }
+  
+  .submit-button {
+    background-color: #ff4081; /* Couleur du bouton */
+    color: white; /* Couleur du texte du bouton */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #ff1a5e; /* Couleur du bouton au survol */
+  }
+  
+  /******************************************************** Modale Styles */
+  .modal {
+    display: none; /* Cacher par défaut */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; /* Pleine largeur */
+    height: 100%; /* Pleine hauteur */
+    overflow: auto; /* Activer le défilement si nécessaire */
+    background-color: rgba(0,0,0,0.4); /* Fond semi-transparent */
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largeur de la modale */
+    max-width: 400px; /* Largeur maximale de la modale */
+    text-align: center;
+  }
+  
+  .close {
+    color: #aaa; /* Couleur de la croix de fermeture */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /*PARCOURS SLIDER *****************************************/
+  
+  #parcours {
+    text-align: center;
+    padding: 50px 20px;
+    color: white; /* Couleur du texte */
+  
+  }
+  
+  .Parcours-title {
+    color: rgb(183, 233, 171); /* Vert néon */
+    text-decoration: none; /* Pas de soulignement */
+    font-size: 36px;
+    text-shadow: 
+        0 0 5px rgba(57, 255, 20, 0.7),
+        0 0 10px rgba(57, 255, 20, 0.7),
+        0 0 15px rgba(57, 255, 20, 0.7),
+        0 0 20px rgba(57, 255, 20, 0.7),
+        0 0 25px rgba(57, 255, 20, 0.7);
+  }
+  
+  .parcours-container {
+    display: flex; /* Flexbox pour aligner les éléments horizontalement */
+    justify-content: center; /* Espacer l'image et les carousels */
+    align-items: flex-start; /* Aligner les éléments au début (en haut) */
+    gap: 20px; /* Espacement entre l'image et les carousels */
+  }
+  
+  .portrait {
+    flex-shrink: 0; /* Empêche l'image de se réduire */
+  }
+  
+  .portrait-img {
+    width: 200px;  /* Ajuste la largeur de l'image */
+    height: auto;  /* Laisse la hauteur s'ajuster automatiquement */
+  }
+  
+  .carousel-container {
+    width: 100%; /* Le carousel occupe toute la largeur de son conteneur */
+    position: relative;
+    overflow: hidden; /* Cache tout ce qui dépasse de l'élément parent */
+  }
+  
+  .carousel-content {
+    display: flex;
+    width: 100%; /* Le contenu occupe toute la largeur */
+    transition: transform 0.3s ease; /* Pour une transition fluide au défilement */
+  }
+  .carousel-chevron.left {
+    left: 0;
+  }
+  
+  .carousel-chevron.right {
+    right: 0;
+  }
+  
+  .carousel-chevron {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .parcours-item {
+    flex: 0 0 33%; /* Chaque item prend 33% de la largeur du conteneur (3 éléments visibles à la fois) */
+    margin: 0 10px; /* Espacement entre les éléments */
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box; /* Inclut la marge et le padding dans le calcul de la largeur */
+  }
+  
+  .parcours-logo {
+    width: 100px; /* Largeur du logo */
+    height: auto; /* Hauteur automatique pour conserver le ratio */
+    margin-bottom: 15px; /* Espacement en dessous du logo */
+  }
+  
+  .parcours-item.active {
+    opacity: 1; /* Pleine opacité pour la carte active */
+    transform: scale(1.1); /* Mettez en valeur l'élément central */
+  }
+  
+  .carousel-chevron {
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .carousel-chevron.left {
+    left: 10px;
+  }
+  
+  .carousel-chevron.right {
+    right: 10px;
+  }
+  
+  /* PAGE PROJETS **************************************/
+  .project-item {
+    background-color: grey;
+  }
+  
+  .project-item h3 {
+    color: pink;
+  }
+  
+  /*MODAL PROJETCT ************************/
+  /* Style pour la modale */
+  .modal-projects {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content-projects {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .modal-projects img {
+    max-width: 100%;
+    height: auto;
+    margin: 5px 0;
+  }
+  
+  .tags span, .tool {
+    background-color: #eee;
+    border-radius: 4px;
+    padding: 3px 5px;
+    margin: 2px;
+    font-size: 0.9em;
+  }
