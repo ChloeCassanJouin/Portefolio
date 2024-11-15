@@ -27,7 +27,7 @@ section {
 
 
 /*LOADER*****************************************************/
-/*.loader {
+.loader {
   position: absolute;
   top: 0;
   left: 0;
@@ -39,7 +39,7 @@ section {
   justify-content: center;
   z-index: 1000;
   animation: fadeOut 3s forwards; 
-  animation-delay: 1s; /
+  animation-delay: 1s; 
   gap: 26em; 
 }
 
@@ -118,7 +118,7 @@ section {
   display: none;
   text-align: center;
   padding: 20px;
-}*/
+}
 
 
 
@@ -213,8 +213,6 @@ header {
   .nav-content {
     flex-direction: column;
   }
-
-
 }
 
 
@@ -577,7 +575,7 @@ section {
   object-fit: cover;
 }
 
-button {
+.carousel-prev .carousel-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
