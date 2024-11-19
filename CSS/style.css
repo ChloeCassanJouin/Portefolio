@@ -53,9 +53,7 @@ section {
   display: flex;
   flex-direction: row;
   gap: 10vh;
-  border-bottom: none; /* Retirer les autres bordures si nécessaire */
-  border-left: none;
-  border-right: none;
+  border: none; /* Retirer toutes les bordures initiales */
   padding: 10vh;
   border-radius: 10px; /* Optionnel : pour arrondir les coins */
   position: relative; /* Nécessaire pour positionner les pseudo-éléments */
@@ -66,21 +64,21 @@ section {
   content: "";
   position: absolute;
   left: 0;
-  height: 5px; /* Même épaisseur que la bordure */
+  height: 5px; /* Épaisseur des bordures */
   width: 0%; /* Commence invisible */
-  background-color: rgb(0, 217, 255); /* Même couleur que la bordure */
-  animation: drawLine 2s linear forwards; /* Animation identique pour les deux bordures */
+  background-color: rgb(0, 217, 255); /* Couleur des bordures */
+  animation: drawLine 2s linear forwards, fadeOutBorder 0.2s linear forwards 1.9s; /* Ajout de fade-out */
 }
 
 .loader-rectangle::before {
-  top: 0; /* Aligner avec la bordure supérieure */
+  top: 0; /* Ligne supérieure */
 }
 
 .loader-rectangle::after {
-  bottom: 0; /* Aligner avec la bordure inférieure */
+  bottom: 0; /* Ligne inférieure */
 }
 
-/* Animation pour les bordures */
+/* Animation pour les bordures horizontales */
 @keyframes drawLine {
   0% {
     width: 0%;
@@ -89,16 +87,24 @@ section {
     width: 100%; /* Ligne complète */
   }
 }
+
+/* Animation pour faire disparaître les bordures */
+@keyframes fadeOutBorder {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0; /* Disparaît complètement */
+  }
+}
+
 .loader__spinner {
-  border: 10px solid rgba(255, 121, 218, 0.3); /* Bordure semi-transparente */
-  border-top: 5px solid rgba(0, 100, 255, 0.7),; /* Couleur principale de la partie visible */
-  border-bottom: 5px solid rgba(0, 100, 255, 0.7),; /* Variation de couleur */
+  border: 5px solid rgb(0, 217, 255); /* Bordure semi-transparente */
   border-right: 10px solid transparent; /* Rendre un côté invisible */
   border-radius: 50%; /* Cercle */
   width: 100px;
   height: 100px;
-
-  animation: spin 3s linear infinite, fadeOutLoader 0.2s 1.9s forwards;
+  animation: spin 2s linear infinite, fadeOutLoader 0.2s 1.9s forwards; /* Disparaît en même temps que les bordures */
 }
 
 @keyframes spin {
@@ -109,6 +115,7 @@ section {
     transform: rotate(360deg);
   }
 }
+
 @keyframes fadeInContent {
   0% {
     opacity: 0;
@@ -117,6 +124,7 @@ section {
     opacity: 1;
   }
 }
+
 @keyframes fadeOutLoader {
   0% {
     opacity: 1;
