@@ -47,7 +47,7 @@ async function displayProjects() {
 // Fonction pour ouvrir la modale avec les informations du projet
 function openModal(project) {
     const modal = document.getElementById('project-modal');
-    modal.style.display = 'block';
+    modal.style.display = 'flex';
 
     // Remplir les informations de la modale
     document.getElementById('modal-title-projects').innerText = project.title;

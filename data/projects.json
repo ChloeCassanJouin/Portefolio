@@ -5,7 +5,7 @@
         "year": 2024,
         "description": "Ce projet consiste à intégrer l'interface utilisateur d'une banque en ligne à partir de maquettes fournies par un designer. L'objectif est de créer des pages web modernes et responsives, incluant une page d'accueil, une page de connexion et une page utilisateur permettant d'accéder aux comptes bancaires. Les tâches incluent : L’utilisation de HTML et CSS pour structurer et styliser les pages, L’intégration de JavaScript pour dynamiser certaines interactions (comme le formulaire de connexion), Le respect des principes d'accessibilité et des bonnes pratiques de code, La gestion du versionnement avec Git et GitHub. Ce projet met en avant les compétences en intégration responsive et les fondamentaux nécessaires pour travailler en collaboration avec des développeurs back-end ou des équipes de design.",
         "skills": ["Frontend", "JavaScript", "CSS"],
-        "tools": ["React", "Node.js", "Git"],
+        "tools": ["React", "Node.js", "Git", "MongoDB"],
         "images": [
             "Assets/Images/PROJETS/Argent-Bank/argent-bank1.png",
             "Assets/Images/PROJETS/Argent-Bank/argent-bank2.png",
@@ -19,7 +19,7 @@
         "title": "PHOTOGRAPHE SOPHIE BLUEL",
         "year": 2024,
         "description": "ce projet consiste à créer un site de portfolio pour une photographe fictive. L’objectif est d'intégrer une interface à partir de maquettes pour présenter le travail photographique de Sophie Bluel, tout en respectant l’esthétique et l’expérience utilisateur souhaitées. Les éléments principaux du projet incluent : La mise en page de plusieurs sections (galerie, informations sur la photographe, contact) en utilisant HTML et CSS, La création d’une galerie d'images interactive et esthétique. La compatibilité avec plusieurs formats d’écran (intégration responsive). Le respect des normes d’accessibilité et d’optimisation des performances. Ce projet permet de renforcer les compétences en intégration web, notamment en structuration HTML, stylisation CSS, et adaptation responsive pour des sites vitrine modernes et élégants.",
-        "skills": ["Photography", "Editing"],
+        "skills": ["Frontend", "JavaScript", "CSS"],
         "tools": ["Photoshop", "Lightroom"],
         "images": [
             "Assets/Images/PROJETS/Photograph-Sophie-Bluel/sophie-bluel1.PNG"

@@ -365,13 +365,14 @@ header {
   display: flex;
   flex-direction: row; 
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
   overflow: hidden;
-  width: 100%; /* S'étend à la largeur du conteneur parent */
-  max-width: 1200px; /* Largeur maximale pour les grandes écrans */
-  height: 300px; /* Hauteur fixe des cartes */
+  width: 100%; 
+  max-width: 1200px; 
+  height: 300px; 
+  border: 1px solid rgb(0, 217, 255); ;
 }
 
 
@@ -395,7 +396,15 @@ header {
 }
 .project-card h3 {
   color: #ff4081;
+  padding-bottom: 4vh;
+  font-size: x-large;
 }
+
+.tags {
+  color: black;
+  font-family: 'Zen Dots', sans-serif;
+}
+
 .tags span {
   background: #333;
   padding: 5px 10px;
@@ -414,12 +423,13 @@ header {
 }
 
 .github-logo {
-  width: 5em;
+  width: 3em;
+  padding-top: 3vh;
 }
 
 .year-tag {
   position: absolute;
-  top: -30px; /* Initially hidden above the card */
+  top: -30px; 
   right: 10px;
   background-color: #ff4081;
   color: #fff;
@@ -439,7 +449,6 @@ header {
   color: pink;
 }
 
-/*MODAL PROJECT ************************/
 .modal-projects {
   display: none;
   position: fixed;
@@ -458,9 +467,7 @@ header {
   background-color: white;
   padding: 20px;
   border-radius: 8px;
-  width: 80%;
-  max-width: 600px;
-  margin: auto;
+  width: 100vh;
 }
 
 .close {
@@ -531,9 +538,9 @@ header {
 .carousel {
   position: relative;
   width: 100%;
-  max-width: 600px; /* Largeur maximale */
+  max-width: 600px; 
   margin: auto;
-  overflow: hidden; /* Cache les images hors de la vue */
+  overflow: hidden; /
 }
 
 .carousel-slides {
@@ -543,7 +550,7 @@ header {
 
 .carousel-slides img {
   width: 100%;
-  max-width: 600px; /* S'assure que les images ne dépassent pas la largeur du carousel */
+  max-width: 600px; 
   object-fit: cover;
 }
 
@@ -573,14 +580,14 @@ header {
 
 #parcours {
   text-align: center;
-  color: white; /* Couleur du texte */
+  color: white; 
   display: flex;
   flex-direction: column;
 }
 
 .Parcours-title {
-  color: rgb(183, 233, 171); /* Vert néon */
-  text-decoration: none; /* Pas de soulignement */
+  color: rgb(183, 233, 171); 
+  text-decoration: none;
   font-size: 36px;
   text-shadow: 
       0 0 5px rgba(57, 255, 20, 0.7),
@@ -591,42 +598,42 @@ header {
 }
 
 .parcours-container {
-  display: flex; /* Flexbox pour aligner les éléments horizontalement */
-  justify-content: center; /* Espacer l'image et les carousels */
-  align-items: flex-start; /* Aligner les éléments au début (en haut) */
-  gap: 20px; /* Espacement entre l'image et les carousels */
+  display: flex; 
+  justify-content: center; 
+  align-items: flex-start; 
+  gap: 20px; 
 }
 
 .portrait {
-  flex-shrink: 0; /* Empêche l'image de se réduire */
+  flex-shrink: 0; 
 }
 
 .portrait-img {
-  width: 200px;  /* Ajuste la largeur de l'image */
-  height: auto;  /* Laisse la hauteur s'ajuster automatiquement */
+  width: 200px;  
+  height: auto;  
 }
 
 .parcours-item {
-  flex: 0 0 33%; /* Chaque item prend 33% de la largeur du conteneur (3 éléments visibles à la fois) */
-  margin: 0 10px; /* Espacement entre les éléments */
+  flex: 0 0 33%; 
+  margin: 0 10px; 
   padding: 20px;
   background-color: #333;
   color: white;
   text-align: center;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  box-sizing: border-box; /* Inclut la marge et le padding dans le calcul de la largeur */
+  box-sizing: border-box; 
 }
 
 .parcours-logo {
-  width: 100px; /* Largeur du logo */
-  height: auto; /* Hauteur automatique pour conserver le ratio */
-  margin-bottom: 15px; /* Espacement en dessous du logo */
+  width: 100px; 
+  height: auto; 
+  margin-bottom: 15px; 
 }
 
 .parcours-item.active {
-  opacity: 1; /* Pleine opacité pour la carte active */
-  transform: scale(1.1); /* Mettez en valeur l'élément central */
+  opacity: 1; 
+  transform: scale(1.1); 
 }
 
 /*AVIS*****************************************************/
@@ -692,6 +699,7 @@ header {
   display: flex;
     flex-direction: column;
     gap: 60px;
+    text-align: left;
 }
 
 span {
@@ -781,7 +789,7 @@ textarea {
 }
 
 .submit-button {
-  background: linear-gradient(45deg, rgb(255, 0, 191), rgb(0, 217, 255));
+  background: linear-gradient(45deg, rgb(255, 0, 191), rgb(0, 102, 255));
   color: white; /* Couleur du texte du bouton */
   padding: 10px 20px;
   border: none;
