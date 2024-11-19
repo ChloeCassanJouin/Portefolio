@@ -30,13 +30,108 @@ section {
 @media (max-width: 768px) {
   section {
     flex-direction: column;
+    padding: 0vh;
+    margin-top: 10vh;
   }
 }
 
 
 
+
 /*LOADER*****************************************************/
-/* Style du loader */
+.loader {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+.loader-rectangle {
+  display: flex;
+  flex-direction: row;
+  gap: 10vh;
+  border-bottom: none; /* Retirer les autres bordures si nécessaire */
+  border-left: none;
+  border-right: none;
+  padding: 10vh;
+  border-radius: 10px; /* Optionnel : pour arrondir les coins */
+  position: relative; /* Nécessaire pour positionner les pseudo-éléments */
+}
+
+.loader-rectangle::before,
+.loader-rectangle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 5px; /* Même épaisseur que la bordure */
+  width: 0%; /* Commence invisible */
+  background-color: rgb(0, 217, 255); /* Même couleur que la bordure */
+  animation: drawLine 2s linear forwards; /* Animation identique pour les deux bordures */
+}
+
+.loader-rectangle::before {
+  top: 0; /* Aligner avec la bordure supérieure */
+}
+
+.loader-rectangle::after {
+  bottom: 0; /* Aligner avec la bordure inférieure */
+}
+
+/* Animation pour les bordures */
+@keyframes drawLine {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%; /* Ligne complète */
+  }
+}
+.loader__spinner {
+  border: 10px solid rgba(255, 121, 218, 0.3); /* Bordure semi-transparente */
+  border-top: 5px solid rgba(0, 100, 255, 0.7),; /* Couleur principale de la partie visible */
+  border-bottom: 5px solid rgba(0, 100, 255, 0.7),; /* Variation de couleur */
+  border-right: 10px solid transparent; /* Rendre un côté invisible */
+  border-radius: 50%; /* Cercle */
+  width: 100px;
+  height: 100px;
+
+  animation: spin 3s linear infinite, fadeOutLoader 0.2s 1.9s forwards;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeInContent {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOutLoader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.loader-enabled {
+  opacity: 0;
+  animation: fadeInContent 3s forwards 2s;
+  position: relative;
+  z-index: 10;
+}
 
 /*navbar /menu *****************************************************/
 
@@ -205,21 +300,21 @@ header {
 
 @media screen and (max-width: 768px) {
   .neon-links {
-    position: static; /* Supprime position:absolute */
-    bottom: auto; /* Inutile sans position:absolute */
-    right: auto; /* Inutile sans position:absolute */
-    transform: none; /* Pas nécessaire */
-    flex-direction: column; /* Dispose les liens verticalement */
-    gap: 20px; /* Réduit l'espace entre les liens */
-    font-size: 6vw; /* Police plus grande si nécessaire */
-    padding-top: 40px;
+    position: static; 
+    bottom: auto; 
+    right: auto; 
+    transform: none; 
+    flex-direction: column; 
+    gap: 20px; 
+    font-size: 6vw; 
+    padding-top: 10vh;
   }
 }
 
 .neon-link1,
 .neon-link2,
 .neon-link3 {
-  text-align: center; /* Centrer le texte */
+  text-align: center;
   }
 
 
@@ -320,6 +415,7 @@ header {
 }
 
 /* TEXTE PRESENTATION ****************************************************/
+
 #presentation p {
   color: rgb(0, 217, 255); 
   text-shadow: 
@@ -328,7 +424,7 @@ header {
     0 0 15px rgba(0, 100, 255, 0.7),
     0 0 20px rgba(0, 100, 255, 0.7),
     0 0 25px rgba(0, 100, 255, 0.7);
-  padding: 10vh;
+  padding: 0vh 10vh;
   font-size: x-large;
 }
 
@@ -845,4 +941,15 @@ textarea {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+footer p {
+  color: rgb(0, 217, 255); 
+  text-shadow: 
+    0 0 5px rgba(0, 100, 255, 0.7),
+    0 0 10px rgba(0, 100, 255, 0.7),
+    0 0 15px rgba(0, 100, 255, 0.7),
+    0 0 20px rgba(0, 100, 255, 0.7),
+    0 0 25px rgba(0, 100, 255, 0.7);
+    padding: 10vh;
 }
