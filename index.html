@@ -10,28 +10,14 @@
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    <div class="loader" id="loader">
-        <div class="ball ball1">
-            <div class="line line1"></div>
-            <div class="line line2"></div>
-            <div class="line line3"></div>
-            <div class="line line4"></div>
-            <div class="line line5"></div>
-        </div>
-
-        <div class="ball ball2">
-            <div class="line line1"></div>
-            <div class="line line2"></div>
-            <div class="line line3"></div>
-            <div class="line line4"></div>
-            <div class="line line5"></div>
-        </div>
+    <div class="loader">
+        
     </div>
 
 <header>
     <nav class="menu">
         <div class="nav-content">
-            <a href="#contact" class="link-nav job"><span>DEVELOPPEUR WEB</span></a>
+            <a href="#projects" class="link-nav job"><span>DEVELOPPEUR WEB</span></a>
             <a href="#contact" class="link-nav name"><span>CHLOE JOUIN</span></a>
             <a href="#contact" class="link-nav contact"><span>CONTACT</span></a>
         </div>
@@ -54,7 +40,7 @@
 </section>
 
 <section id="presentation" class="neon-border">
-    <p>Enthousiaste à l'idée de continuer à apprendre et d'évoluer dans le domaine du développement web,<br> je recherche une opportunité en tant que développeur junior ou en alternance <br> pour contribuer activement à des projets concrets et enrichir mes compétences techniques.</p>
+    <p class="presentation-text">Enthousiaste à l'idée de continuer à apprendre et d'évoluer dans le domaine du développement web,<br> je recherche une opportunité en tant que développeur junior ou en alternance <br> pour contribuer activement à des projets concrets et enrichir mes compétences techniques.</p>
 </section> 
 
 <section id="projects" class="neon-border">
@@ -101,21 +87,51 @@
 
 <section id="contact" class="neon-border">
     <h2 class="Contact-title">CONTACT</h2>
-    <div class="contact-form-container">
-        <form id="contact-form">
-            <label for="name">Nom :</label>
-            <input type="text" id="name" name="name" required>
+    <div class="contact-container">
+        <div class="contact-form-container">
+            <form id="contact-form">
 
-            <label for="email">Email :</label>
-            <input type="email" id="email" name="email" required>
+                    <label for="last-name">Nom :</label>
+                    <input type="text" id="last-name" name="last-name" required>
 
-            <label for="message">Message :</label>
-            <textarea id="message" name="message" required></textarea>
+                    <label for="first-name">Prénom :</label>
+                    <input type="text" id="first-name" name="first-name" required>
 
-            <button type="submit" class="submit-button">Envoyer</button>
-        </form>
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone-number">Téléphone :</label>
+                    <input type="phone-number" id="phone-number" name="phone-number" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" class="submit-button">Envoyer</button>
+            </form>
+        </div>
+        <div class="contact-info">
+            <div class="info-item">
+                <img src="Assets/Images/Logos/EMAIL.png" alt="Ray Tomlinson @" class="contact-logo rayTomlinson">
+                <span>chloecassanjouin@gmail.com</span>
+            </div>
+            <div class="info-item">
+                <img src="Assets/Images/Logos/phone.png" alt="Logo Téléphone" class="contact-logo">
+                <span>06 89 05 22 72</span>
+            </div>
+            <div class="info-item">
+                <img src="Assets/Images/Logos/MAISON.png" alt="Logo Maison" class="contact-logo">
+                <span>26210 Lapeyrouse-Mornay<br>nord Drôme<br>Rhône Alpes</span>
+            </div>
+        </div>
     </div>
-    <div id="modal" class="modal">
+    <div id="modal-image" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="Assets/Images/Logos/EMAIL.png" alt="@" class="modal-large-image">
+            <p>Cliquez sur cette image pour copier l'email ou partager avec vos amis.</p>
+        </div>
+    </div>
+    <div id="modal-sent" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <p>Message envoyé !</p>
@@ -132,6 +148,7 @@
 <script src="js/loader.js"></script>
 <script src="js/navbar.js"></script>   
 <script src="js/music-play.js"></script>    
+<script src="js/presentation-text.js"></script> 
 <script src="js/projects.js"></script> 
 <script src="js/parcours.js"></script> 
 <script src="js/slider.js"></script>

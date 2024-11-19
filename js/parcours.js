@@ -24,7 +24,6 @@ function createCards(data) {
             <h3>${item.role}</h3>
             <p>Type : ${item.type}</p>
             <p>Année : ${item.year}</p>
-            <p>Domaine : ${item.domaine}</p>
         `;
         container.appendChild(card);
     });
