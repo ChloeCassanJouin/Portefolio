@@ -44,4 +44,30 @@ document.addEventListener("DOMContentLoaded", function () {
         index = (index + 1) % images.length;
         updateSlidePosition();
     }, 3000); // Change d'image toutes les 3 secondes
+
+    // Sélectionner la modale et ses éléments de contrôle
+    const modal = document.querySelector(".modal-avis");
+    const modalImage = modal.querySelector(".modal-image-avis");
+    const modalClose = modal.querySelector(".modal-close-avis");
+
+    // Ajouter un événement de clic sur les images pour ouvrir la modale
+    images.forEach((img) => {
+        img.addEventListener("click", () => {
+            modalImage.src = img.src; // Affiche l'image agrandie dans la modale
+            modal.style.display = "flex"; // Affiche la modale
+        });
+    });
+
+    // Fermer la modale en cliquant sur la croix
+    modalClose.addEventListener("click", (event) => {
+        event.stopPropagation(); // Empêche la propagation du clic
+        modal.style.display = "none"; // Cache la modale
+    });
+
+    // Fermer la modale en cliquant en dehors du contenu
+    modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none"; // Cache la modale
+        }
+    });
 });
