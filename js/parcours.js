@@ -1,7 +1,6 @@
 // Emplacement de ton fichier JSON
 const parcoursDataUrl = './data/parcours.json';
 
-
 // Chargement des données et initialisation
 fetch(parcoursDataUrl)
     .then(response => response.json())
@@ -21,9 +20,9 @@ function createCards(data) {
         card.classList.add('card');
         card.innerHTML = `
             <img src="${item.image}" alt="${item.alt}">
-            <h3>${item.role}</h3>
-            <p>Type : ${item.type}</p>
-            <p>Année : ${item.year}</p>
+            <h3 class="card-job">${item.role}</h3>
+            <p class="card-type">${item.type}</p>
+            <p class="card-year">${item.year}</p>
         `;
         container.appendChild(card);
     });

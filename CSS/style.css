@@ -16,6 +16,13 @@ body {
 p {
   font-family: 'Zen Dots', sans-serif;
   font-size: large;
+  color: rgb(0, 217, 255); 
+  text-shadow: 
+      0 0 5px rgba(0, 100, 255, 0.7),
+      0 0 10px rgba(0, 100, 255, 0.7),
+      0 0 15px rgba(0, 100, 255, 0.7),
+      0 0 20px rgba(0, 100, 255, 0.7),
+      0 0 25px rgba(0, 100, 255, 0.7);
 }
 
 section {
@@ -52,6 +59,7 @@ h2 {
   width: 100%;
   margin: auto;
 }
+
 
 .loader-rectangle {
   display: flex;
@@ -430,13 +438,6 @@ header {
 
 
 #presentation p {
-  color: rgb(0, 217, 255); 
-  text-shadow: 
-    0 0 5px rgba(0, 100, 255, 0.7),
-    0 0 10px rgba(0, 100, 255, 0.7),
-    0 0 15px rgba(0, 100, 255, 0.7),
-    0 0 20px rgba(0, 100, 255, 0.7),
-    0 0 25px rgba(0, 100, 255, 0.7);
   padding: 0vh 10vh;
   font-size: x-large;
 }
@@ -616,17 +617,30 @@ header {
   width: 250px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 40vh;
 }
 .card img {
-  max-width: 100%;
-  height: auto;
+  width: auto;
+  max-height: 8vh;
   border-radius: 4px;
+  margin-bottom: 4vh;
 }
+
+.card-job {
+  font-family: 'Zen Dots', sans-serif;
+  margin-bottom: 4vh;
+  padding: 0vh 2vh;
+}
+
+.card-type {
+  margin-bottom: 4vh;
+}
+
 .filter-buttons {
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin-bottom: 16px;
+  padding-bottom: 5vh;
 }
 .filter-buttons button {
   padding: 8px 16px;
@@ -664,36 +678,37 @@ header {
 
 .parcours-container {
   display: flex; 
-  justify-content: center; 
-  align-items: flex-start; 
-  gap: 20px; 
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si nécessaire */
+  justify-content: center; /* Répartir les éléments uniformément */
+  gap: 4vh; 
 }
 
-.portrait {
-  flex-shrink: 0; 
-}
-
-.portrait-img {
-  width: 200px;  
-  height: auto;  
-}
 
 .parcours-item {
-  flex: 0 0 33%; 
-  margin: 0 10px; 
+  flex: 0 1 calc(33.333% - 20px); /* Chaque carte occupe environ 33% de la largeur moins l'écart */
+  margin: 0; /* Enlève les marges externes, tout est géré par le flexbox */
   padding: 20px;
   background-color: #333;
   color: white;
   text-align: center;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  box-sizing: border-box; 
+  box-sizing: border-box; /* Inclut les marges et paddings dans la largeur de l'élément */
+  /* Ajout de dimensions fixes */
+  max-width: calc(33.333% - 20px); /* Assurer qu'aucune carte ne dépasse une largeur de 33.333% */
+  min-width: 280px; /* Un minimum de largeur pour garantir un affichage correct */
+}
+
+.parcours-item img {
+  width: 100%; /* Les images prennent toute la largeur de la carte */
+  height: auto; /* Conserver le ratio d'aspect des images */
+  margin-bottom: 15px;
 }
 
 .parcours-logo {
   width: 100px; 
   height: auto; 
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
 }
 
 .parcours-item.active {
@@ -714,6 +729,10 @@ header {
       0 0 25px rgba(255, 20, 147, 0.7);
 }
 
+.avis-text {
+  padding-bottom: 10vh;
+}
+
 .letters {
   width: 100%;
   max-width: 100%;
@@ -723,6 +742,51 @@ header {
   width: 100%;
   max-width: 100%;
 }
+
+/* button CV ***************************/
+.img-CV-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10vh;
+}
+
+.cv-button {
+  color: black; /* Couleur du texte */
+  background: linear-gradient(to top,rgb(255, 0, 140), rgb(255, 208, 0), rgb(238, 255, 0)); /* Dégradé de bas en haut */
+  box-shadow: 
+      0 0 5px rgba(255, 20, 147, 0.7),
+      0 0 10px rgba(255, 20, 147, 0.7),
+      0 0 15px rgba(255, 20, 147, 0.7),
+      0 0 20px rgba(255, 20, 147, 0.7),
+      0 0 25px rgba(255, 20, 147, 0.7);
+  border: none; /* Supprime les bordures */
+  border-radius: 50%; /* Rend l'élément circulaire */
+  width: 100px; /* Largeur pour créer un cercle */
+  height: 100px; /* Hauteur identique pour conserver la forme */
+  display: flex; /* Pour centrer le texte */
+  justify-content: center; /* Centrage horizontal du texte */
+  align-items: center; /* Centrage vertical du texte */
+  font-size: 16px; /* Taille de la police */
+  font-weight: bold; /* Texte en gras */
+  cursor: pointer; /* Curseur interactif */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation pour effet au survol */
+}
+
+.cv-button:hover {
+  transform: scale(1.1); /* Agrandit légèrement le bouton au survol */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Augmente l'ombre au survol */
+}
+
+.cv-button:active {
+  transform: scale(0.95); /* Rétrécit légèrement le bouton au clic */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Réduit l'ombre au clic */
+}
+
+.cv-text {
+  color: black;
+  text-shadow: none;
+}
+
 
 /*Carousel Avis *******************************************************/
 .carousel {
@@ -748,7 +812,7 @@ header {
 .carousel-prev,
 .carousel-next {
   position: absolute;
-  top: 50%; /* Centrage vertical */
+  top: 60%; /* Centrage vertical */
   transform: translateY(-50%); /* Ajuste le centrage */
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
@@ -762,11 +826,11 @@ header {
 
 /* Place les flèches à l'extérieur de l'image */
 .carousel-prev {
-  left: 5%; /* Positionner à gauche */
+  left: 24%; /* Positionner à gauche */
 }
 
 .carousel-next {
-  right: 5%; /* Positionner à droite */
+  right: 24%; /* Positionner à droite */
 }
 
 .fa-arrow-left,
@@ -787,15 +851,26 @@ header {
   .carousel-next {
     font-size: 5vw; /* Augmenter la taille des icônes sur les petits écrans */
     padding: 1rem;  /* Ajuster la taille des boutons */
-    top: 60%;
-
+    top: 65%
   }
 
   .fa-arrow-left,
   .fa-arrow-right {
     font-size: 5vh; /* Agrandir l'icône pour les petits écrans */
+
   }
+
+  .carousel-prev {
+    left: 4%; /* Positionner à gauche */
+  }
+  
+  .carousel-next {
+    right: 4%; /* Positionner à droite */
+  }
+  
 }
+
+
 
 /*MODAL AVIS ******************/
 .modal-avis {
@@ -954,6 +1029,7 @@ input:-webkit-autofill {
   box-shadow: 0 0 0px 1000px transparent inset !important; /* Supprime le fond ajouté par défaut */
   -webkit-text-fill-color: #fff !important; /* Texte blanc */
   transition: background-color 5000s ease-in-out 0s; /* Évite les transitions visibles */
+  font-size: 2vh;
 }
 
 input, textarea {
@@ -1011,6 +1087,49 @@ textarea {
 
 .linkedin-logo-container {
   padding-top: 18px;
+}
+
+/* MODALE CONTACT**************************/
+/* Style pour la modale */
+.modal-contact {
+  display: none; /* Cacher la modale par défaut */
+  position: fixed; /* Fixe la modale en haut à gauche */
+  z-index: 1; /* Assure que la modale est par-dessus les autres éléments */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Activer le défilement si nécessaire */
+  background-color: rgba(0, 0, 0, 0.4); /* Fond semi-transparent */
+}
+
+.modal-content-contact {
+  background-color: #fff;
+  margin: 15% auto; /* Centrer la modale */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+}
+
+.close-btn-contact {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+}
+
+.close-btn-contact:hover,
+.close-btn-contact:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#clear-form-contact {
+  margin-top: 10px;
 }
 
 

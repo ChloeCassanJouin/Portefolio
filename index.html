@@ -78,10 +78,15 @@
 
 <section id="avis">
     <h2 class="avis-title">AVIS</h2>
-    <p>
+    <p class="avis-text">
         Ils m'ont fait confiance, pourquoi pas vous? <br>
         Preuve de professionnalisme et d'engagement depuis 2007.
     </p>
+    <div class="img-CV-container">
+        <button id="cv-button" class="cv-button">
+            <p class="cv-text">Mon CV</p>
+        </button>
+    </div>
     <div class="carousel">
         <div class="carousel-slides"></div>
     </div>
@@ -93,10 +98,11 @@
         <div class="modal-content-avis">
           <span class="modal-close-avis">&times;</span>
           <div class="modal-image-container-avis">
-            <img src="" alt="Image agrandie" class="modal-image-avis">
+            <!-- Contenu chargé dynamiquement : image ou PDF -->
+            <img src="" alt="Contenu agrandi" class="modal-image-avis" style="display: none;">
           </div>
         </div>
-      </div>
+    </div>
 </section>
 
 <section id="contact" class="neon-border">
@@ -122,6 +128,13 @@
 
                 <button type="submit" class="submit-button">Envoyer</button>
             </form>
+            <div id="message-modal-contact" class="modal-contact">
+                <div class="modal-content-contact">
+                    <span id="close-modal-contact" class="close-btn-contact">&times;</span>
+                    <p>Message envoyé !</p>
+                    <button id="clear-form-contact">OK</button>
+                </div>
+            </div>
         </div>
         <div class="contact-info">
             <div class="info-item">
@@ -137,8 +150,8 @@
                 <span>26210<br>Lapeyrouse-Mornay<br>nord Drôme<br>Rhône Alpes</span>
             </div>
             <div class="logo-link-contact">
-                <div ><a href="https://github.com/ChloeCassanJouin?tab=repositories"><img src="Assets/Images/Logos/github.png" alt="lien github" class ="contact-logo"></a></div>
-                <div><a href="www.linkedin.com/in/chloe-jouin"><img src="Assets/Images/Logos/linkedin.jpg" alt="lien Linkedin" class ="contact-logo"></a></div>
+                <div><a href="https://github.com/ChloeCassanJouin?tab=repositories"><img src="Assets/Images/Logos/github.png" alt="lien github" class ="contact-logo"></a></div>
+                <div class="linkedin-logo-container"><a href="www.linkedin.com/in/chloe-jouin"><img src="Assets/Images/Logos/linkedin.jpg" alt="lien Linkedin" class ="contact-logo"></a></div>
             </div>
         </div>
     </div>
@@ -156,11 +169,11 @@
 <script src="js/music-play.js"></script> 
 <script src="js/presentation-text.js"></script>  
 <script src="js/section-appearance.js"></script>  
-
 <script src="js/projects.js"></script> 
-<script src="js/parcours.js"></script> 
+<script src="js/parcours.js"></script>
+<script src="js/button-cv.js"></script>
 <script src="js/slider.js"></script>
-
+<script src="js/contact.js"></script>
 </body>
 
 </html>
