@@ -744,38 +744,57 @@ header {
   object-fit: cover;
 }
 
+/* Boutons de navigation */
 .carousel-prev,
 .carousel-next {
   position: absolute;
-  top: 55%; /* Centrage vertical */
+  top: 50%; /* Centrage vertical */
+  transform: translateY(-50%); /* Ajuste le centrage */
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
-  font-size: 2rem;
-  padding: 10px;
+  font-size: 5vw; /* Taille responsive des icônes */
+  padding: 1rem;
   cursor: pointer;
   z-index: 10;
+  border-radius: 50%; /* Ajouter un arrondi pour un effet circulaire */
 }
 
 /* Place les flèches à l'extérieur de l'image */
 .carousel-prev {
-  right: 115vh; /* Ajustez cette valeur pour la distance à gauche */
+  left: 5%; /* Positionner à gauche */
 }
 
 .carousel-next {
-  left: 115vh;  /* Ajustez cette valeur pour la distance à droite */
+  right: 5%; /* Positionner à droite */
 }
 
 .fa-arrow-left,
 .fa-arrow-right {
-  color: rgb(214, 128, 174); 
-  font-size: 8vh;
-  text-shadow: 
+  color: rgb(214, 128, 174);
+  font-size: 8vh; /* Taille de l'icône responsive */
+  text-shadow:
     0 0 5px rgba(255, 20, 147, 0.7),
     0 0 10px rgba(255, 20, 147, 0.7),
     0 0 15px rgba(255, 20, 147, 0.7),
     0 0 20px rgba(255, 20, 147, 0.7),
     0 0 25px rgba(255, 20, 147, 0.7);
+}
+
+/* Media queries pour petits écrans */
+@media (max-width: 768px) {
+  .carousel-prev,
+  .carousel-next {
+    font-size: 5vw; /* Augmenter la taille des icônes sur les petits écrans */
+    padding: 1rem;  /* Ajuster la taille des boutons */
+    top: 60%;
+
+  }
+
+  .fa-arrow-left,
+  .fa-arrow-right {
+    font-size: 5vh; /* Agrandir l'icône pour les petits écrans */
+  }
 }
 
 /*MODAL AVIS ******************/
