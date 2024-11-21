@@ -892,7 +892,7 @@ header {
 .contact-info {
   display: flex;
     flex-direction: column;
-    gap: 5vh;
+    gap: 6vh;
     text-align: left;
 }
 
@@ -901,8 +901,8 @@ span {
 }
 .contact-form-container {
   padding: 5px;
-  width: 80%; /* Largeur de la zone du formulaire */
-  max-width: 600px; /* Largeur maximale */
+  width: 80%; 
+  max-width: 600px; 
 }
 
 .contact-block {
@@ -1009,7 +1009,12 @@ textarea {
   gap: 5vh;
 }
 
+.linkedin-logo-container {
+  padding-top: 18px;
+}
 
+
+/* FOOTER *******************************************************/
 footer p {
   color: rgb(0, 217, 255); 
   text-shadow: 
