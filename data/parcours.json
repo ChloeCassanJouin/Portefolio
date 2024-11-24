@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "image": "Assets/Images/Logos/openclassrooms.jpg",
+        "image": "Assets/Images/Logos/openclassrooms.jpg", 
         "alt": "Logo openclassrooms",
         "type": "Formation",
         "role": "Intégrateur Web",

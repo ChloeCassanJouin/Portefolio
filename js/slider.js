@@ -10,11 +10,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const slidesContainer = document.querySelector(".carousel-slides");
 
-    // Ajoute les images dynamiquement
+    // Ajout dynamique des images
     imagePaths.forEach((path) => {
         const img = document.createElement("img");
         img.src = path;
         img.alt = "Lettre de recommandation";
+        img.classList.add("carousel-image"); // Ajout d'une classe pour un ciblage précis
         slidesContainer.appendChild(img);
     });
 
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateSlidePosition() {
         slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+        slidesContainer.style.transition = "transform 0.5s ease"; // Transition fluide
     }
 
     // Boutons de navigation
@@ -45,29 +47,30 @@ document.addEventListener("DOMContentLoaded", function () {
         updateSlidePosition();
     }, 3000); // Change d'image toutes les 3 secondes
 
-    // Sélectionner la modale et ses éléments de contrôle
+    // Gestion de la modale
     const modal = document.querySelector(".modal-avis");
     const modalImage = modal.querySelector(".modal-image-avis");
     const modalClose = modal.querySelector(".modal-close-avis");
 
-    // Ajouter un événement de clic sur les images pour ouvrir la modale
+    // Affichage de la modale au clic sur une image
     images.forEach((img) => {
         img.addEventListener("click", () => {
-            modalImage.src = img.src; // Affiche l'image agrandie dans la modale
-            modal.style.display = "flex"; // Affiche la modale
+            modalImage.src = img.src;
+            modalImage.style.display = "block"; // S'assurer que l'image est visible
+            modal.style.display = "flex"; // Afficher la modale avec flex
         });
     });
 
-    // Fermer la modale en cliquant sur la croix
+    // Fermeture de la modale au clic sur la croix
     modalClose.addEventListener("click", (event) => {
-        event.stopPropagation(); // Empêche la propagation du clic
-        modal.style.display = "none"; // Cache la modale
+        event.stopPropagation();
+        modal.style.display = "none";
     });
 
-    // Fermer la modale en cliquant en dehors du contenu
+    // Fermeture de la modale au clic en dehors du contenu
     modal.addEventListener("click", (event) => {
         if (event.target === modal) {
-            modal.style.display = "none"; // Cache la modale
+            modal.style.display = "none";
         }
     });
 });
