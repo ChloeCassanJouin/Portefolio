@@ -390,7 +390,47 @@ header {
 }
 
 /* TEXTE PRESENTATION ****************************************************/
+#presentation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Pour gérer les petits écrans */
+  gap: 20px; /* Espacement entre les éléments */
+  padding: 20px;
+}
 
+.presentation-img img {
+  max-width: 100%; /* Image responsive */
+  height: auto;
+  border-radius: 10px; /* Optionnel, pour arrondir les angles */
+}
+
+.presentation-img {
+  flex: 1;
+  min-width: 200px; /* Largeur minimale de l'image */
+}
+
+/* Médias queries */
+@media (max-width: 768px) {
+  #presentation {
+      flex-direction: column; /* Les éléments passent les uns sous les autres */
+      text-align: center; /* Centrer le contenu pour les petits écrans */
+  }
+
+  .presentation-img {
+      margin-bottom: 20px; /* Espacement entre l'image et le texte */
+  }
+}
+
+@media (max-width: 480px) {
+  .text-container p {
+      font-size: 14px; /* Réduction de la taille du texte pour les très petits écrans */
+  }
+
+  .neon-link3 {
+      font-size: 16px; /* Taille du texte ajustée */
+  }
+}
 
 #presentation p {
   /*padding: 0vh 10vh;*/
@@ -398,6 +438,19 @@ header {
   opacity: 0;
   animation: fade-in 4s forwards;
   animation-delay: 10s;
+}
+
+.presentation-img {
+  opacity: 0;
+  animation: fade-in 4s forwards;
+  animation-delay: 10s;
+}
+
+.text-container {
+  padding: 10vh;
+  gap: 10vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /*PROJETS ****************************************************************/
@@ -415,8 +468,6 @@ header {
       0 0 15px rgba(0, 100, 255, 0.7),
       0 0 20px rgba(0, 100, 255, 0.7),
       0 0 25px rgba(0, 100, 255, 0.7);
-  background-image: url(../Assets/Images/background-image/sun);
-  background-size: cover;
 }
 
 .Projects-title {
@@ -449,6 +500,7 @@ header {
   max-width: 1200px; 
   height: auto;
   border: 1px solid rgb(0, 217, 255); ;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 
@@ -579,14 +631,54 @@ header {
   width: 60em;
 }
 
-/*PARCOURS*************************************************************/
-.parcours-container {
+
+
+
+/*PARCOURS *****************************************************/
+#parcours {
+  text-align: center;
+  color: white; 
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-  padding: 0vh 2%;
+  flex-direction: column;
 }
+
+.Parcours-title {
+  color: rgb(183, 233, 171); 
+  text-decoration: none;
+  font-size: 36px;
+  text-shadow: 
+      0 0 5px rgba(57, 255, 20, 0.7),
+      0 0 10px rgba(57, 255, 20, 0.7),
+      0 0 15px rgba(57, 255, 20, 0.7),
+      0 0 20px rgba(57, 255, 20, 0.7),
+      0 0 25px rgba(57, 255, 20, 0.7);
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding-bottom: 5vh;
+}
+.filter-buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+}
+.filter-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.parcours-container {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 11vh; 
+}
+
 .card {
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -613,85 +705,6 @@ header {
   margin-bottom: 4vh;
 }
 
-.filter-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  padding-bottom: 5vh;
-}
-.filter-buttons button {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  background-color: #007BFF;
-  color: white;
-  cursor: pointer;
-}
-.filter-buttons button:hover {
-  background-color: #0056b3;
-}
-
-
-/*PARCOURS *****************************************************/
-
-#parcours {
-  text-align: center;
-  color: white; 
-  display: flex;
-  flex-direction: column;
-}
-
-.Parcours-title {
-  color: rgb(183, 233, 171); 
-  text-decoration: none;
-  font-size: 36px;
-  text-shadow: 
-      0 0 5px rgba(57, 255, 20, 0.7),
-      0 0 10px rgba(57, 255, 20, 0.7),
-      0 0 15px rgba(57, 255, 20, 0.7),
-      0 0 20px rgba(57, 255, 20, 0.7),
-      0 0 25px rgba(57, 255, 20, 0.7);
-}
-
-.parcours-container {
-  display: flex; 
-  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si nécessaire */
-  justify-content: center; /* Répartir les éléments uniformément */
-  gap: 4vh; 
-}
-
-
-.parcours-item {
-  flex: 0 1 calc(33.333% - 20px); /* Chaque carte occupe environ 33% de la largeur moins l'écart */
-  margin: 0; /* Enlève les marges externes, tout est géré par le flexbox */
-  padding: 20px;
-  background-color: #333;
-  color: white;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  box-sizing: border-box; /* Inclut les marges et paddings dans la largeur de l'élément */
-  /* Ajout de dimensions fixes */
-  max-width: calc(33.333% - 20px); /* Assurer qu'aucune carte ne dépasse une largeur de 33.333% */
-  min-width: 280px; /* Un minimum de largeur pour garantir un affichage correct */
-}
-
-.parcours-item img {
-  width: 100%; /* Les images prennent toute la largeur de la carte */
-  height: auto; /* Conserver le ratio d'aspect des images */
-  margin-bottom: 15px;
-}
-
-.parcours-logo {
-  width: 100px; 
-  height: auto; 
-  margin-bottom: 15px;
-}
-
-.parcours-item.active {
-  opacity: 1; 
-  transform: scale(1.1); 
-}
 
 /*AVIS*****************************************************/
 .avis-title {
@@ -889,8 +902,6 @@ header {
 #contact {
   text-align: center;
   color: white;
-
-
 }
 
 .Contact-title {
@@ -1128,6 +1139,7 @@ section {
   /* PROJECTS****************************/
   .project-card {
     height: auto;
+    
   }
 
   .project-card h3{
