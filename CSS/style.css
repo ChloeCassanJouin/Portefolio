@@ -34,21 +34,6 @@ section {
   overflow: hidden; 
 }
 
-@media (max-width: 768px) {
-  section {
-    flex-direction: column;
-    padding: 0vh;
-    margin-top: 10vh;
-  }
-}
-
-h2 {
-  padding-bottom: 10vh;
-}
-
-
-
-
 /*LOADER*****************************************************/
 .loader {
   position: fixed;
@@ -232,21 +217,7 @@ header {
   display: none;
 }
 
-@media (max-width: 768px) {
 
-
-  .menu {
-    justify-content: space-between;
-
-    .link-nav {
-      font-size: 2vh;
-    }
-  }
-
-  .nav-content {
-    flex-direction: column;
-  }
-}
 
 
 /*Welcome part - background img ******/
@@ -282,12 +253,7 @@ header {
   }
 }
 
-@media (max-width: 768px) {
-  .background-img {
-    padding-top: 40px;
-    opacity: 0;
-  }
-}
+
 
 
 /* NEON LINKS **************************/
@@ -318,18 +284,7 @@ header {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .neon-links {
-    position: static; 
-    bottom: auto; 
-    right: auto; 
-    transform: none; 
-    flex-direction: column; 
-    gap: 20px; 
-    font-size: 6vw; 
-    padding-top: 10vh;
-  }
-}
+
 
 .neon-link1,
 .neon-link2,
@@ -438,8 +393,11 @@ header {
 
 
 #presentation p {
-  padding: 0vh 10vh;
-  font-size: x-large;
+  /*padding: 0vh 10vh;*/
+  font-size: medium;
+  opacity: 0;
+  animation: fade-in 4s forwards;
+  animation-delay: 10s;
 }
 
 /*PROJETS ****************************************************************/
@@ -447,9 +405,18 @@ header {
 .project-item h3 {
   color: pink;
 }
+
 #projects {
   text-align: center;
-  color: pink;
+  color: rgb(0, 217, 255); 
+  text-shadow: 
+      0 0 5px rgba(0, 100, 255, 0.7),
+      0 0 10px rgba(0, 100, 255, 0.7),
+      0 0 15px rgba(0, 100, 255, 0.7),
+      0 0 20px rgba(0, 100, 255, 0.7),
+      0 0 25px rgba(0, 100, 255, 0.7);
+  background-image: url(../Assets/Images/background-image/sun);
+  background-size: cover;
 }
 
 .Projects-title {
@@ -468,11 +435,11 @@ header {
   flex-direction: column; 
   gap: 40px;
   align-items: center; 
-  padding: 0 20px; 
+  /*padding: 0 20px;*/ 
 }
 .project-card {
   display: flex;
-  flex-direction: row; 
+  flex-direction: column; 
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -480,15 +447,15 @@ header {
   overflow: hidden;
   width: 100%; 
   max-width: 1200px; 
-  height: 300px; 
+  height: auto;
   border: 1px solid rgb(0, 217, 255); ;
 }
 
 
 .project-image img {
-  width: 100%;
-  height: auto;
-  max-width: 200px; /* Largeur maximum de l'image */
+  /*width: 100%;
+  height: auto;*/
+  max-width: 100%; /* Largeur maximum de l'image */
   border-radius: 10px;
   object-fit: cover;
 }
@@ -505,7 +472,7 @@ header {
 }
 .project-card h3 {
   color: #ff4081;
-  padding-bottom: 4vh;
+  padding: 4vh;
   font-size: x-large;
 }
 
@@ -556,6 +523,7 @@ header {
 /*MODALE PROJECT****************************************************/
 .modal-description-projects {
   color: pink;
+  padding: 5vh;
 }
 
 .modal-projects {
@@ -573,7 +541,7 @@ header {
 }
 
 .modal-content-projects {
-  background-color: white;
+  background-color: black;
   padding: 20px;
   border-radius: 8px;
   width: 100vh;
@@ -583,6 +551,14 @@ header {
   float: right;
   font-size: 24px;
   cursor: pointer;
+  color: rgb(183, 233, 171); 
+  text-shadow: 
+      0 0 5px rgba(57, 255, 20, 0.7),
+      0 0 10px rgba(57, 255, 20, 0.7),
+      0 0 15px rgba(57, 255, 20, 0.7),
+      0 0 20px rgba(57, 255, 20, 0.7),
+      0 0 25px rgba(57, 255, 20, 0.7);
+  
 }
 
 .modal-projects img {
@@ -846,30 +822,7 @@ header {
     0 0 25px rgba(255, 20, 147, 0.7);
 }
 
-/* Media queries pour petits écrans */
-@media (max-width: 768px) {
-  .carousel-prev,
-  .carousel-next {
-    font-size: 5vw; /* Augmenter la taille des icônes sur les petits écrans */
-    padding: 1rem;  /* Ajuster la taille des boutons */
-    top: 65%
-  }
 
-  .fa-arrow-left,
-  .fa-arrow-right {
-    font-size: 5vh; /* Agrandir l'icône pour les petits écrans */
-
-  }
-
-  .carousel-prev {
-    left: 4%; /* Positionner à gauche */
-  }
-  
-  .carousel-next {
-    right: 4%; /* Positionner à droite */
-  }
-  
-}
 
 
 
@@ -960,13 +913,7 @@ header {
   padding: 10vh;
 }
 
-@media screen and (max-width: 768px) {
-  .contact-container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-}
+
 
 .contact-info {
   display: flex;
@@ -1004,12 +951,7 @@ textarea {
 
 }
 
-@media screen and (max-width: 768px) {
-  .contact-block {
-    display: flex;
-    flex-direction: column;
-  }
-}
+
 
 .info-item {
   display: flex;
@@ -1147,4 +1089,106 @@ footer p {
     0 0 20px rgba(0, 100, 255, 0.7),
     0 0 25px rgba(0, 100, 255, 0.7);
     padding: 10vh;
+}
+
+/*RESPONSIVE********************************************************/
+/* Media queries pour petits écrans */
+@media screen and (max-width: 768px) {
+section {
+  padding: 3vh;
+}
+
+  /*navbar *******************************/
+  .nav-content {
+    flex-direction: column;
+  }
+  .menu{
+    justify-content: space-between;
+  }
+  .menu .link-nav {
+    font-size: 15px;
+  }
+  .background-img {
+    padding-top: 11%;
+  }
+
+  .neon-links {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-size: 5vw;
+    padding: 3vh;
+    right: 0%;
+  }
+
+  #presentation p {
+    font-size: small;
+  }
+
+  /* PROJECTS****************************/
+  .project-card {
+    height: auto;
+  }
+
+  .project-card h3{
+    font-size: medium;
+    padding: 2vh;
+  }
+
+  .project-image img {
+    max-width: 100%;
+  }
+
+  .tags span {
+    font-size: 0.7rem;
+  }
+
+  #modal-description-projects {
+    font-size: small;
+  }
+
+  #modal-video-projects {
+    width: 30em;
+}
+
+  /*carousel ****************************/
+  .carousel-prev,
+  .carousel-next {
+    font-size: 5vw; 
+    padding: 1rem;  
+  }
+
+  .fa-arrow-left,
+  .fa-arrow-right {
+    font-size: 5vh; 
+  }
+
+  .carousel-prev, .carousel-next {
+    top: 70%;
+  }
+
+  .carousel-prev {
+    left: 4%; 
+  }
+
+  .carousel-next {
+    right: 4%; 
+  }
+
+  /*contact **************************/
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0vh;
+  }
+
+  .contact-block {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+ /*footer **************************/
+footer p {
+  font-size: small;
 }
