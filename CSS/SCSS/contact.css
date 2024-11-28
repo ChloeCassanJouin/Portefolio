@@ -1,0 +1,171 @@
+@charset "UTF-8";
+#contact {
+  text-align: center;
+  color: white;
+}
+
+.Contact-title {
+  font-size: 36px;
+  text-decoration: none;
+  color: rgb(0, 217, 255);
+  text-shadow: 0 0 5px rgba(0, 100, 255, 0.7), 0 0 10px rgba(0, 100, 255, 0.7), 0 0 15px rgba(0, 100, 255, 0.7), 0 0 20px rgba(0, 100, 255, 0.7), 0 0 25px rgba(0, 100, 255, 0.7);
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20vh;
+  padding: 10vh;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6vh;
+  text-align: left;
+}
+
+span {
+  align-content: center;
+}
+
+.contact-form-container {
+  padding: 5px;
+  width: 80%;
+  max-width: 600px;
+}
+
+.contact-block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-block label {
+  text-align: right; /* Aligne le texte à droite */
+  margin-right: 10px; /* Espace entre le label et l'input */
+}
+
+.contact-block input,
+textarea {
+  flex: 1; /* Laisse l'input occuper l'espace restant */
+  min-width: 20px; /* Largeur minimale */
+}
+
+.info-item {
+  display: flex;
+  gap: 20px;
+}
+
+label {
+  display: flex;
+  color: rgb(0, 217, 255);
+  text-shadow: 0 0 5px rgba(0, 100, 255, 0.7), 0 0 10px rgba(0, 100, 255, 0.7), 0 0 15px rgba(0, 100, 255, 0.7), 0 0 20px rgba(0, 100, 255, 0.7), 0 0 25px rgba(0, 100, 255, 0.7);
+}
+
+input:-webkit-autofill {
+  background-color: transparent !important; /* Rend le fond transparent */
+  box-shadow: 0 0 0px 1000px transparent inset !important; /* Supprime le fond ajouté par défaut */
+  -webkit-text-fill-color: #fff !important; /* Texte blanc */
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s; /* Évite les transitions visibles */
+  font-size: 2vh;
+}
+
+input, textarea {
+  width: 100%; /* Largeur complète */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid transparent; /* Bordure initialement invisible */
+  border-radius: 5px; /* Coins arrondis */
+  background-color: transparent; /* Fond transparent */
+  color: #fff; /* Couleur du texte */
+  transition: box-shadow 0.4s ease; /* Transition progressive sur l'ombre */
+}
+
+input:hover, textarea:hover {
+  outline: none; /* Supprime le contour par défaut */
+  box-shadow: 0 0 20px rgb(255, 0, 191); /* Néon plus intense au focus */
+}
+
+input:focus, textarea:focus {
+  outline: none; /* Supprime le contour par défaut */
+  box-shadow: 0 0 20px rgb(255, 64, 129); /* Néon plus intense au focus */
+}
+
+textarea {
+  resize: none; /* Désactiver le redimensionnement */
+  height: 120px; /* Hauteur du textarea */
+}
+
+.submit-button {
+  background: linear-gradient(45deg, rgb(255, 0, 191), rgb(0, 102, 255));
+  color: white; /* Couleur du texte du bouton */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Monoton", cursive;
+}
+
+.submit-button:hover {
+  transform: scale(1.1);
+}
+
+.contact-logo {
+  width: 5vh;
+  height: 5vh;
+}
+
+.logo-link-contact {
+  display: flex;
+  flex-direction: row;
+  gap: 5vh;
+}
+
+/* MODALE CONTACT**************************/
+/* Style pour la modale */
+.modal-contact {
+  display: none; /* Cacher la modale par défaut */
+  position: fixed; /* Fixe la modale en haut à gauche */
+  z-index: 1; /* Assure que la modale est par-dessus les autres éléments */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Activer le défilement si nécessaire */
+  background-color: rgba(0, 0, 0, 0.4); /* Fond semi-transparent */
+}
+
+.modal-content-contact {
+  background-color: #fff;
+  margin: 15% auto; /* Centrer la modale */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+}
+
+.close-btn-contact {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+}
+
+.close-btn-contact:hover,
+.close-btn-contact:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#clear-form-contact {
+  margin-top: 10px;
+}/*# sourceMappingURL=contact.css.map */

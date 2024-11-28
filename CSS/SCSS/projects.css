@@ -1,0 +1,163 @@
+.project-item h3 {
+  color: pink;
+}
+
+#projects {
+  text-align: center;
+  color: rgb(0, 217, 255);
+  text-shadow: 0 0 5px rgba(0, 100, 255, 0.7), 0 0 10px rgba(0, 100, 255, 0.7), 0 0 15px rgba(0, 100, 255, 0.7), 0 0 20px rgba(0, 100, 255, 0.7), 0 0 25px rgba(0, 100, 255, 0.7);
+}
+
+.Projects-title {
+  color: rgb(0, 217, 255);
+  text-shadow: 0 0 5px rgba(0, 100, 255, 0.7), 0 0 10px rgba(0, 100, 255, 0.7), 0 0 15px rgba(0, 100, 255, 0.7), 0 0 20px rgba(0, 100, 255, 0.7), 0 0 25px rgba(0, 100, 255, 0.7);
+  font-size: 36px;
+}
+
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  /*padding: 0 20px;*/
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  border: 1px solid rgb(0, 217, 255);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.project-image img {
+  /*width: 100%;
+  height: auto;*/
+  max-width: 100%; /* Largeur maximum de l'image */
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.project-content {
+  flex: 1; /* Prend tout l'espace restant pour le contenu */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centre verticalement le contenu */
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card h3 {
+  color: #ff4081;
+  padding: 4vh;
+  font-size: x-large;
+}
+
+.tags {
+  color: black;
+  font-family: "Zen Dots", sans-serif;
+}
+
+.tags span {
+  background: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 0.8rem;
+}
+
+.project-links a {
+  color: #00d9ff;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+  color: #ff4081;
+}
+
+.github-logo {
+  width: 3em;
+  padding-top: 3vh;
+}
+
+.year-tag {
+  position: absolute;
+  top: -30px;
+  right: 10px;
+  background-color: #ff4081;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: top 0.3s ease;
+}
+
+.project-card:hover .year-tag {
+  top: 10px; /* Slides down when hovering */
+}
+
+/*MODALE PROJECT****************************************************/
+.modal-description-projects {
+  color: pink;
+  padding: 5vh;
+}
+
+.modal-projects {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content-projects {
+  background-color: black;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100vh;
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+  color: rgb(183, 233, 171);
+  text-shadow: 0 0 5px rgba(57, 255, 20, 0.7), 0 0 10px rgba(57, 255, 20, 0.7), 0 0 15px rgba(57, 255, 20, 0.7), 0 0 20px rgba(57, 255, 20, 0.7), 0 0 25px rgba(57, 255, 20, 0.7);
+}
+
+.modal-projects img {
+  max-width: 100%;
+  height: auto;
+  margin: 5px 0;
+}
+
+.tags span, .tool {
+  background-color: #eee;
+  border-radius: 4px;
+  padding: 3px 5px;
+  margin: 2px;
+  font-size: 0.9em;
+}
+
+#modal-video-projects {
+  width: 60em;
+}/*# sourceMappingURL=projects.css.map */

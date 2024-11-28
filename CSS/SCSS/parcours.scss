@@ -1,0 +1,84 @@
+#parcours {
+    text-align: center;
+    color: white; 
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Parcours-title {
+    color: rgb(183, 233, 171); 
+    text-decoration: none;
+    font-size: 36px;
+    text-shadow: 
+        0 0 5px rgba(57, 255, 20, 0.7),
+        0 0 10px rgba(57, 255, 20, 0.7),
+        0 0 15px rgba(57, 255, 20, 0.7),
+        0 0 20px rgba(57, 255, 20, 0.7),
+        0 0 25px rgba(57, 255, 20, 0.7);
+  }
+  
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10vh;
+    padding-bottom: 5vh;
+  }
+  
+  .filter-buttons button {
+    padding: 8px 16px;
+    margin: 0vh 5vh;
+    border: none;
+    border-radius: 10px;
+    background-color: #6b00ff;
+    color: white; 
+    cursor: pointer;
+    font-family: 'Zen Dots', sans-serif;
+    font-size: 16px;
+    box-shadow: 
+        0 0 10px rgba(107, 0, 255, 0.5), 
+        0 0 20px rgba(107, 0, 255, 0.7), 
+        0 0 30px rgba(107, 0, 255, 0.9);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .filter-buttons button:hover {
+    transform: scale(1.1);
+    box-shadow: 
+        0 0 15px rgba(107, 0, 255, 0.7), 
+        0 0 30px rgba(107, 0, 255, 0.9), 
+        0 0 45px rgba(118, 255, 151, 0.8);
+  }
+  
+  .parcours-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 11vh; 
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 40vh;
+  }
+  .card img {
+    width: auto;
+    max-height: 7vh;
+    border-radius: 4px;
+    margin-bottom: 4vh;
+  }
+  
+  .card-job {
+    font-family: 'Zen Dots', sans-serif;
+    margin-bottom: 4vh;
+    padding: 0vh 2vh;
+  }
+  
+  .card-type {
+    margin-bottom: 4vh;
+  }
+  
