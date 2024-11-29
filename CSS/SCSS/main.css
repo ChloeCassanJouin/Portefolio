@@ -2,6 +2,7 @@
 #avis {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 .avis-title {
@@ -353,6 +354,111 @@ footer p {
   justify-content: center;
 }
 
+/* Media queries pour petits écrans */
+@media screen and (max-width: 768px) {
+  section {
+    padding: 3vh;
+  }
+  /*navbar *******************************/
+  .nav-content {
+    flex-direction: column;
+  }
+  .menu {
+    justify-content: space-between;
+  }
+  .menu .link-nav {
+    font-size: 15px;
+  }
+  .background-img {
+    padding-top: 11%;
+  }
+  .neon-links {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-size: 5vw;
+    padding: 3vh;
+    right: 0%;
+  }
+  /*PRESENTATION *************************/
+  #presentation {
+    flex-direction: column;
+    align-items: center;
+  }
+  .presentation-img {
+    margin-bottom: 20px;
+    max-width: 300px;
+  }
+  .text-container {
+    padding: 5vh;
+    text-align: center;
+  }
+  #presentation p {
+    font-size: small;
+  }
+  /* PROJECTS****************************/
+  .project-card {
+    height: auto;
+  }
+  .project-card h3 {
+    font-size: medium;
+    padding: 2vh;
+  }
+  .project-image img {
+    max-width: 100%;
+  }
+  .tags span {
+    font-size: 0.7rem;
+  }
+  #modal-description-projects {
+    font-size: small;
+  }
+  #modal-video-projects {
+    width: 30em;
+  }
+  /* PARCOURS ****************************/
+  .filter-buttons {
+    flex-direction: column;
+    gap: 3vh;
+  }
+  /*carousel ****************************/
+  .carousel-prev,
+  .carousel-next {
+    font-size: 5vw;
+    padding: 1rem;
+  }
+  .fa-arrow-left,
+  .fa-arrow-right {
+    font-size: 5vh;
+  }
+  .carousel-prev, .carousel-next {
+    top: 70%;
+  }
+  .carousel-prev {
+    left: 4%;
+  }
+  .carousel-next {
+    right: 4%;
+  }
+  /*contact **************************/
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0vh;
+    gap: 8vh;
+  }
+  contact span {
+    font-size: 11px;
+  }
+  .contact-block {
+    display: flex;
+    flex-direction: column;
+  }
+  /*footer **************************/
+  footer p {
+    font-size: small;
+  }
+}
 header {
   padding: 10px 0;
 }
