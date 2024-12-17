@@ -26,25 +26,13 @@ p {
 }
 
 section {
-  padding: 10vh;
   text-align: center;
   display: flex;
   flex-direction: column;
   position: relative; 
-  overflow: hidden; 
+  padding: 10vh;
 }
 
-#presentation, 
-#projects,
-#intermediaire,
-#parcours,
-#avis,
-#contact,
-footer {
-opacity: 0;
-animation: fade-in 4s forwards;
-animation-delay: 10s;
-}
 
 /*LOADER*****************************************************/
 .loader {
@@ -409,7 +397,7 @@ header {
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 10vh;
+  padding: 10vh 5vh;
 }
 
 .presentation-img {
@@ -417,9 +405,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 100%;
   max-width: 400px;
+  overflow: hidden;
 }
 
 .presentation-img img {
@@ -437,7 +425,6 @@ header {
 }
 
 /*PROJETS ****************************************************************/
-
 .project-item h3 {
   color: pink;
 }
@@ -451,6 +438,12 @@ header {
       0 0 15px rgba(0, 100, 255, 0.7),
       0 0 20px rgba(0, 100, 255, 0.7),
       0 0 25px rgba(0, 100, 255, 0.7);
+      background-image: url('../Assets/Images/background-image/planches-noires.avif');
+      background-size: cover; /* Ajuste l'image pour couvrir toute la section */
+      background-repeat: no-repeat; /* Empêche la répétition */
+      background-position: center; /* Centre l'image */
+      width: 100%; /* Assure que la section prend toute la largeur */
+      height: 100vh; /* Définit une hauteur de 100% de la hauteur de la fenêtre */
 }
 
 .Projects-title {
@@ -462,14 +455,18 @@ header {
       0 0 20px rgba(0, 100, 255, 0.7),
       0 0 25px rgba(0, 100, 255, 0.7);
   font-size: 36px; 
+  position: absolute; 
+  top: 10vh;
+  left: 45%;
 }
 
 .projects-grid {
   display: flex;
-  flex-direction: column; 
+  flex-direction: row; 
   gap: 40px;
-  align-items: center; 
-  /*padding: 0 20px;*/ 
+  position: absolute; 
+  top: 20vh;
+  padding: 5vh 10vh;
 }
 .project-card {
   display: flex;
@@ -480,10 +477,11 @@ header {
   transition: transform 0.3s ease;
   overflow: hidden;
   width: 100%; 
-  max-width: 1200px; 
+  max-width: 800px;
   height: auto;
   border: 1px solid rgb(0, 217, 255); ;
   background-color: rgba(0, 0, 0, 0.7);
+  
 }
 
 
@@ -635,6 +633,7 @@ header {
       0 0 15px rgba(57, 255, 20, 0.7),
       0 0 20px rgba(57, 255, 20, 0.7),
       0 0 25px rgba(57, 255, 20, 0.7);
+      padding: 7vh;
 }
 
 .filter-buttons {
@@ -702,6 +701,57 @@ header {
   margin-bottom: 4vh;
 }
 
+/*SKILLS***************************************************/
+#skills {
+  background-image: url('../Assets/Images/background-image/brickWall2.avif');
+  background-size: cover; /* Ajuste l'image pour couvrir toute la section */
+  background-repeat: no-repeat; /* Empêche la répétition */
+  background-position: center; /* Centre l'image */
+  width: 100%; /* Assure que la section prend toute la largeur */
+  height: auto; /* Définit une hauteur de 100% de la hauteur de la fenêtre */
+  padding: 40px 20px; /* Espacement autour de la section */
+  background-color: #111; /* Couleur de fond sombre */
+  color: #fff; /* Couleur du texte */
+  text-align: center; /* Centrer le titre */
+  padding-bottom: 20vh;
+}
+
+/* Titre de la section */
+.Projects-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Grid container */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 4 colonnes égales */
+  gap: 5%; /* Espacement entre les éléments */
+  justify-items: center; /* Centrer les logos horizontalement */
+  align-items: center;
+  padding-top: 20vh;
+  
+}
+
+/* Images des logos */
+.skill-logo {
+  max-width: 70%; /* Ajustez pour que l'image occupe une taille raisonnable */
+  max-height: 70%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation douce */
+  border-radius: 10%;
+}
+
+.skill-logo:hover {
+  transform: scale(1.1); /* Zoom léger au survol */
+  box-shadow: 
+  0 0 5px rgba(255, 20, 147, 0.7),
+  0 0 10px rgba(255, 20, 147, 0.7),
+  0 0 15px rgba(255, 20, 147, 0.7),
+  0 0 20px rgba(255, 20, 147, 0.7),
+  0 0 25px rgba(255, 20, 147, 0.7);
+}
 
 /*AVIS*****************************************************/
 .avis-title {
@@ -714,6 +764,13 @@ header {
       0 0 15px rgba(255, 20, 147, 0.7),
       0 0 20px rgba(255, 20, 147, 0.7),
       0 0 25px rgba(255, 20, 147, 0.7);
+}
+
+.avisContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .avis-text {
@@ -901,6 +958,12 @@ header {
 #contact {
   text-align: center;
   color: white;
+  background-image: url('../Assets/Images/background-image/darkroad.webp');
+  background-size: cover; /* Ajuste l'image pour couvrir toute la section */
+  background-repeat: no-repeat; /* Empêche la répétition */
+  background-position: center; /* Centre l'image */
+  width: 100%; /* Assure que la section prend toute la largeur */
+  height: 100vh; /* Définit une hauteur de 100% de la hauteur de la fenêtre */
 }
 
 .Contact-title {
