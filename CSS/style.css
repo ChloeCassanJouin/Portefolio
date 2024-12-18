@@ -431,13 +431,6 @@ header {
 
 #projects {
   text-align: center;
-  color: rgb(0, 217, 255); 
-  text-shadow: 
-      0 0 5px rgba(0, 100, 255, 0.7),
-      0 0 10px rgba(0, 100, 255, 0.7),
-      0 0 15px rgba(0, 100, 255, 0.7),
-      0 0 20px rgba(0, 100, 255, 0.7),
-      0 0 25px rgba(0, 100, 255, 0.7);
       background-image: url('../Assets/Images/background-image/planches-noires.avif');
       background-size: cover; /* Ajuste l'image pour couvrir toute la section */
       background-repeat: no-repeat; /* Empêche la répétition */
@@ -455,6 +448,7 @@ header {
       0 0 20px rgba(0, 100, 255, 0.7),
       0 0 25px rgba(0, 100, 255, 0.7);
   font-size: 36px; 
+  padding: 7vh;
   position: absolute; 
   top: 10vh;
   left: 45%;
@@ -504,7 +498,13 @@ header {
   transform: scale(1.05);
 }
 .project-card h3 {
-  color: #ff4081;
+  color: rgb(0, 217, 255); 
+  text-shadow: 
+      0 0 5px rgba(0, 100, 255, 0.7),
+      0 0 10px rgba(0, 100, 255, 0.7),
+      0 0 15px rgba(0, 100, 255, 0.7),
+      0 0 20px rgba(0, 100, 255, 0.7),
+      0 0 25px rgba(0, 100, 255, 0.7);
   padding: 4vh;
   font-size: x-large;
 }
@@ -633,7 +633,7 @@ header {
       0 0 15px rgba(57, 255, 20, 0.7),
       0 0 20px rgba(57, 255, 20, 0.7),
       0 0 25px rgba(57, 255, 20, 0.7);
-      padding: 7vh;
+  padding: 7vh;
 }
 
 .filter-buttons {
@@ -694,7 +694,6 @@ header {
 .card-job {
   font-family: 'Zen Dots', sans-serif;
   margin-bottom: 4vh;
-  padding: 0vh 2vh;
 }
 
 .card-type {
@@ -722,6 +721,7 @@ header {
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  padding: 7vh;
 }
 
 /* Grid container */
@@ -754,10 +754,13 @@ header {
 }
 
 /*AVIS*****************************************************/
+
+
 .avis-title {
   color: rgb(214, 128, 174); 
   font-size: 36px;
   text-decoration: none; 
+  padding: 7vh;
   text-shadow: 
       0 0 5px rgba(255, 20, 147, 0.7),
       0 0 10px rgba(255, 20, 147, 0.7),
@@ -769,8 +772,15 @@ header {
 .avisContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  background-image: url(../Assets/Images/background-image/delorean-7705900_960_720.jpg);
+  background-size: cover; /* Ajuste l'image pour couvrir toute la section */
+    background-repeat: no-repeat; /* Empêche la répétition */
+    background-position: center; /* Centre l'image */
+    width: 100%; /* Assure que la section prend toute la largeur */
+    height: 100%; /* Définit une hauteur de 100% de la hauteur de la fenêtre */
+
 }
 
 .avis-text {
@@ -787,11 +797,17 @@ header {
   max-width: 100%;
 }
 
+.delorean {
+  width: 100%;
+}
+
 /* button CV ***************************/
 .img-CV-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   padding-bottom: 10vh;
+  justify-content: space-between;
 }
 
 .cv-button {
@@ -805,8 +821,8 @@ header {
       0 0 25px rgba(255, 20, 147, 0.7);
   border: none; /* Supprime les bordures */
   border-radius: 50%; /* Rend l'élément circulaire */
-  width: 100px; /* Largeur pour créer un cercle */
-  height: 100px; /* Hauteur identique pour conserver la forme */
+  width: 200px; /* Largeur pour créer un cercle */
+  height: 200px; /* Hauteur identique pour conserver la forme */
   display: flex; /* Pour centrer le texte */
   justify-content: center; /* Centrage horizontal du texte */
   align-items: center; /* Centrage vertical du texte */
@@ -850,37 +866,29 @@ header {
   width: 100%;
   max-width: 600px;
   object-fit: cover;
+  border: black solid 1vh;
 }
 
 /* Boutons de navigation */
 .carousel-prev,
 .carousel-next {
-  position: absolute;
-  top: 60%; /* Centrage vertical */
-  transform: translateY(-50%); /* Ajuste le centrage */
+  left:50%;
+  top: 80%; /* Centrage vertical */
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   font-size: 5vw; /* Taille responsive des icônes */
   padding: 1rem;
   cursor: pointer;
-  z-index: 10;
   border-radius: 50%; /* Ajouter un arrondi pour un effet circulaire */
 }
 
-/* Place les flèches à l'extérieur de l'image */
-.carousel-prev {
-  left: 24%; /* Positionner à gauche */
-}
 
-.carousel-next {
-  right: 24%; /* Positionner à droite */
-}
+/* Place les flèches à l'extérieur de l'image */
 
 .fa-arrow-left,
 .fa-arrow-right {
-  color: rgb(214, 128, 174);
-  font-size: 8vh; /* Taille de l'icône responsive */
+  font-size: 4vh; /* Taille de l'icône responsive */
   text-shadow:
     0 0 5px rgba(255, 20, 147, 0.7),
     0 0 10px rgba(255, 20, 147, 0.7),
@@ -976,6 +984,7 @@ header {
     0 0 15px rgba(0, 100, 255, 0.7),
     0 0 20px rgba(0, 100, 255, 0.7),
     0 0 25px rgba(0, 100, 255, 0.7);
+    padding: 7vh;
 }
 
 .contact-container {

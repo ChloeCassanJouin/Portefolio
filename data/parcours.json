@@ -31,18 +31,18 @@
         "image": "Assets/Images/Logos/capfruit.jpg",
         "alt": "Logo capfruit",
         "type": "En Poste",
-        "role": "Assistante ADV export",
-        "year": "2022",
-        "domaine": "Commerce"
+        "role": "Assistante ADV export anglais",
+        "year": "2021-2022",
+        "domaine": "Commerce-Anglais"
     },
     {
         "id": 5,
         "image": "Assets/Images/Logos/drome-cailles.jpg",
         "alt": "Logo drome-cailles",
         "type": "En Poste",
-        "role": "Assistante ADV",
-        "year": "20??",
-        "domaine": "Commerce"
+        "role": "Assistante ADV export anglais",
+        "year": "2015-2019",
+        "domaine": "Commerce-Anglais"
     },
     {
         "id": 6,
@@ -50,25 +50,25 @@
         "alt": "Logo onlylyon",
         "type": "En Poste",
         "role": "Assistante administrative",
-        "year": "20??",
-        "domaine": "Commerce"
+        "year": "2013",
+        "domaine": "Commerce-Anglais"
     },
     {
         "id": 7,
-        "image": "Assets/Images/Logos/onlylyon.png",
-        "alt": "Logo onlylyon",
+        "image": "Assets/Images/Logos/Plastic-Omnium-logo.png",
+        "alt": "Logo Plastic Omnium",
         "type": "En Poste",
-        "role": "Assistante administrative",
-        "year": "20??",
-        "domaine": "Commerce"
+        "role": "Assistante administrative anglais",
+        "year": "2010-12",
+        "domaine": "Commerce-Anglais"
     },
     {
         "id": 8,
-        "image": "Assets/Images/Logos/onlylyon.png",
-        "alt": "Logo onlylyon",
+        "image": "Assets/Images/Logos/logo-ministere-education-nationale.jpg",
+        "alt": "Logo lEducation nationale",
         "type": "En Poste",
-        "role": "Assistante administrative",
-        "year": "20??",
-        "domaine": "Commerce"
+        "role": "Professeur d'anglais vacataire lycée",
+        "year": "2010",
+        "domaine": "Commerce-Anglais"
     }
 ]
