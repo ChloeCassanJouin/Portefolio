@@ -462,6 +462,7 @@ header {
   top: 20vh;
   padding: 5vh 10vh;
 }
+
 .project-card {
   display: flex;
   flex-direction: column; 
@@ -726,8 +727,7 @@ header {
 
 /* Grid container */
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 4 colonnes égales */
+  display: flex;
   gap: 5%; /* Espacement entre les éléments */
   justify-items: center; /* Centrer les logos horizontalement */
   align-items: center;
