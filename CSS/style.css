@@ -727,7 +727,8 @@ header {
 
 /* Grid container */
 .skills-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 4 colonnes égales */
   gap: 5%; /* Espacement entre les éléments */
   justify-items: center; /* Centrer les logos horizontalement */
   align-items: center;
