@@ -726,11 +726,11 @@ header {
 }
 
 /* Grid container */
-.skills-grid {
+.logo-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 4 colonnes égales */
-  gap: 5%; /* Espacement entre les éléments */
-  justify-items: center; /* Centrer les logos horizontalement */
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5%;
+  justify-items: center;
   align-items: center;
   padding-top: 20vh;
   
