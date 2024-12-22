@@ -1,16 +1,16 @@
 // Fonction pour récupérer les projets à partir du fichier JSON
 async function fetchProjects() {
     try {
-        const response = await fetch('../data/projects.json');
+        const response = await fetch("../data/projects.json");
         if (!response.ok) {
-            throw new Error('Erreur lors du chargement des projets');
+            throw new Error("Erreur lors du chargement des projets");
         }
         return await response.json();
     } catch (error) {
-        console.error('Erreur :', error);
+        console.error("Erreur :", error);
         return [];
     }
-}
+ }
 
 // Fonction pour afficher les projets dans la page
 async function displayProjects() {
