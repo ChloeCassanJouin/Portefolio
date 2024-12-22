@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "title": "ARGENT BANK",
+        "year": 2024,
+        "description": "ARGENT BANK \n\nIntégration d'une interface utilisateur de banque en ligne.\n\nCréer des pages web modernes et responsives avec:\n- page d'accueil\n- page de connexion\n- page utilisateur avec accès aux comptes bancaires.\n\n",
+        "skills": ["Frontend", "JavaScript", "CSS"],
+        "tools": ["React", "Node.js", "Git", "MongoDB"],
+        "images": [
+            "Assets/Images/PROJETS/Argent-Bank/argent-bank1.png",
+            "Assets/Images/PROJETS/Argent-Bank/argent-bank2.png",
+            "Assets/Images/PROJETS/Argent-Bank/argent-bank3.png"
+        ],
+        "videoUrl": "../Assets/VIDEOS/ArgentBank-video.mp4",
+        "github": "https://github.com/ChloeCassanJouin/argentBank-App"
+    },
+    {
+        "id": 2,
+        "title": "PHOTOGRAPHE SOPHIE BLUEL",
+        "year": 2024,
+        "description": "SOPHIE BLUEL - PHOTOGRAPHE \n\nCréation d'un site de portfolio. \n\nIntégrer une interface à partir de maquettes \n\nRespecter l’esthétique et l’expérience utilisateur",
+        "skills": ["Frontend", "JavaScript", "CSS"],
+        "tools": ["Photoshop", "Lightroom"],
+        "images": [
+            "Assets/Images/PROJETS/Photograph-Sophie-Bluel/sophie-bluel1.PNG"
+        ],
+        "videoUrl": "",
+        "github": "https://github.com/ChloeCassanJouin/Sophie_Bluel"
+    }
+]
