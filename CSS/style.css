@@ -725,7 +725,7 @@ header {
   padding: 7vh;
 }
 
-.logo {
+#logo-container{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 5%;
