@@ -1,5 +1,5 @@
 // Emplacement de ton fichier JSON
-const parcoursDataUrl = './data/parcours.json';
+const parcoursDataUrl = 'data/parcours.json';
 
 // Chargement des données et initialisation
 fetch(parcoursDataUrl)
