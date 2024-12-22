@@ -726,7 +726,7 @@ header {
 }
 
 /* Grid container */
-.logo-container {
+.logo {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 5%;
