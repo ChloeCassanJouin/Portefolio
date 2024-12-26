@@ -1,7 +1,7 @@
 // Récupérer les éléments
 const form = document.getElementById("contact-form");
 const modal = document.getElementById("message-modal-contact");
-const closeModal = document.getElementById("close-modal-contact");
+const closeModal1 = document.getElementById("close-modal-contact");
 const clearFormButton = document.getElementById("clear-form-contact");
 
 // Lorsque le formulaire est soumis, afficher la modale et vider les champs
@@ -14,7 +14,7 @@ form.addEventListener("submit", function(event) {
 });
 
 // Fermer la modale lorsque l'utilisateur clique sur la croix (X)
-closeModal.addEventListener("click", function() {
+closeModal1.addEventListener("click", function() {
     modal.style.display = "none";
 });
 
