@@ -1141,7 +1141,6 @@ textarea {
         height: auto;
     }
 
-
     .neon-links {
       display: flex;
       flex-direction: column;
@@ -1155,6 +1154,7 @@ textarea {
     #presentation {
       flex-direction: column; 
       align-items: center; 
+      padding: 0vh;
     }
 
     .presentation-img {
@@ -1199,7 +1199,11 @@ textarea {
     }
 
     #modal-video-projects {
-      width: 30em;
+      width: 40vh;
+  }
+
+  .modal-content-projects {
+    width: 45vh;
   }
 
   /* SKILLS ******************************/
@@ -1216,11 +1220,11 @@ textarea {
   }
 
   .filter-buttons button {
-    margin: 0vh 10vh;
+    margin: 0vh 7vh;
   }
 
   .card {
-    padding: 70px 13px;
+    padding: 30px 13px;
   }
 
   /* AVIS *********************************/
@@ -1279,6 +1283,10 @@ textarea {
   }
 
   /*footer **************************/
+  .footer {
+    margin-top: 30vh;
+  }
+  
   footer p {
     font-size: small;
     padding: 20vh 10vh 5vh;
