@@ -247,7 +247,7 @@ header {
   align-items: center; 
 }
 
-.background-img {
+.cassette {
   width: 100%;
   opacity: 0; 
   animation: fade-in 6s forwards;
