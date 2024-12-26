@@ -9,7 +9,7 @@
         "images": [
             "Assets/Images/PROJETS/Argent-Bank/argent-bank-min.webp"
         ],
-        "videoUrl": "../Assets/VIDEOS/ArgentBank-video.mp4",
+        "videoUrl": "PORTEFOLIO-CHLOE-JOUIN/Assets/VIDEOS/ArgentBank-video.mp4",
         "github": "https://github.com/ChloeCassanJouin/argentBank-App"
     },
     {
@@ -22,7 +22,7 @@
         "images": [
             "Assets/Images/PROJETS/Nina-Carducci/nina-carducci-min.webp"
         ],
-        "videoUrl": "../Assets/VIDEOS/NINA-video.mp4",
+        "videoUrl": "PORTEFOLIO-CHLOE-JOUIN/Assets/VIDEOS/NINA-video.mp4",
         "github": "https://github.com/ChloeCassanJouin/ninacarducci.p9"
     }
 ]
