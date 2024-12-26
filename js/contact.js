@@ -18,7 +18,6 @@ clearFormButton.addEventListener("click", function() {
     modal.style.display = "none";
     form.reset(); 
 });
-e
 window.onload = function() {
     form.reset();
 };
