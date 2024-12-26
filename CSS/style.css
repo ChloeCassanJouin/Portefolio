@@ -37,127 +37,10 @@ section {
   padding: 10vh;
 }
 
-#presentation {
-  opacity: 0; 
-  animation: fade-in 5s forwards;
-  animation-delay: 8s;
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .transparent {
   color: transparent;
 }
 
-
-/*LOADER*****************************************************/
-.loader {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  margin: auto;
-}
-
-
-.loader-rectangle {
-  display: flex;
-  flex-direction: row;
-  gap: 10vh;
-  border: none; 
-  padding: 10vh;
-  border-radius: 10px; 
-  position: relative; 
-}
-
-.loader-rectangle::before,
-.loader-rectangle::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  height: 5px; 
-  width: 0%; 
-  background-color: rgb(0, 217, 255); 
-  animation: drawLine 2s linear forwards, fadeOutBorder 0.2s linear forwards 1.9s; 
-}
-
-.loader-rectangle::before {
-  top: 0; 
-}
-
-.loader-rectangle::after {
-  bottom: 0; 
-}
-
-@keyframes drawLine {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 100%; 
-  }
-}
-
-@keyframes fadeOutBorder {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0; 
-  }
-}
-
-.loader__spinner {
-  border: 5px solid rgb(0, 217, 255); 
-  border-right: 10px solid transparent; 
-  border-radius: 50%; 
-  width: 100px;
-  height: 100px;
-  animation: spin 2s linear infinite, fadeOutLoader 0.2s 1.9s forwards; 
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes fadeInContent {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOutLoader {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.loader-enabled {
-  opacity: 0;
-  animation: fadeInContent 3s forwards 2s;
-  position: relative;
-  z-index: 10;
-}
 
 /*navbar /menu *****************************************************/
 header {
@@ -237,7 +120,6 @@ header {
 }
 
 /*Welcome part - background img ******/
-
 #Welcome-part {
   padding: 0px;
   margin: 0px;
@@ -331,7 +213,7 @@ header {
 }
 
 .neon-link3 {
-  color: rgb(255, 20, 147); /* Rose néon */
+  color: rgb(255, 20, 147); 
   text-decoration: none;
   text-shadow: 
       0 0 5px rgba(255, 20, 147, 0.7),
@@ -415,6 +297,18 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   padding: 10vh 5vh;
+  opacity: 0; 
+  animation: fade-in 5s forwards;
+  animation-delay: 8s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .presentation-img {
@@ -436,7 +330,6 @@ header {
 
 .text-container {
   flex: 1;
-  padding: 5vh;
   gap: 20px;
   display: flex;
   flex-direction: column;
@@ -765,15 +658,13 @@ header {
 .skill-logo {
   max-width: 70%; 
   max-height: 70%;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1/1;
+
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 10%;
 }
 
 /*AVIS*****************************************************/
-.avis-title {
+  .avis-title {
   color: rgb(214, 128, 174); 
   font-size: 36px;
   text-decoration: none; 
@@ -918,7 +809,7 @@ header {
 }
 
 /*MODAL AVIS ******************/
-.modal-avis {
+  .modal-avis {
   position: fixed;
   top: 0;
   left: 0;
@@ -1127,7 +1018,7 @@ textarea {
 }
 
 /* MODALE CONTACT**************************/
-.modal-contact {
+  .modal-contact {
   display: none; 
   position: fixed; 
   z-index: 1;
@@ -1170,7 +1061,7 @@ textarea {
 
 
 /* FOOTER *******************************************************/
-footer p {
+  footer p {
   color: rgb(0, 217, 255); 
   text-shadow: 
     0 0 5px rgba(0, 100, 255, 0.7),
@@ -1184,7 +1075,7 @@ footer p {
 }
 
 /* LIENS *********************************************************/
-.nav-sections {
+  .nav-sections {
   position: fixed;
   top: 60px;
   right: 10px;
@@ -1202,8 +1093,17 @@ footer p {
   gap: 10px; 
 }
 
+@keyframes fadeInContent {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
 .nav-sections a {
   color: white;
+  font-family: 'Zen Dots', sans-serif;
   text-decoration: none;
   display: block;
   pointer-events: auto;
@@ -1240,7 +1140,7 @@ footer p {
         min-height: 100vh;
         height: auto;
     }
-    }
+
 
     .neon-links {
       display: flex;
@@ -1301,6 +1201,7 @@ footer p {
     #modal-video-projects {
       width: 30em;
   }
+
   /* SKILLS ******************************/
   .logo-container{
     grid-template-columns: repeat(2, 1fr);
@@ -1330,6 +1231,7 @@ footer p {
   .img-CV-container {
     padding: 10vh;
   }
+
 
   /*carousel ****************************/
   .carousel-prev,
@@ -1387,3 +1289,4 @@ footer p {
     bottom: 10px;
     top:auto;
   }
+}

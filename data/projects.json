@@ -7,7 +7,7 @@
         "skills": ["Frontend", "UI/UX Design", "Responsive Web Design"],
         "tools": ["HTML", "CSS", "JavaScript", "Git"],
         "images": [
-            "Assets/Images/PROJETS/Argent-Bank/argent-bank.png"
+            "Assets/Images/PROJETS/Argent-Bank/argent-bank-min.webp"
         ],
         "videoUrl": "../Assets/VIDEOS/ArgentBank-video.mp4",
         "github": "https://github.com/ChloeCassanJouin/argentBank-App"
@@ -16,11 +16,11 @@
         "id": 2,
         "title": "NINA CARDUCCI",
         "year": 2024,
-        "description": "NINA CARDUCCI - PHOTOGRAPHE \n\nOptimisation d'un portfolio. \n\nAudit Lighthouse",
+        "description": "NINA CARDUCCI - PHOTOGRAPHE \n\nOptimisation d'un portfolio. \n\nAudit Lighthouse avec étude des: \nPerformance \nAccessibilité  \nBonnes pratiques \nSEO",
         "skills": ["Frontend", "JavaScript", "CSS"],
         "tools": ["CSS", "HTML", "Lighthouse", "Wave", "rich snippet"],
         "images": [
-            "Assets/Images/PROJETS/Nina-Carducci/nina-carducci.jpg"
+            "Assets/Images/PROJETS/Nina-Carducci/nina-carducci-min.webp"
         ],
         "videoUrl": "../Assets/VIDEOS/NINA-video.mp4",
         "github": "https://github.com/ChloeCassanJouin/ninacarducci.p9"
