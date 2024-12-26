@@ -1,7 +1,5 @@
-// Emplacement de ton fichier JSON
 const parcoursDataUrl = 'data/parcours.json';
 
-// Chargement des données et initialisation
 fetch(parcoursDataUrl)
     .then(response => response.json())
     .then(data => {
@@ -10,10 +8,9 @@ fetch(parcoursDataUrl)
     })
     .catch(error => console.error('Erreur lors du chargement des données :', error));
 
-// Fonction pour créer les cards
 function createCards(data) {
     const container = document.querySelector('.parcours-container');
-    container.innerHTML = ''; // Nettoie le conteneur avant d'ajouter les nouvelles cards
+    container.innerHTML = ''; 
 
     data.forEach(item => {
         const card = document.createElement('div');
@@ -28,7 +25,6 @@ function createCards(data) {
     });
 }
 
-// Fonction pour configurer les filtres
 function setupFilters(data) {
     const buttons = document.querySelectorAll('.filter-buttons button');
 
