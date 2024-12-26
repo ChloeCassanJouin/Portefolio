@@ -249,6 +249,7 @@ header {
 
 .cassette {
   width: 100%;
+  height: auto;
   opacity: 0; 
   animation: fade-in 6s forwards;
   animation-delay: 3s;
@@ -424,6 +425,7 @@ header {
 
 .presentation-img img {
   width: 100%;
+  height: auto;
   max-width: 300px;
   border-radius: 10px;
 }
@@ -444,6 +446,8 @@ header {
 #projects {
   text-align: center;
       background-image: url('../Assets/Images/background-image/planches-noires-min.webp');
+      width: 100%;
+      height: auto;
       background-size: cover; 
       background-repeat: no-repeat; 
       background-position: center; 
@@ -497,6 +501,8 @@ header {
 
 .project-image img {
   max-width: 100%; 
+  width: 100%;
+  height: auto;
   border-radius: 10px;
   object-fit: cover;
 }
@@ -547,6 +553,7 @@ header {
 
 .github-logo {
   width: 3em;
+  height: auto;
   padding-top: 3vh;
 }
 
@@ -610,6 +617,7 @@ header {
 
 .modal-projects img {
   max-width: 100%;
+  width: 100%;
   height: auto;
   margin: 5px 0;
 }
@@ -697,6 +705,7 @@ header {
 }
 .card img {
   width: auto;
+  height: auto;
   max-height: 7vh;
   border-radius: 4px;
   margin-bottom: 4vh;
@@ -714,6 +723,8 @@ header {
 /*SKILLS***************************************************/
 #skills {
   background-image: url('../Assets/Images/background-image/brickWall2-min.webp');
+  width: 100%;
+  height: auto;
   background-size: cover; 
   background-repeat: no-repeat; 
   background-position: center; 
@@ -750,6 +761,9 @@ header {
 .skill-logo {
   max-width: 70%; 
   max-height: 70%;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 10%;
 }
@@ -792,11 +806,13 @@ header {
 
 .letter {
   width: 100%;
+  height: auto;
   max-width: 100%;
 }
 
 .delorean {
   width: 100%;
+  height: auto;
 }
 
 /* button CV ***************************/
@@ -961,6 +977,8 @@ header {
   text-align: center;
   color: white;
   background-image: url('../Assets/Images/background-image/darkroad-min.webp');
+  width: 100%;
+  height: auto;
   background-size: cover; 
   background-repeat: no-repeat;
   background-position: center;
@@ -1215,6 +1233,9 @@ footer p {
     }
     .background-img {
       padding-top: 11%;
+        min-height: 100vh;
+        height: auto;
+    }
     }
 
     .neon-links {
@@ -1362,4 +1383,3 @@ footer p {
     bottom: 10px;
     top:auto;
   }
-}

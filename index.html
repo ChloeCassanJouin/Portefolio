@@ -7,22 +7,24 @@
     <meta name="portefolio" content="Chloé Jouin développeur web Drôme Rhône-Alpes">
     <meta name="description" content="Portfolio de Chloé Jouin, développeur web front-end basé en Drôme, Rhône-Alpes. Découvrez ses projets et son expertise en développement web.">
     
-    <!-- Préconnexion pour les polices Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Préchargement des polices critiques -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" as="style">
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+    <link rel="preload" href="CSS/style.min.css" as="style">
+    <link rel="preload" href="Assets/Images/background-image/cassette-min.webp" as="image">
+    <link rel="preload" 
+          href="https://fonts.googleapis.com/css2?family=Zen+Dots&family=Monoton&display=swap" 
+          as="style" 
+          onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&family=Monoton&display=swap" 
+              rel="stylesheet">
+    </noscript>
     
-    <!-- Polices avec font-display: swap -->
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet" onload="this.onload=null;this.rel='stylesheet'">
-    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet" onload="this.onload=null;this.rel='stylesheet'">
-    
-    <!-- Polices d'icônes Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- Feuille de style principale -->
     <link rel="stylesheet" href="CSS/style.min.css">
 
     <script type="application/ld+json" defer>
@@ -75,7 +77,14 @@
 <section id="Welcome-part">
     <h2 class="transparent">Welcome</h2>
     <div class="background-container">
-        <img src="Assets/Images/background-image/cassette-min.webp" alt="cassette neon" class="cassette">
+        <img src="Assets/Images/background-image/cassette-min.webp" 
+     alt="cassette neon" 
+     class="cassette"
+     width="1920"
+     height="1080"
+     style="width: 100%; height: auto;"
+     fetchpriority="high"
+     decoding="sync">
         <div class="neon-links">
             <a href="#projects" class="neon-link1">PROJETS</a>
             <a href="#parcours" class="neon-link2">PARCOURS</a>
@@ -121,6 +130,7 @@
         <button data-filter="Developpement" aria-label="développement">Développement</button>
         <button data-filter="Commerce-Anglais" aria-label="Commerce-Anglais">Commerce-Anglais</button>
     </div>
+    <div class="parcours-container"></div>
 </section>
 
 <section id="skills" class="neon-border">
@@ -244,8 +254,8 @@
 </div>
 
 <script src="js/navbar.min.js" defer></script>   
-<script src="js/music-play.min.js" defer></script> 
-<script src="js/projects..min.js" defer></script> 
+<script src="js/music-play.min.js" async></script> 
+<script src="js/projects.min.js" defer></script> 
 <script src="js/parcours.min.js" defer></script>
 <script src="js/button-cv.min.js" defer></script>
 <script src="js/slider.min.js" defer></script>
