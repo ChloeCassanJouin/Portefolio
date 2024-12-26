@@ -3,13 +3,11 @@
         "id": 1,
         "title": "ARGENT BANK",
         "year": 2024,
-        "description": "ARGENT BANK \n\nIntégration d'une interface utilisateur de banque en ligne.\n\nCréer des pages web modernes et responsives avec:\n- page d'accueil\n- page de connexion\n- page utilisateur avec accès aux comptes bancaires.\n\n",
-        "skills": ["Frontend", "JavaScript", "CSS"],
-        "tools": ["React", "Node.js", "Git", "MongoDB"],
+        "description": "NINA CARDUCCI\n\nRefonte du site portfolio d'une photographe professionnelle.\n\nCréer un site moderne et responsive avec :\n- page d'accueil mettant en valeur les photos de l'artiste,\n- page de présentation et biographie,\n- galeries photos organisées par thématiques,\n- formulaire de contact fonctionnel.\n\n",
+        "skills": ["Frontend", "UI/UX Design", "Responsive Web Design"],
+        "tools": ["HTML", "CSS", "JavaScript", "Git"],
         "images": [
-            "Assets/Images/PROJETS/Argent-Bank/argent-bank1.png",
-            "Assets/Images/PROJETS/Argent-Bank/argent-bank2.png",
-            "Assets/Images/PROJETS/Argent-Bank/argent-bank3.png"
+            "Assets/Images/PROJETS/Argent-Bank/argent-bank.png"
         ],
         "videoUrl": "../Assets/VIDEOS/ArgentBank-video.mp4",
         "github": "https://github.com/ChloeCassanJouin/argentBank-App"
@@ -18,13 +16,13 @@
         "id": 2,
         "title": "NINA CARDUCCI",
         "year": 2024,
-        "description": "SOPHIE BLUEL - PHOTOGRAPHE \n\nCréation d'un site de portfolio. \n\nIntégrer une interface à partir de maquettes \n\nRespecter l’esthétique et l’expérience utilisateur",
+        "description": "SOPHIE BLUEL - PHOTOGRAPHE \n\nOptimisation d'un portfolio. \n\nAudit Lighthouse",
         "skills": ["Frontend", "JavaScript", "CSS"],
-        "tools": ["Photoshop", "Lightroom"],
+        "tools": ["CSS", "HTML", "Lighthouse", "Wave", "rich snippet"],
         "images": [
-            "Assets/Images/PROJETS/Photograph-Sophie-Bluel/sophie-bluel1.PNG"
+            "Assets/Images/PROJETS/Nina-Carducci/nina-carducci.jpg"
         ],
-        "videoUrl": "",
+        "videoUrl": "../Assets/VIDEOS/NINA-video.mp4",
         "github": "https://github.com/ChloeCassanJouin/ninacarducci.p9"
     }
 ]

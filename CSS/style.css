@@ -33,6 +33,22 @@ section {
   padding: 10vh;
 }
 
+#presentation, #projects, #parcours, #skills, #avis, #contact {
+  opacity: 0; /* Assurez-vous que l'image est invisible au départ */
+  animation: fade-in 5s forwards;
+  animation-delay: 8s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 
 /*LOADER*****************************************************/
 .loader {
@@ -265,7 +281,7 @@ header {
   flex-wrap: nowrap;
   opacity: 0;
   animation: fade-in-links 1s forwards;
-  animation-delay: 6s;
+  animation-delay: 4s;
   z-index: 20;
   font-size: 2vw;
   text-transform: uppercase;
@@ -336,7 +352,7 @@ header {
 .neon-link1:nth-child(1) {
   opacity: 0; 
   animation: appear-flicker 1s forwards; 
-  animation-delay: 8s; 
+  animation-delay: 5s; 
 }
 
 .neon-link2:nth-child(2) {
@@ -450,6 +466,11 @@ header {
   padding: 7vh;
   top: 10vh;
   left: 45%;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 7vh;
 }
 
 .projects-grid {
@@ -714,13 +735,16 @@ header {
   padding-bottom: 20vh;
 }
 
-/* Titre de la section */
-.Projects-title {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding: 7vh;
+.Skills-title {
+  color: rgb(233 146 255); /* Remplacé par une couleur violette lumineuse */
+  font-size: 36px;
+  padding-top: 5vh;
+  text-shadow: 
+      0 0 5px rgb(159 41 251 / 90%), /* Adapté au violet néon */
+      0 0 10px rgb(159 41 251 / 90%),
+      0 0 15px rgb(159 41 251 / 90%),
+      0 0 20px rgb(159 41 251 / 90%),
+      0 0 25px rgb(159 41 251 / 90%);
 }
 
 .logo-container{
@@ -729,7 +753,7 @@ header {
   gap: 5%;
   justify-items: center;
   align-items: center;
-  padding-top: 20vh;
+  padding-top: 10vh;
 }
 
 /* Images des logos */
@@ -771,7 +795,7 @@ header {
 }
 
 .avis-text {
-  padding-bottom: 10vh;
+  padding-bottom: 3vh;
 }
 
 .letters {
@@ -1160,6 +1184,40 @@ footer p {
     justify-content: center;
 }
 
+/* LIENS *********************************************************/
+.nav-sections {
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding: 10px;
+  border-radius: 15px;
+  z-index: 1000; /* Assurez-vous que cette valeur est supérieure aux autres éléments */
+  font-size: x-small;
+  opacity: 0;
+  animation: fadeInContent 5s forwards 7s;
+}
+
+.nav-sections a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  pointer-events: auto; /* Activé par défaut, mais à vérifier */
+}
+
+.nav-sections a:hover {
+  color: rgb(183, 233, 171); 
+  text-shadow: 
+      0 0 5px rgba(57, 255, 20, 0.7),
+      0 0 10px rgba(57, 255, 20, 0.7),
+      0 0 15px rgba(57, 255, 20, 0.7),
+      0 0 20px rgba(57, 255, 20, 0.7),
+      0 0 25px rgba(57, 255, 20, 0.7);
+}
 
 
 
@@ -1268,6 +1326,10 @@ footer p {
     margin: 0vh 10vh;
   }
 
+  .card {
+    padding: 70px 13px;
+  }
+
 
   /* AVIS *********************************/
   .avisContainer{
@@ -1327,6 +1389,12 @@ footer p {
   /*footer **************************/
   footer p {
     font-size: small;
-    padding: 20vh 10vh;
+    padding: 20vh 10vh 5vh;
+  }
+
+  /*navigation ***********************/
+  .nav-sections {
+    bottom: 10px;
+    top:auto;
   }
 }
