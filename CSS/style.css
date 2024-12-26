@@ -13,6 +13,10 @@ body {
   margin: 0;
 }
 
+span {
+  font-family: 'Zen Dots', sans-serif;
+}
+
 p {
   font-family: 'Zen Dots', sans-serif;
   font-size: large;
@@ -1075,8 +1079,8 @@ input, textarea {
   margin-bottom: 15px;
   border: 1px solid transparent; 
   border-radius: 5px; 
-  background-color: transparent; 
-  color: #fff; 
+  background-color: #45454570; 
+  color: #45454570; 
   transition: box-shadow 0.4s ease; 
 }
 
