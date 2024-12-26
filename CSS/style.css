@@ -449,7 +449,7 @@ header {
 
 #projects {
   text-align: center;
-      background-image: url('../Assets/Images/background-image/planches-noires.avif');
+      background-image: url('../Assets/Images/background-image/planches-noires-min.webp');
       background-size: cover; /* Ajuste l'image pour couvrir toute la section */
       background-repeat: no-repeat; /* Empêche la répétition */
       background-position: center; /* Centre l'image */
@@ -724,7 +724,7 @@ header {
 
 /*SKILLS***************************************************/
 #skills {
-  background-image: url('../Assets/Images/background-image/brickWall2.avif');
+  background-image: url('../Assets/Images/background-image/brickWall2-min.webp');
   background-size: cover; /* Ajuste l'image pour couvrir toute la section */
   background-repeat: no-repeat; /* Empêche la répétition */
   background-position: center; /* Centre l'image */
@@ -787,7 +787,7 @@ header {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background-image: url(../Assets/Images/background-image/delorean-7705900_960_720.jpg);
+  background-image: url(../Assets/Images/background-image/delorean-7705900_960_720-min.webp);
   background-size: cover; /* Ajuste l'image pour couvrir toute la section */
     background-repeat: no-repeat; /* Empêche la répétition */
     background-position: center; /* Centre l'image */
@@ -981,7 +981,7 @@ header {
 #contact {
   text-align: center;
   color: white;
-  background-image: url('../Assets/Images/background-image/darkroad.webp');
+  background-image: url('../Assets/Images/background-image/darkroad-min.webp');
   background-size: cover; /* Ajuste l'image pour couvrir toute la section */
   background-repeat: no-repeat; /* Empêche la répétition */
   background-position: center; /* Centre l'image */
