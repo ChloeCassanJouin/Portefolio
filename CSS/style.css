@@ -13,6 +13,12 @@ body {
   margin: 0;
 }
 
+@font-face {
+  font-family: 'Zen Dots';
+  src: url('https://fonts.gstatic.com/s/zendots/v1/your-font-file.woff2') format('woff2');
+  font-display: swap;
+}
+
 p {
   font-family: 'Zen Dots', sans-serif;
   font-size: large;

@@ -4,14 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chloé Jouin - Développeur Web Front End - Portfolio</title>
-    <meta name="portefolio" content="Chloé Jouin développeur web drôme Rhône-Alpes">
+    <meta name="portefolio" content="Chloé Jouin développeur web Drôme Rhône-Alpes">
     <meta name="description" content="Portfolio de Chloé Jouin, développeur web front-end basé en Drôme, Rhône-Alpes. Découvrez ses projets et son expertise en développement web.">
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    
+    <!-- Préconnexion pour les polices Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Préchargement des polices critiques -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" as="style">
+    
+    <!-- Polices avec font-display: swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet" onload="this.onload=null;this.rel='stylesheet'">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Polices d'icônes Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Feuille de style principale -->
     <link rel="stylesheet" href="CSS/style.css">
 
-    <script type="application/ld+json">
+    <script type="application/ld+json" defer>
         {
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
@@ -234,16 +248,16 @@
     <a href="#contact">Contact</a>
 </div>
 
-<script src="js/loader.js"></script>
-<script src="js/navbar.js"></script>   
-<script src="js/music-play.js"></script> 
-<script src="js/presentation-text.js"></script>  
-<script src="js/section-appearance.js"></script>  
-<script src="js/projects.js"></script> 
-<script src="js/parcours.js"></script>
-<script src="js/button-cv.js"></script>
-<script src="js/slider.js"></script>
-<script src="js/contact.js"></script>
+<script src="js/loader.js" defer></script>
+<script src="js/navbar.js" defer></script>   
+<script src="js/music-play.js" defer></script> 
+<script src="js/presentation-text.js" defer></script>  
+<script src="js/section-appearance.js" defer></script>  
+<script src="js/projects.js" defer></script> 
+<script src="js/parcours.js" defer></script>
+<script src="js/button-cv.js" defer></script>
+<script src="js/slider.js" defer></script>
+<script src="js/contact.js" defer></script>
 </body>
 
 </html>
