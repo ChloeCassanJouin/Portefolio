@@ -1200,21 +1200,22 @@ footer p {
   color: white;
   padding: 10px;
   border-radius: 15px;
-  z-index: 1000; /* Assurez-vous que cette valeur est supérieure aux autres éléments */
-  font-size: x-small;
+  z-index: 1000;
+  font-size: 0.875rem; /* Remplacer x-small par une valeur plus adaptée */
   opacity: 0;
   animation: fadeInContent 5s forwards 7s;
+  gap: 10px; /* Ajouter l'espacement entre les éléments */
 }
 
 .nav-sections a {
   color: white;
   text-decoration: none;
   display: block;
-  pointer-events: auto; /* Activé par défaut, mais à vérifier */
+  pointer-events: auto;
 }
 
 .nav-sections a:hover {
-  color: rgb(183, 233, 171); 
+  color: rgb(183, 233, 171);
   text-shadow: 
       0 0 5px rgba(57, 255, 20, 0.7),
       0 0 10px rgba(57, 255, 20, 0.7),
