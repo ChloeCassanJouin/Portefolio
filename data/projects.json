@@ -16,7 +16,7 @@
     },
     {
         "id": 2,
-        "title": "PHOTOGRAPHE SOPHIE BLUEL",
+        "title": "NINA CARDUCCI",
         "year": 2024,
         "description": "SOPHIE BLUEL - PHOTOGRAPHE \n\nCréation d'un site de portfolio. \n\nIntégrer une interface à partir de maquettes \n\nRespecter l’esthétique et l’expérience utilisateur",
         "skills": ["Frontend", "JavaScript", "CSS"],
@@ -25,6 +25,6 @@
             "Assets/Images/PROJETS/Photograph-Sophie-Bluel/sophie-bluel1.PNG"
         ],
         "videoUrl": "",
-        "github": "https://github.com/ChloeCassanJouin/Sophie_Bluel"
+        "github": "https://github.com/ChloeCassanJouin/ninacarducci.p9"
     }
 ]

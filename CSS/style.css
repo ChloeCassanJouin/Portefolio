@@ -436,7 +436,6 @@ header {
       background-repeat: no-repeat; /* Empêche la répétition */
       background-position: center; /* Centre l'image */
       width: 100%; /* Assure que la section prend toute la largeur */
-      height: 100vh; /* Définit une hauteur de 100% de la hauteur de la fenêtre */
 }
 
 .Projects-title {
@@ -449,7 +448,6 @@ header {
       0 0 25px rgba(0, 100, 255, 0.7);
   font-size: 36px; 
   padding: 7vh;
-  position: absolute; 
   top: 10vh;
   left: 45%;
 }
@@ -457,8 +455,8 @@ header {
 .projects-grid {
   display: flex;
   flex-direction: row; 
+  justify-content: space-around;
   gap: 40px;
-  position: absolute; 
   top: 20vh;
   padding: 5vh 10vh;
 }
@@ -1101,6 +1099,7 @@ textarea {
   display: flex;
   flex-direction: row;
   gap: 5vh;
+  justify-content: center;
 }
 
 /* MODALE CONTACT**************************/
@@ -1220,6 +1219,11 @@ footer p {
     }
 
     /* PROJECTS****************************/
+    .projects-grid {
+      flex-direction: column;
+      padding: 0vh;
+    }
+
     .project-card {
       height: auto;
       
@@ -1245,11 +1249,33 @@ footer p {
     #modal-video-projects {
       width: 30em;
   }
+  /* SKILLS ******************************/
+  .logo-container{
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 5vh;
+    gap: 0%;
+  }
+    
+    
 
   /* PARCOURS ****************************/
   .filter-buttons {
     flex-direction: column;
     gap: 3vh;
+  }
+
+  .filter-buttons button {
+    margin: 0vh 10vh;
+  }
+
+
+  /* AVIS *********************************/
+  .avisContainer{
+    flex-direction: column;
+  }
+
+  .img-CV-container {
+    padding: 10vh;
   }
 
     /*carousel ****************************/
@@ -1284,6 +1310,10 @@ footer p {
       gap: 8vh;
     }
 
+    input, textarea {
+      width: auto;
+    }
+
     contact span {
       font-size: 11px;
     }
@@ -1297,5 +1327,6 @@ footer p {
   /*footer **************************/
   footer p {
     font-size: small;
+    padding: 20vh 10vh;
   }
 }

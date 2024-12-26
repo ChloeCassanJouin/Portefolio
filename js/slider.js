@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const imagePaths = [
-        "./Assets/Images/letter-of-recommandation/Lettre-recommandation-Info-Reso.png",
+        "./Assets/Images/letter-of-recommandation/Lettre-recommandation-Info-Reso2.png",
         "./Assets/Images/letter-of-recommandation/Lettre-recommandation-DromeCailles.png",
         "./Assets/Images/letter-of-recommandation/lettre-reco-OnlyLyon.jpg",
         "./Assets/Images/letter-of-recommandation/lettre-reco-plasticOmnium.jpg",
