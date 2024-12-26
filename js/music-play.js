@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const audio = new Audio('Assets/music/(FREE) 80s Type Beat - Delorean  The Weeknd x Dua Lipa Pop Synthwave.mp3'); 
+    const audio = new Audio('Assets/music/80s-Delorean-Weeknd-DuaLipa-Pop-Synthwave.mp3'); 
 
     const toggleButton = document.getElementById('toggle-music-button');
     const iconPlay = toggleButton.querySelector('.icon-play');

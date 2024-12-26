@@ -58,6 +58,7 @@
 </header>
 
 <section id="Welcome-part">
+    <h2 class="transparent">Welcome</h2>
     <div class="background-container">
         <img src="Assets/Images/background-image/cassette.png" alt="voiture background" class="background-img">
         <div class="neon-links">
@@ -69,6 +70,7 @@
 </section>
 
 <section id="presentation" class="neon-border">
+    <h2 class="transparent">presentation</h2>
     <div class="presentation-img">
         <img src="Assets/Images/portrait/portrait-chloe-jouin.png" alt="Chloé Jouin">
     </div>
@@ -90,7 +92,7 @@
     <div id="project-modal" class="modal-projects">
         <div class="modal-content-projects">
             <span class="close" id="close-modal-projects">&times;</span>
-            <h3 id="modal-title-projects"></h3>
+            <h3 id="modal-title-projects" class="transparent">MODAL TITLE</h3>
             <p id="modal-description-projects"></p>
             <video id="modal-video-projects" controls></video>
         </div>
@@ -145,7 +147,7 @@
     <div class="avisContainer">
         <div class="img-CV-container">
             <button id="cv-button" class="cv-button">
-                <p class="cv-text">Mon CV</p>
+                <span class="cv-text">Mon CV</span>
             </button>
 
         </div>
@@ -157,7 +159,7 @@
             <div class="modal-avis">
                 <div class="modal-content-avis">
                 <span class="modal-close-avis">&times;</span>
-                    <img src="" alt="Contenu agrandi" class="modal-image-avis" style="display: none;">
+                    <img src="Assets/Images/background-image/delorean-7705900_960_720.jpg" alt="Contenu agrandi" class="modal-image-avis" style="display: none;">
                 </div>
             </div>
         </div>
@@ -170,17 +172,17 @@
         <div class="contact-form-container">
             <form id="contact-form">
 
-                    <label for="last-name">Nom :</label>
-                    <input type="text" id="last-name" name="last-name" required>
+                <label for="last-name">Nom :</label>
+                <input type="text" id="last-name" name="last-name" required>
 
-                    <label for="first-name">Prénom :</label>
-                    <input type="text" id="first-name" name="first-name" required>
+                <label for="first-name">Prénom :</label>
+                <input type="text" id="first-name" name="first-name" required>
 
-                    <label for="email">Email :</label>
-                    <input type="email" id="email" name="email" required>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
 
-                    <label for="phone-number">Téléphone :</label>
-                    <input type="phone-number" id="phone-number" name="phone-number" required>
+                <label for="phone-number">Téléphone :</label>
+                <input type="tel" id="phone-number" name="phone-number" required>
 
                 <label for="message">Message :</label>
                 <textarea id="message" name="message" required></textarea>
@@ -230,8 +232,6 @@
     <a href="#avis">Avis</a>
     <a href="#contact">Contact</a>
 </div>
-
-<audio id="background-music" src="Assets/music/(FREE) 80s Type Beat - Delorean  The Weeknd x Dua Lipa Pop Synthwave.mp3"></audio>
 
 <script src="js/loader.js"></script>
 <script src="js/navbar.js"></script>   

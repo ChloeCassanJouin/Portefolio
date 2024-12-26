@@ -33,7 +33,7 @@ section {
   padding: 10vh;
 }
 
-#presentation, #projects, #parcours, #skills, #avis, #contact {
+#presentation {
   opacity: 0; /* Assurez-vous que l'image est invisible au départ */
   animation: fade-in 5s forwards;
   animation-delay: 8s;
@@ -48,6 +48,9 @@ section {
   }
 }
 
+.transparent {
+  color: transparent;
+}
 
 
 /*LOADER*****************************************************/
@@ -239,7 +242,6 @@ header {
 #Welcome-part {
   padding: 0px;
   margin: 0px;
-
 }
 
 .background-container {
@@ -856,6 +858,8 @@ header {
 .cv-text {
   color: black;
   text-shadow: none;
+  font-family: 'Zen Dots', sans-serif;
+  font-size: large;
 }
 
 
