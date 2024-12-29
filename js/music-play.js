@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    setTimeout(() => {
+   /* setTimeout(() => {
         audio.play()
             .then(() => {
                 iconPlay.style.display = 'inline';
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(error => {
                 console.error('Erreur lors de la lecture de la musique:', error);
             });
-    }, 3000);
+    }, 3000); */
 
     toggleButton.addEventListener('click', toggleMusic);
 });
