@@ -52,7 +52,7 @@ Code commenté et structuré pour faciliter la lecture et la maintenance.
 ✅ Validation HTML/CSS via W3C Validator
 
 👩‍💻 À propos de moi
-Je m’appelle Chloé Cassan Jouin, développeuse web junior issue d’une reconversion professionnelle. Mon parcours m’a menée du secteur administratif et de l’EDI dans l’agroalimentaire (en lien avec Super U au niveau national) à la découverte du développement web.
+Je m’appelle Chloé Jouin, développeuse web junior issue d’une reconversion professionnelle. Mon parcours m’a menée du secteur administratif et de l’EDI dans l’agroalimentaire (en lien avec Super U au niveau national) à la découverte du développement web.
 
 Je ne suis pas une passionnée du code depuis toujours, mais je découvre avec curiosité et enthousiasme cet univers, en particulier les données, la logique, et les possibilités offertes par l’intelligence artificielle.
 
